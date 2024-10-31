@@ -48,26 +48,6 @@ export const direttoriData = [
     },
     {
       "nome": "ANGRISANO ALBERTO",
-      "mese": "2024-01",
-      "turni": 0
-    },
-    {
-      "nome": "ANGRISANO ALBERTO",
-      "mese": "2024-02",
-      "turni": 0
-    },
-    {
-      "nome": "ANGRISANO ALBERTO",
-      "mese": "2024-03",
-      "turni": 0
-    },
-    {
-      "nome": "ANGRISANO ALBERTO",
-      "mese": "2024-04",
-      "turni": 0
-    },
-    {
-      "nome": "ANGRISANO ALBERTO",
       "mese": "2024-05",
       "turni": 1
     },
@@ -77,64 +57,9 @@ export const direttoriData = [
       "turni": 7
     },
     {
-      "nome": "ANGRISANO ALBERTO",
-      "mese": "2024-07",
-      "turni": 0
-    },
-    {
-      "nome": "ANGRISANO ALBERTO",
-      "mese": "2024-08",
-      "turni": 0
-    },
-    {
-      "nome": "ANGRISANO ALBERTO",
-      "mese": "2024-09",
-      "turni": 0
-    },
-    {
-      "nome": "BALDINI ANTONELLA",
-      "mese": "2024-01",
-      "turni": 0
-    },
-    {
-      "nome": "BALDINI ANTONELLA",
-      "mese": "2024-02",
-      "turni": 0
-    },
-    {
-      "nome": "BALDINI ANTONELLA",
-      "mese": "2024-03",
-      "turni": 0
-    },
-    {
       "nome": "BALDINI ANTONELLA",
       "mese": "2024-04",
       "turni": 2
-    },
-    {
-      "nome": "BALDINI ANTONELLA",
-      "mese": "2024-05",
-      "turni": 0
-    },
-    {
-      "nome": "BALDINI ANTONELLA",
-      "mese": "2024-06",
-      "turni": 0
-    },
-    {
-      "nome": "BALDINI ANTONELLA",
-      "mese": "2024-07",
-      "turni": 0
-    },
-    {
-      "nome": "BALDINI ANTONELLA",
-      "mese": "2024-08",
-      "turni": 0
-    },
-    {
-      "nome": "BALDINI ANTONELLA",
-      "mese": "2024-09",
-      "turni": 0
     },
       {
         "nome": "BALDINI ORESTE",
@@ -183,48 +108,8 @@ export const direttoriData = [
       },
       {
         "nome": "BALDINI RITA",
-        "mese": "2024-01",
-        "turni": 0
-      },
-      {
-        "nome": "BALDINI RITA",
-        "mese": "2024-02",
-        "turni": 0
-      },
-      {
-        "nome": "BALDINI RITA",
-        "mese": "2024-03",
-        "turni": 0
-      },
-      {
-        "nome": "BALDINI RITA",
         "mese": "2024-04",
         "turni": 2
-      },
-      {
-        "nome": "BALDINI RITA",
-        "mese": "2024-05",
-        "turni": 0
-      },
-      {
-        "nome": "BALDINI RITA",
-        "mese": "2024-06",
-        "turni": 0
-      },
-      {
-        "nome": "BALDINI RITA",
-        "mese": "2024-07",
-        "turni": 0
-      },
-      {
-        "nome": "BALDINI RITA",
-        "mese": "2024-08",
-        "turni": 0
-      },
-      {
-        "nome": "BALDINI RITA",
-        "mese": "2024-09",
-        "turni": 0
       },
       {
         "nome": "BENASSI STEFANO",
@@ -273,53 +158,8 @@ export const direttoriData = [
       },
       {
         "nome": "BOLOGNESI GAIA VENUSTA",
-        "mese": "2024-01",
-        "turni": 0
-      },
-      {
-        "nome": "BOLOGNESI GAIA VENUSTA",
-        "mese": "2024-02",
-        "turni": 0
-      },
-      {
-        "nome": "BOLOGNESI GAIA VENUSTA",
-        "mese": "2024-03",
-        "turni": 0
-      },
-      {
-        "nome": "BOLOGNESI GAIA VENUSTA",
-        "mese": "2024-04",
-        "turni": 0
-      },
-      {
-        "nome": "BOLOGNESI GAIA VENUSTA",
-        "mese": "2024-05",
-        "turni": 0
-      },
-      {
-        "nome": "BOLOGNESI GAIA VENUSTA",
         "mese": "2024-06",
         "turni": 2
-      },
-      {
-        "nome": "BOLOGNESI GAIA VENUSTA",
-        "mese": "2024-07",
-        "turni": 0
-      },
-      {
-        "nome": "BOLOGNESI GAIA VENUSTA",
-        "mese": "2024-08",
-        "turni": 0
-      },
-      {
-        "nome": "BOLOGNESI GAIA VENUSTA",
-        "mese": "2024-09",
-        "turni": 0
-      },
-      {
-        "nome": "CAPUTO ARIANNA",
-        "mese": "2024-01",
-        "turni": 0
       },
       {
         "nome": "CAPUTO ARIANNA",
@@ -343,18 +183,8 @@ export const direttoriData = [
       },
       {
         "nome": "CAPUTO ARIANNA",
-        "mese": "2024-06",
-        "turni": 0
-      },
-      {
-        "nome": "CAPUTO ARIANNA",
         "mese": "2024-07",
         "turni": 14
-      },
-      {
-        "nome": "CAPUTO ARIANNA",
-        "mese": "2024-08",
-        "turni": 0
       },
       {
         "nome": "CAPUTO ARIANNA",
