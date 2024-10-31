@@ -815,7 +815,97 @@ export const direttoriData = [
           "nome": "WARD MONICA",
           "mese": "2024-07",
           "turni": 4
-        }      
+        },
+          {
+            "nome": "ANCIDONI ROSSELLA",
+            "mese": "2024-10",
+            "turni": 25
+          },
+          {
+            "nome": "BALDINI ORESTE",
+            "mese": "2024-10",
+            "turni": 37
+          },
+          {
+            "nome": "BENASSI STEFANO",
+            "mese": "2024-10",
+            "turni": 37
+          },
+          {
+            "nome": "CAPUTO ARIANNA",
+            "mese": "2024-10",
+            "turni": 35
+          },
+          {
+            "nome": "CASTRACANE BARBARA",
+            "mese": "2024-10",
+            "turni": 20
+          },
+          {
+            "nome": "CATANIA GIULIA",
+            "mese": "2024-10",
+            "turni": 43
+          },
+          {
+            "nome": "CATANIA MYRIAM",
+            "mese": "2024-10",
+            "turni": 26
+          },
+          {
+            "nome": "CIGLIANO ALESSIO",
+            "mese": "2024-10",
+            "turni": 7
+          },
+          {
+            "nome": "COLTORTI JESUS EMILIANO",
+            "mese": "2024-10",
+            "turni": 7
+          },
+          {
+            "nome": "DE FLAVIIS FABRIZIO",
+            "mese": "2024-10",
+            "turni": 22
+          },
+          {
+            "nome": "IZZO GIUSEPPINA",
+            "mese": "2024-10",
+            "turni": 38
+          },
+          {
+            "nome": "IZZO ROSSELLA",
+            "mese": "2024-10",
+            "turni": 51
+          },
+          {
+            "nome": "IZZO FIAMMETTA",
+            "mese": "2024-10",
+            "turni": 36
+          },
+          {
+            "nome": "METE ANDREA",
+            "mese": "2024-10",
+            "turni": 6
+          },
+          {
+            "nome": "VENDITTI FRANCESCO SAVERIO",
+            "mese": "2024-10",
+            "turni": 7
+          },
+          {
+            "nome": "VERSINO LUDOVICO",
+            "mese": "2024-10",
+            "turni": 13
+          },
+          {
+            "nome": "AQUILONE FLAVIO",
+            "mese": "2024-10",
+            "turni": 13
+          },
+          {
+            "nome": "PASQUERO GERMANA",
+            "mese": "2024-10",
+            "turni": 20
+          }        
   
 ];
 
