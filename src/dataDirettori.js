@@ -45,8 +45,97 @@ export const direttoriData = [
       "nome": "ANCIDONI ROSSELLA",
       "mese": "2024-09",
       "turni": 25
+    },
+    {
+      "nome": "ANGRISANO ALBERTO",
+      "mese": "2024-01",
+      "turni": 0
+    },
+    {
+      "nome": "ANGRISANO ALBERTO",
+      "mese": "2024-02",
+      "turni": 0
+    },
+    {
+      "nome": "ANGRISANO ALBERTO",
+      "mese": "2024-03",
+      "turni": 0
+    },
+    {
+      "nome": "ANGRISANO ALBERTO",
+      "mese": "2024-04",
+      "turni": 0
+    },
+    {
+      "nome": "ANGRISANO ALBERTO",
+      "mese": "2024-05",
+      "turni": 1
+    },
+    {
+      "nome": "ANGRISANO ALBERTO",
+      "mese": "2024-06",
+      "turni": 7
+    },
+    {
+      "nome": "ANGRISANO ALBERTO",
+      "mese": "2024-07",
+      "turni": 0
+    },
+    {
+      "nome": "ANGRISANO ALBERTO",
+      "mese": "2024-08",
+      "turni": 0
+    },
+    {
+      "nome": "ANGRISANO ALBERTO",
+      "mese": "2024-09",
+      "turni": 0
+    },
+    {
+      "nome": "BALDINI ANTONELLA",
+      "mese": "2024-01",
+      "turni": 0
+    },
+    {
+      "nome": "BALDINI ANTONELLA",
+      "mese": "2024-02",
+      "turni": 0
+    },
+    {
+      "nome": "BALDINI ANTONELLA",
+      "mese": "2024-03",
+      "turni": 0
+    },
+    {
+      "nome": "BALDINI ANTONELLA",
+      "mese": "2024-04",
+      "turni": 2
+    },
+    {
+      "nome": "BALDINI ANTONELLA",
+      "mese": "2024-05",
+      "turni": 0
+    },
+    {
+      "nome": "BALDINI ANTONELLA",
+      "mese": "2024-06",
+      "turni": 0
+    },
+    {
+      "nome": "BALDINI ANTONELLA",
+      "mese": "2024-07",
+      "turni": 0
+    },
+    {
+      "nome": "BALDINI ANTONELLA",
+      "mese": "2024-08",
+      "turni": 0
+    },
+    {
+      "nome": "BALDINI ANTONELLA",
+      "mese": "2024-09",
+      "turni": 0
     }
-
   
 ];
 
