@@ -454,7 +454,97 @@ export const direttoriData = [
       "nome": "Monica WARD",
       "mese": "2024-07",
       "turni": 6
-    }
+    },
+      {
+          "nome": "Flavio AQUILONE",
+          "mese": "2024-10",
+          "turni": 11
+      },
+      {
+          "nome": "Rossella ANCIDONI",
+          "mese": "2024-10",
+          "turni": 17
+      },
+      {
+          "nome": "Oreste BALDINI",
+          "mese": "2024-10",
+          "turni": 24
+      },
+      {
+          "nome": "Stefano BENASSI",
+          "mese": "2024-10",
+          "turni": 21
+      },
+      {
+          "nome": "Arianna CAPUTO",
+          "mese": "2024-10",
+          "turni": 24
+      },
+      {
+          "nome": "Barbara CASTRACANE",
+          "mese": "2024-10",
+          "turni": 17
+      },
+      {
+          "nome": "Giulia CATANIA",
+          "mese": "2024-10",
+          "turni": 28
+      },
+      {
+          "nome": "Myriam CATANIA",
+          "mese": "2024-10",
+          "turni": 20
+      },
+      {
+          "nome": "Alessio CIGLIANO",
+          "mese": "2024-10",
+          "turni": 8
+      },
+      {
+          "nome": "Jesus Emiliano COLTORTI",
+          "mese": "2024-10",
+          "turni": 8
+      },
+      {
+          "nome": "Fabrizio DE FLAVIIS",
+          "mese": "2024-10",
+          "turni": 11
+      },
+      {
+          "nome": "Fiammetta IZZO",
+          "mese": "2024-10",
+          "turni": 31
+      },
+      {
+          "nome": "Giuseppina IZZO",
+          "mese": "2024-10",
+          "turni": 25
+      },
+      {
+          "nome": "Rossella IZZO",
+          "mese": "2024-10",
+          "turni": 37
+      },
+      {
+          "nome": "Andrea METE",
+          "mese": "2024-10",
+          "turni": 6
+      },
+      {
+          "nome": "Germana PASQUERO",
+          "mese": "2024-10",
+          "turni": 20
+      },
+      {
+          "nome": "Francesco Saverio VENDITTI",
+          "mese": "2024-10",
+          "turni": 6
+      },
+      {
+          "nome": "Ludovico VERSINO",
+          "mese": "2024-10",
+          "turni": 11
+      }
 ];
 
 export const getDirettoriTurnCountsForPeriod = (period) => {

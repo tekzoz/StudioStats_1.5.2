@@ -446,7 +446,68 @@ export const assistentiData = [
       "nome": "Wanda TUCCINARDI",
       "mese": "2024-04",
       "turni": 3
-    }
+    },
+      {
+          "nome": "Alice CARBINI",
+          "mese": "2024-10",
+          "turni": 39
+      },
+      {
+          "nome": "Federica CONTI",
+          "mese": "2024-10",
+          "turni": 43
+      },
+      {
+          "nome": "Elisabetta CORTESE",
+          "mese": "2024-10",
+          "turni": 17
+      },
+      {
+          "nome": "Andrea FABRICATORE",
+          "mese": "2024-10",
+          "turni": 29
+      },
+      {
+          "nome": "Elisabetta GIRARDI",
+          "mese": "2024-10",
+          "turni": 41
+      },
+      {
+          "nome": "Francesca NICOLOSI",
+          "mese": "2024-10",
+          "turni": 45
+      },
+      {
+          "nome": "Jeanne PARLATO",
+          "mese": "2024-10",
+          "turni": 5
+      },
+      {
+          "nome": "Maurizio PICCHIO",
+          "mese": "2024-10",
+          "turni": 47
+      },
+      {
+          "nome": "Manuele ROMA",
+          "mese": "2024-10",
+          "turni": 31
+      },
+      {
+          "nome": "Simona ROMEO",
+          "mese": "2024-10",
+          "turni": 33
+      },
+      {
+          "nome": "Fiorenza SAITTA",
+          "mese": "2024-10",
+          "turni": 9
+      },
+      {
+          "nome": "Manuela SCACCO DE SANTIS",
+          "mese": "2024-10",
+          "turni": 14
+      }
+
   
   ];
   
