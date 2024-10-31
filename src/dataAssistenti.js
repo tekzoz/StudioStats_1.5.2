@@ -3,512 +3,556 @@
 export const assistentiData = [
   
     {
-      "nome": "Simona ROMEO",
+      "nome": "CARBINI ALICE",
       "mese": "2024-01",
-      "turni": 20
+      "turni": 28
     },
     {
-      "nome": "Simona ROMEO",
+      "nome": "CARBINI ALICE",
       "mese": "2024-02",
-      "turni": 35
+      "turni": 30
     },
     {
-      "nome": "Simona ROMEO",
+      "nome": "CARBINI ALICE",
       "mese": "2024-03",
-      "turni": 10
+      "turni": 11
     },
     {
-      "nome": "Silvia FERRI",
+      "nome": "CARBINI ALICE",
+      "mese": "2024-04",
+      "turni": 48
+    },
+    {
+      "nome": "CARBINI ALICE",
+      "mese": "2024-05",
+      "turni": 56
+    },
+    {
+      "nome": "CARBINI ALICE",
+      "mese": "2024-06",
+      "turni": 34
+    },
+    {
+      "nome": "CARBINI ALICE",
+      "mese": "2024-07",
+      "turni": 58
+    },
+    {
+      "nome": "CARBINI ALICE",
+      "mese": "2024-08",
+      "turni": 6
+    },
+    {
+      "nome": "CARBINI ALICE",
+      "mese": "2024-09",
+      "turni": 12
+    },
+    {
+      "nome": "CARBINI ALICE",
+      "mese": "2024-10",
+      "turni": 50
+    },
+    {
+      "nome": "CONTI FEDERICA",
       "mese": "2024-01",
-      "turni": 10
+      "turni": 28
     },
     {
-      "nome": "Silvia FERRI",
+      "nome": "CONTI FEDERICA",
       "mese": "2024-02",
-      "turni": 16
+      "turni": 31
     },
     {
-      "nome": "Maurizio PICCHIO",
-      "mese": "2024-01",
-      "turni": 18
-    },
-    {
-      "nome": "Maurizio PICCHIO",
-      "mese": "2024-02",
-      "turni": 9
-    },
-    {
-      "nome": "Maurizio PICCHIO",
-      "mese": "2024-03",
-      "turni": 8
-    },
-    {
-      "nome": "Alice CARBINI",
-      "mese": "2024-01",
-      "turni": 25
-    },
-    {
-      "nome": "Alice CARBINI",
-      "mese": "2024-02",
-      "turni": 21
-    },
-    {
-      "nome": "Alice CARBINI",
+      "nome": "CONTI FEDERICA",
       "mese": "2024-03",
       "turni": 12
     },
     {
-      "nome": "Federica CONTI",
-      "mese": "2024-01",
+      "nome": "CONTI FEDERICA",
+      "mese": "2024-04",
+      "turni": 40
+    },
+    {
+      "nome": "CONTI FEDERICA",
+      "mese": "2024-05",
+      "turni": 59
+    },
+    {
+      "nome": "CONTI FEDERICA",
+      "mese": "2024-06",
       "turni": 20
     },
     {
-      "nome": "Federica CONTI",
+      "nome": "CONTI FEDERICA",
+      "mese": "2024-07",
+      "turni": 33
+    },
+    {
+      "nome": "CONTI FEDERICA",
+      "mese": "2024-09",
+      "turni": 48
+    },
+    {
+      "nome": "CONTI FEDERICA",
+      "mese": "2024-10",
+      "turni": 51
+    },
+    {
+      "nome": "CORTESE ELISABETTA",
+      "mese": "2024-04",
+      "turni": 2
+    },
+    {
+      "nome": "CORTESE ELISABETTA",
+      "mese": "2024-05",
+      "turni": 14
+    },
+    {
+      "nome": "CORTESE ELISABETTA",
+      "mese": "2024-06",
+      "turni": 31
+    },
+    {
+      "nome": "CORTESE ELISABETTA",
+      "mese": "2024-07",
+      "turni": 34
+    },
+    {
+      "nome": "CORTESE ELISABETTA",
+      "mese": "2024-08",
+      "turni": 3
+    },
+    {
+      "nome": "CORTESE ELISABETTA",
+      "mese": "2024-10",
+      "turni": 23
+    },
+    {
+      "nome": "FABRICATORE ANDREA",
+      "mese": "2024-05",
+      "turni": 13
+    },
+    {
+      "nome": "FABRICATORE ANDREA",
+      "mese": "2024-06",
+      "turni": 16
+    },
+    {
+      "nome": "FABRICATORE ANDREA",
+      "mese": "2024-07",
+      "turni": 3
+    },
+    {
+      "nome": "FABRICATORE ANDREA",
+      "mese": "2024-10",
+      "turni": 36
+    },
+    {
+      "nome": "FERRI SILVIA",
+      "mese": "2024-01",
+      "turni": 10
+    },
+    {
+      "nome": "FERRI SILVIA",
       "mese": "2024-02",
-      "turni": 27
+      "turni": 17
     },
     {
-      "nome": "Federica CONTI",
-      "mese": "2024-03",
-      "turni": 9
+      "nome": "FERRI SILVIA",
+      "mese": "2024-04",
+      "turni": 31
     },
     {
-      "nome": "Elisabetta GIRARDI",
+      "nome": "FERRI SILVIA",
+      "mese": "2024-05",
+      "turni": 2
+    },
+    {
+      "nome": "FERRI SILVIA",
+      "mese": "2024-10",
+      "turni": 60
+    },
+    {
+      "nome": "GIRARDI ELISABETTA",
       "mese": "2024-01",
       "turni": 30
     },
     {
-      "nome": "Elisabetta GIRARDI",
+      "nome": "GIRARDI ELISABETTA",
       "mese": "2024-02",
-      "turni": 12
+      "turni": 13
     },
     {
-      "nome": "Elisabetta GIRARDI",
+      "nome": "GIRARDI ELISABETTA",
       "mese": "2024-03",
+      "turni": 25
+    },
+    {
+      "nome": "GIRARDI ELISABETTA",
+      "mese": "2024-04",
+      "turni": 41
+    },
+    {
+      "nome": "GIRARDI ELISABETTA",
+      "mese": "2024-05",
+      "turni": 32
+    },
+    {
+      "nome": "GIRARDI ELISABETTA",
+      "mese": "2024-06",
+      "turni": 46
+    },
+    {
+      "nome": "GIRARDI ELISABETTA",
+      "mese": "2024-07",
+      "turni": 15
+    },
+    {
+      "nome": "GIRARDI ELISABETTA",
+      "mese": "2024-08",
+      "turni": 1
+    },
+    {
+      "nome": "GIRARDI ELISABETTA",
+      "mese": "2024-09",
+      "turni": 37
+    },
+    {
+      "nome": "GIRARDI ELISABETTA",
+      "mese": "2024-10",
+      "turni": 45
+    },
+    {
+      "nome": "NICOLOSI FRANCESCA",
+      "mese": "2024-01",
+      "turni": 20
+    },
+    {
+      "nome": "NICOLOSI FRANCESCA",
+      "mese": "2024-02",
+      "turni": 32
+    },
+    {
+      "nome": "NICOLOSI FRANCESCA",
+      "mese": "2024-03",
+      "turni": 31
+    },
+    {
+      "nome": "NICOLOSI FRANCESCA",
+      "mese": "2024-04",
+      "turni": 43
+    },
+    {
+      "nome": "NICOLOSI FRANCESCA",
+      "mese": "2024-05",
+      "turni": 46
+    },
+    {
+      "nome": "NICOLOSI FRANCESCA",
+      "mese": "2024-06",
+      "turni": 46
+    },
+    {
+      "nome": "NICOLOSI FRANCESCA",
+      "mese": "2024-07",
+      "turni": 46
+    },
+    {
+      "nome": "NICOLOSI FRANCESCA",
+      "mese": "2024-08",
+      "turni": 5
+    },
+    {
+      "nome": "NICOLOSI FRANCESCA",
+      "mese": "2024-09",
+      "turni": 35
+    },
+    {
+      "nome": "NICOLOSI FRANCESCA",
+      "mese": "2024-10",
+      "turni": 54
+    },
+    {
+      "nome": "PARLATO JEANNE",
+      "mese": "2024-05",
+      "turni": 3
+    },
+    {
+      "nome": "PARLATO JEANNE",
+      "mese": "2024-07",
+      "turni": 5
+    },
+    {
+      "nome": "PARLATO JEANNE",
+      "mese": "2024-10",
+      "turni": 5
+    },
+    {
+      "nome": "PICCHIO MAURIZIO",
+      "mese": "2024-01",
       "turni": 16
     },
     {
-      "nome": "Francesca NICOLOSI",
-      "mese": "2024-01",
-      "turni": 18
-    },
-    {
-      "nome": "Francesca NICOLOSI",
+      "nome": "PICCHIO MAURIZIO",
       "mese": "2024-02",
-      "turni": 27
-    },
-    {
-      "nome": "Francesca NICOLOSI",
-      "mese": "2024-03",
-      "turni": 24
-    },
-    {
-      "nome": "Manuele ROMA",
-      "mese": "2024-01",
-      "turni": 36
-    },
-    {
-      "nome": "Manuele ROMA",
-      "mese": "2024-02",
-      "turni": 23
-    },
-    {
-      "nome": "Manuele ROMA",
-      "mese": "2024-03",
       "turni": 21
     },
     {
-      "nome": "Manuela SCACCO DE SANTIS",
+      "nome": "PICCHIO MAURIZIO",
       "mese": "2024-03",
-      "turni": 18
+      "turni": 28
     },
     {
-      "nome": "Wanda TUCCINARDI",
-      "mese": "2024-02",
-      "turni": 2
-    },
-    {
-      "nome": "Alice CARBINI",
+      "nome": "PICCHIO MAURIZIO",
       "mese": "2024-04",
       "turni": 37
     },
     {
-      "nome": "Alice CARBINI",
+      "nome": "PICCHIO MAURIZIO",
       "mese": "2024-05",
       "turni": 39
     },
     {
-      "nome": "Alice CARBINI",
+      "nome": "PICCHIO MAURIZIO",
       "mese": "2024-06",
-      "turni": 38
+      "turni": 47
     },
     {
-      "nome": "Alice CARBINI",
+      "nome": "PICCHIO MAURIZIO",
       "mese": "2024-07",
       "turni": 44
     },
     {
-      "nome": "Alice CARBINI",
+      "nome": "PICCHIO MAURIZIO",
       "mese": "2024-08",
-      "turni": 4
+      "turni": 23
     },
     {
-      "nome": "Alice CARBINI",
+      "nome": "PICCHIO MAURIZIO",
       "mese": "2024-09",
-      "turni": 14
+      "turni": 28
     },
     {
-      "nome": "Federica CONTI",
+      "nome": "PICCHIO MAURIZIO",
+      "mese": "2024-10",
+      "turni": 57
+    },
+    {
+      "nome": "RAZZI SABINA",
       "mese": "2024-04",
-      "turni": 40
+      "turni": 24
     },
     {
-      "nome": "Federica CONTI",
-      "mese": "2024-05",
-      "turni": 44
-    },
-    {
-      "nome": "Federica CONTI",
-      "mese": "2024-06",
-      "turni": 9
-    },
-    {
-      "nome": "Federica CONTI",
-      "mese": "2024-07",
-      "turni": 36
-    },
-    {
-      "nome": "Federica CONTI",
-      "mese": "2024-09",
-      "turni": 31
-    },
-    {
-      "nome": "Elisabetta CORTESE",
-      "mese": "2024-04",
-      "turni": 3
-    },
-    {
-      "nome": "Elisabetta CORTESE",
+      "nome": "RAZZI SABINA",
       "mese": "2024-05",
       "turni": 16
     },
     {
-      "nome": "Elisabetta CORTESE",
+      "nome": "RAZZI SABINA",
       "mese": "2024-06",
-      "turni": 22
+      "turni": 16
     },
     {
-      "nome": "Elisabetta CORTESE",
-      "mese": "2024-07",
-      "turni": 29
+      "nome": "RAZZI SABINA",
+      "mese": "2024-10",
+      "turni": 56
     },
     {
-      "nome": "Elisabetta CORTESE",
-      "mese": "2024-08",
-      "turni": 3
+      "nome": "ROMA MANUELE",
+      "mese": "2024-01",
+      "turni": 21
     },
     {
-      "nome": "Andrea FABRICATORE",
+      "nome": "ROMA MANUELE",
+      "mese": "2024-02",
+      "turni": 26
+    },
+    {
+      "nome": "ROMA MANUELE",
+      "mese": "2024-03",
+      "turni": 19
+    },
+    {
+      "nome": "ROMA MANUELE",
+      "mese": "2024-04",
+      "turni": 44
+    },
+    {
+      "nome": "ROMA MANUELE",
       "mese": "2024-05",
-      "turni": 11
+      "turni": 49
     },
     {
-      "nome": "Andrea FABRICATORE",
+      "nome": "ROMA MANUELE",
+      "mese": "2024-06",
+      "turni": 48
+    },
+    {
+      "nome": "ROMA MANUELE",
+      "mese": "2024-07",
+      "turni": 31
+    },
+    {
+      "nome": "ROMA MANUELE",
+      "mese": "2024-08",
+      "turni": 8
+    },
+    {
+      "nome": "ROMA MANUELE",
+      "mese": "2024-09",
+      "turni": 23
+    },
+    {
+      "nome": "ROMA MANUELE",
+      "mese": "2024-10",
+      "turni": 39
+    },
+    {
+      "nome": "ROMEO SIMONA",
+      "mese": "2024-01",
+      "turni": 23
+    },
+    {
+      "nome": "ROMEO SIMONA",
+      "mese": "2024-02",
+      "turni": 45
+    },
+    {
+      "nome": "ROMEO SIMONA",
+      "mese": "2024-03",
+      "turni": 14
+    },
+    {
+      "nome": "ROMEO SIMONA",
+      "mese": "2024-04",
+      "turni": 28
+    },
+    {
+      "nome": "ROMEO SIMONA",
+      "mese": "2024-05",
+      "turni": 10
+    },
+    {
+      "nome": "ROMEO SIMONA",
       "mese": "2024-06",
       "turni": 7
     },
     {
-      "nome": "Andrea FABRICATORE",
+      "nome": "ROMEO SIMONA",
       "mese": "2024-07",
+      "turni": 30
+    },
+    {
+      "nome": "ROMEO SIMONA",
+      "mese": "2024-08",
       "turni": 3
     },
     {
-      "nome": "Elisabetta GIRARDI",
-      "mese": "2024-04",
-      "turni": 36
+      "nome": "ROMEO SIMONA",
+      "mese": "2024-09",
+      "turni": 39
     },
     {
-      "nome": "Elisabetta GIRARDI",
+      "nome": "ROMEO SIMONA",
+      "mese": "2024-10",
+      "turni": 35
+    },
+    {
+      "nome": "SAITTA FIORENZA",
       "mese": "2024-05",
-      "turni": 40
+      "turni": 5
     },
     {
-      "nome": "Elisabetta GIRARDI",
+      "nome": "SAITTA FIORENZA",
       "mese": "2024-06",
-      "turni": 28
+      "turni": 33
     },
     {
-      "nome": "Elisabetta GIRARDI",
+      "nome": "SAITTA FIORENZA",
       "mese": "2024-07",
-      "turni": 18
-    },
-    {
-      "nome": "Elisabetta GIRARDI",
-      "mese": "2024-08",
       "turni": 1
     },
     {
-      "nome": "Elisabetta GIRARDI",
-      "mese": "2024-09",
-      "turni": 22
-    },
-    {
-      "nome": "Francesca NICOLOSI",
-      "mese": "2024-04",
-      "turni": 29
-    },
-    {
-      "nome": "Francesca NICOLOSI",
-      "mese": "2024-05",
-      "turni": 44
-    },
-    {
-      "nome": "Francesca NICOLOSI",
-      "mese": "2024-06",
-      "turni": 36
-    },
-    {
-      "nome": "Francesca NICOLOSI",
-      "mese": "2024-07",
-      "turni": 42
-    },
-    {
-      "nome": "Francesca NICOLOSI",
+      "nome": "SAITTA FIORENZA",
       "mese": "2024-08",
-      "turni": 3
+      "turni": 2
     },
     {
-      "nome": "Francesca NICOLOSI",
-      "mese": "2024-09",
-      "turni": 34
-    },
-    {
-      "nome": "Jeanne PARLATO",
-      "mese": "2024-05",
-      "turni": 3
-    },
-    {
-      "nome": "Jeanne PARLATO",
-      "mese": "2024-07",
-      "turni": 4
-    },
-    {
-      "nome": "Maurizio PICCHIO",
-      "mese": "2024-04",
-      "turni": 39
-    },
-    {
-      "nome": "Maurizio PICCHIO",
-      "mese": "2024-05",
-      "turni": 39
-    },
-    {
-      "nome": "Maurizio PICCHIO",
-      "mese": "2024-06",
-      "turni": 31
-    },
-    {
-      "nome": "Maurizio PICCHIO",
-      "mese": "2024-07",
-      "turni": 37
-    },
-    {
-      "nome": "Maurizio PICCHIO",
-      "mese": "2024-08",
-      "turni": 43
-    },
-    {
-      "nome": "Maurizio PICCHIO",
-      "mese": "2024-09",
-      "turni": 27
-    },
-    {
-      "nome": "Manuele ROMA",
-      "mese": "2024-04",
-      "turni": 25
-    },
-    {
-      "nome": "Manuele ROMA",
-      "mese": "2024-05",
-      "turni": 45
-    },
-    {
-      "nome": "Manuele ROMA",
-      "mese": "2024-06",
-      "turni": 31
-    },
-    {
-      "nome": "Manuele ROMA",
-      "mese": "2024-07",
-      "turni": 41
-    },
-    {
-      "nome": "Manuele ROMA",
-      "mese": "2024-08",
-      "turni": 8
-    },
-    {
-      "nome": "Manuele ROMA",
-      "mese": "2024-09",
-      "turni": 12
-    },
-    {
-      "nome": "Simona ROMEO",
-      "mese": "2024-04",
+      "nome": "SAITTA FIORENZA",
+      "mese": "2024-10",
       "turni": 15
     },
     {
-      "nome": "Simona ROMEO",
-      "mese": "2024-05",
-      "turni": 9
-    },
-    {
-      "nome": "Simona ROMEO",
-      "mese": "2024-06",
-      "turni": 2
-    },
-    {
-      "nome": "Simona ROMEO",
-      "mese": "2024-07",
+      "nome": "SCACCO DE SANTIS MANUELA",
+      "mese": "2024-03",
       "turni": 14
     },
     {
-      "nome": "Simona ROMEO",
-      "mese": "2024-09",
-      "turni": 32
+      "nome": "SCACCO DE SANTIS MANUELA",
+      "mese": "2024-04",
+      "turni": 20
     },
     {
-      "nome": "Fiorenza SAITTA",
+      "nome": "SCACCO DE SANTIS MANUELA",
       "mese": "2024-05",
+      "turni": 22
+    },
+    {
+      "nome": "SCACCO DE SANTIS MANUELA",
+      "mese": "2024-06",
+      "turni": 3
+    },
+    {
+      "nome": "SCACCO DE SANTIS MANUELA",
+      "mese": "2024-09",
+      "turni": 5
+    },
+    {
+      "nome": "SCACCO DE SANTIS MANUELA",
+      "mese": "2024-10",
+      "turni": 17
+    },
+    {
+      "nome": "SIMONETTI MONICA",
+      "mese": "2024-04",
       "turni": 9
     },
     {
-      "nome": "Fiorenza SAITTA",
-      "mese": "2024-06",
-      "turni": 19
-    },
-    {
-      "nome": "Fiorenza SAITTA",
-      "mese": "2024-08",
-      "turni": 2
-    },
-    {
-      "nome": "Manuela SCACCO DE SANTIS",
-      "mese": "2024-04",
-      "turni": 19
-    },
-    {
-      "nome": "Manuela SCACCO DE SANTIS",
+      "nome": "SIMONETTI MONICA",
       "mese": "2024-05",
-      "turni": 16
+      "turni": 13
     },
     {
-      "nome": "Manuela SCACCO DE SANTIS",
+      "nome": "SIMONETTI MONICA",
       "mese": "2024-06",
-      "turni": 3
+      "turni": 34
     },
     {
-      "nome": "Manuela SCACCO DE SANTIS",
-      "mese": "2024-09",
-      "turni": 6
-    },
-    {
-      "nome": "Monica SIMONETTI",
-      "mese": "2024-04",
-      "turni": 8
-    },
-    {
-      "nome": "Monica SIMONETTI",
-      "mese": "2024-05",
-      "turni": 25
-    },
-    {
-      "nome": "Monica SIMONETTI",
-      "mese": "2024-06",
-      "turni": 21
-    },
-    {
-      "nome": "Monica SIMONETTI",
+      "nome": "SIMONETTI MONICA",
       "mese": "2024-07",
-      "turni": 28
+      "turni": 35
     },
     {
-      "nome": "Monica SIMONETTI",
+      "nome": "SIMONETTI MONICA",
       "mese": "2024-08",
+      "turni": 7
+    },
+    {
+      "nome": "SIMONETTI MONICA",
+      "mese": "2024-09",
       "turni": 1
     },
     {
-      "nome": "Monica SIMONETTI",
-      "mese": "2024-09",
-      "turni": 11
+      "nome": "TUCCINARDI WANDA",
+      "mese": "2024-02",
+      "turni": 2
     },
     {
-      "nome": "Wanda TUCCINARDI",
+      "nome": "TUCCINARDI WANDA",
       "mese": "2024-04",
       "turni": 3
-    },
-      {
-          "nome": "Alice CARBINI",
-          "mese": "2024-10",
-          "turni": 39
-      },
-      {
-          "nome": "Federica CONTI",
-          "mese": "2024-10",
-          "turni": 43
-      },
-      {
-          "nome": "Elisabetta CORTESE",
-          "mese": "2024-10",
-          "turni": 17
-      },
-      {
-          "nome": "Andrea FABRICATORE",
-          "mese": "2024-10",
-          "turni": 29
-      },
-      {
-          "nome": "Elisabetta GIRARDI",
-          "mese": "2024-10",
-          "turni": 41
-      },
-      {
-          "nome": "Francesca NICOLOSI",
-          "mese": "2024-10",
-          "turni": 45
-      },
-      {
-          "nome": "Jeanne PARLATO",
-          "mese": "2024-10",
-          "turni": 5
-      },
-      {
-          "nome": "Maurizio PICCHIO",
-          "mese": "2024-10",
-          "turni": 47
-      },
-      {
-          "nome": "Manuele ROMA",
-          "mese": "2024-10",
-          "turni": 31
-      },
-      {
-          "nome": "Simona ROMEO",
-          "mese": "2024-10",
-          "turni": 33
-      },
-      {
-          "nome": "Fiorenza SAITTA",
-          "mese": "2024-10",
-          "turni": 9
-      },
-      {
-          "nome": "Manuela SCACCO DE SANTIS",
-          "mese": "2024-10",
-          "turni": 14
-      }
-
-  
+    }
+    
   ];
   
   // Funzione per ottenere il conteggio dei turni per un periodo
