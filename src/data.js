@@ -20053,154 +20053,154 @@ export const foniciData = [
                                                                                 },
                                                                                 
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-04",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-04",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-04",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-04",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-04",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-04",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-04",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-04",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-04",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-04",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-04",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-04",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-04",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    nome: "MASSIMO LITTERIO MAGGIORE",
                                                                                     data: "2024-11-04",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    nome: "MASSIMO LITTERIO MAGGIORE",
                                                                                     data: "2024-11-04",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    nome: "MASSIMO LITTERIO MAGGIORE",
                                                                                     data: "2024-11-04",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-04",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    nome: "CLAUDIO CANNIZZARO",
                                                                                     data: "2024-11-04",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    nome: "CLAUDIO CANNIZZARO",
                                                                                     data: "2024-11-04",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    nome: "CLAUDIO CANNIZZARO",
                                                                                     data: "2024-11-04",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-04",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-04",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
@@ -20208,119 +20208,119 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-05",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-05",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-05",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-05",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-05",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-05",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-05",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    nome: "MASSIMO LITTERIO MAGGIORE",
                                                                                     data: "2024-11-05",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    nome: "MASSIMO LITTERIO MAGGIORE",
                                                                                     data: "2024-11-05",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-05",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    nome: "CLAUDIO CANNIZZARO",
                                                                                     data: "2024-11-05",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    nome: "CLAUDIO CANNIZZARO",
                                                                                     data: "2024-11-05",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    nome: "CLAUDIO CANNIZZARO",
                                                                                     data: "2024-11-05",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    nome: "MASSIMO LITTERIO MAGGIORE",
                                                                                     data: "2024-11-05",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-05",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-05",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-05",
                                                                                     turno: "12:30-13:30",
                                                                                     sala: "6 FIAMMA",
@@ -20328,98 +20328,98 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-06",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-06",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-06",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-06",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-06",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-06",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-06",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-06",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-06",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-06",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-06",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-06",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    nome: "CLAUDIO CANNIZZARO",
                                                                                     data: "2024-11-06",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    nome: "MASSIMO LITTERIO MAGGIORE",
                                                                                     data: "2024-11-06",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "10 GIULIA",
@@ -20427,112 +20427,112 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-07",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-07",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-07",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-07",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-07",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-07",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-07",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-07",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-07",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-07",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-07",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-07",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-07",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-07",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    nome: "CLAUDIO CANNIZZARO",
                                                                                     data: "2024-11-07",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-07",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "8 ROSSA",
@@ -20540,98 +20540,98 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-08",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-08",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-08",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-08",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-08",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-08",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-08",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-08",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-08",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-08",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-08",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-08",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-08",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-08",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
@@ -20639,112 +20639,112 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-11",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-11",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-11",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-11",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-11",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-11",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-11",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-11",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-11",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-11",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-11",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-11",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-11",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-11",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-11",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-11",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "6 FIAMMA",
@@ -20752,168 +20752,168 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-12",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-12",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-12",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-12",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-12",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-12",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-12",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-12",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-12",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-12",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-12",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-12",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-12",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-12",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-12",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-12",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-12",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-12",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-12",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-12",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-12",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-12",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-12",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-12",
                                                                                     turno: "19:30-22:30",
                                                                                     sala: "6 FIAMMA",
@@ -20921,119 +20921,119 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-13",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-13",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-13",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-13",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-13",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-13",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-13",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-13",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-13",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-13",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-13",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-13",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-13",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-13",
                                                                                     turno: "12:30-13:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-13",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-13",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-13",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "6 FIAMMA",
@@ -21041,154 +21041,154 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-14",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-14",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-14",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-14",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-14",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-14",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-14",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-14",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-14",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-14",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-14",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-14",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-14",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-14",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-14",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-14",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-14",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-14",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-14",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-14",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-14",
                                                                                     turno: "12:30-13:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-14",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
@@ -21196,119 +21196,119 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-15",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-15",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-15",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-15",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-15",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-15",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-15",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "8 ROSSA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-15",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-15",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-15",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-15",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-15",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-15",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-15",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-15",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-15",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-15",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
@@ -21316,21 +21316,21 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-16",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-16",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-16",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "6 FIAMMA",
@@ -21338,70 +21338,70 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-18",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-18",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-18",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-18",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-18",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-18",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-18",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-18",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-18",
                                                                                     turno: "12:30-13:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-18",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
@@ -21409,56 +21409,56 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-19",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-19",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-19",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-19",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-19",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-19",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-19",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-19",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
@@ -21466,77 +21466,77 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-20",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-20",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-20",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-20",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-20",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-20",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-20",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-20",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-20",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-20",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-20",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
@@ -21544,35 +21544,35 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-21",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-21",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-21",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-21",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-21",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
@@ -21580,35 +21580,35 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-22",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-22",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-22",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-22",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-22",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
@@ -21616,126 +21616,126 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-25",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-25",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-25",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-25",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-25",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-25",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-25",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-25",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-25",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-25",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-25",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-25",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-25",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-25",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-25",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-25",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-25",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-25",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "6 FIAMMA",
@@ -21743,140 +21743,140 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-26",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-26",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "10 GIULIA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-26",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-26",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-26",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-26",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-26",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-26",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-26",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-26",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-26",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-26",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-26",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-26",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MURGIA ALESSANDRO",
+                                                                                    nome: "ALESSANDRO MURGIA",
                                                                                     data: "2024-11-26",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "9 MYRIAM",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-26",
                                                                                     turno: "12:30-13:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-26",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-26",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "6 FIAMMA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    nome: "MASSIMO DE SANTIS",
                                                                                     data: "2024-11-26",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DACCO TOMMASO",
+                                                                                    nome: "TOMMASO DACCO",
                                                                                     data: "2024-11-26",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "6 FIAMMA",
@@ -21884,98 +21884,98 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-27",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-27",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-27",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-27",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-27",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-27",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-27",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-27",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-27",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-27",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-27",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-27",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-27",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-27",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
@@ -21983,105 +21983,105 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-28",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-28",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-28",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-28",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-28",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-28",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "3 SIMONA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-28",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-28",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    nome: "GIANANDREA ROSSI",
                                                                                     data: "2024-11-28",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    nome: "FEDERICO MANUTI",
                                                                                     data: "2024-11-28",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "5 GIUPPY",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-28",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-28",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "7 ROSSELLA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-28",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-28",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    nome: "VALENTINA CAPECCI",
                                                                                     data: "2024-11-28",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "5 GIUPPY",
@@ -22089,56 +22089,55 @@ export const foniciData = [
                                                                                   },
                                                                                 
                                                                                   {
-                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    nome: "GIANMARIA DINALLO",
                                                                                     data: "2024-11-29",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    nome: "RODOLFO CIUFFO",
                                                                                     data: "2024-11-29",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "2 STEFANO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-29",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-29",
                                                                                     turno: "9:30-12:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    nome: "ANTONIO GIORGIUCCI",
                                                                                     data: "2024-11-29",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "1 LAURA",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-29",
                                                                                     turno: "13:30-16:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   },
                                                                                   {
-                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    nome: "MASSIMO LOMBARDO",
                                                                                     data: "2024-11-29",
                                                                                     turno: "16:30-19:30",
                                                                                     sala: "4 FRANCESCO",
                                                                                     turni: 1
                                                                                   }
-                                                                                                                                                    
-                                                                                                                                                           
+                                                                                                 
                                                 ];
             
   // Aggiungi qui i dati reali provenienti dal report Excel
