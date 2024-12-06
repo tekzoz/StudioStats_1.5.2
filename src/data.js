@@ -20051,6 +20051,2093 @@ export const foniciData = [
                                                                                   sala: "6 FIAMMA",
                                                                                   turni: 1
                                                                                 },
+                                                                                
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-04",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-05",
+                                                                                    turno: "12:30-13:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MAGGIORE MASSIMO LITTERIO",
+                                                                                    data: "2024-11-06",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CANNIZZARO CLAUDIO",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-07",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-08",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-11",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-12",
+                                                                                    turno: "19:30-22:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "12:30-13:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-13",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "12:30-13:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-14",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "8 ROSSA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-15",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-16",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-16",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-16",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-18",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-18",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-18",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-18",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-18",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-18",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-18",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-18",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-18",
+                                                                                    turno: "12:30-13:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-18",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-19",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-19",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-19",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-19",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-19",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-19",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-19",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-19",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-20",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-20",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-20",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-20",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-20",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-20",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-20",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-20",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-20",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-20",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-20",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-21",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-21",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-21",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-21",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-21",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-22",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-22",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-22",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-22",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-22",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-25",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "10 GIULIA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MURGIA ALESSANDRO",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "9 MYRIAM",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "12:30-13:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DE SANTIS MASSIMO",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DACCO TOMMASO",
+                                                                                    data: "2024-11-26",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "6 FIAMMA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-27",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "3 SIMONA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "ROSSI GIANANDREA",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "MANUTI FEDERICO",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "7 ROSSELLA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CAPECCI VALENTINA",
+                                                                                    data: "2024-11-28",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "5 GIUPPY",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                
+                                                                                  {
+                                                                                    nome: "DINALLO GIANMARIA",
+                                                                                    data: "2024-11-29",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "CIUFFO RODOLFO",
+                                                                                    data: "2024-11-29",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "2 STEFANO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-29",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-29",
+                                                                                    turno: "9:30-12:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "GIORGIUCCI ANTONIO",
+                                                                                    data: "2024-11-29",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "1 LAURA",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-29",
+                                                                                    turno: "13:30-16:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  },
+                                                                                  {
+                                                                                    nome: "LOMBARDO MASSIMO",
+                                                                                    data: "2024-11-29",
+                                                                                    turno: "16:30-19:30",
+                                                                                    sala: "4 FRANCESCO",
+                                                                                    turni: 1
+                                                                                  }
+                                                                                                                                                    
                                                                                                                                                            
                                                 ];
             
