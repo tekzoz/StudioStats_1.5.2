@@ -541,7 +541,62 @@ export const assistentiData = [
           nome: "TUCCINARDI WANDA",
           mese: "2024-04",
           turni: 3
-        }
+        },
+                  {
+                    nome: "ALICE CARBINI",
+                    mese: "2024-11",
+                    turni: 12
+                  },
+          {
+                    nome: "ANDREA FABRICATORE",
+                    mese: "2024-11",
+                    turni: 30
+                  },
+          {
+                    nome: "DE SANTIS MANUELA SCACCO",
+                    mese: "2024-11",
+                    turni: 22
+                  },
+          {
+                    nome: "ELISABETTA CORTESE",
+                    mese: "2024-11",
+                    turni: 11
+                  },
+          {
+                    nome: "ELISABETTA GIRARDI",
+                    mese: "2024-11",
+                    turni: 32
+                  },
+          {
+                    nome: "FEDERICA CONTI",
+                    mese: "2024-11",
+                    turni: 22
+                  },
+          {
+                    nome: "FIORENZA SAITTA",
+                    mese: "2024-11",
+                    turni: 4
+                  },
+          {
+                    nome: "FRANCESCA NICOLOSI",
+                    mese: "2024-11",
+                    turni: 45
+                  },
+          {
+                    nome: "MANUELE ROMA",
+                    mese: "2024-11",
+                    turni: 31
+                  },
+          {
+                    nome: "MAURIZIO PICCHIO",
+                    mese: "2024-11",
+                    turni: 36
+                  },
+          {
+                    nome: "SIMONA ROMEO",
+                    mese: "2024-11",
+                    turni: 39
+                  }
 
   ];
   
