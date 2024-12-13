@@ -906,7 +906,106 @@ export const direttoriData = [
             "mese": "2024-10",
             "turni": 20
           },
-            
+            {
+                      "nome": "ANCIDONI ROSSELLA",
+                      "mese": "2024-11",
+                      "turni": 22
+                    },
+            {
+                      "nome": "AQUILONE FLAVIO",
+                      "mese": "2024-11",
+                      "turni": 4
+                    },
+            {
+                      "nome": "BALDINI ORESTE",
+                      "mese": "2024-11",
+                      "turni": 21
+                    },
+            {
+                      "nome": "BENASSI STEFANO",
+                      "mese": "2024-11",
+                      "turni": 28
+                    },
+            {
+                      "nome": "CAPUTO ARIANNA",
+                      "mese": "2024-11",
+                      "turni": 9
+                    },
+            {
+                      "nome": "CASTRACANE BARBARA",
+                      "mese": "2024-11",
+                      "turni": 12
+                    },
+            {
+                      "nome": "CATANIA GIULIA",
+                      "mese": "2024-11",
+                      "turni": 22
+                    },
+            {
+                      "nome": "CATANIA MYRIAM",
+                      "mese": "2024-11",
+                      "turni": 18
+                    },
+            {
+                      "nome": "CIGLIANO ALESSIO",
+                      "mese": "2024-11",
+                      "turni": 18
+                    },
+            {
+                      "nome": "COLTORTI JESUS EMILIANO",
+                      "mese": "2024-11",
+                      "turni": 4
+                    },
+            {
+                      "nome": "DE FLAVIIS FABRIZIO",
+                      "mese": "2024-11",
+                      "turni": 18
+                    },
+            {
+                      "nome": "IZZO FIAMMETTA",
+                      "mese": "2024-11",
+                      "turni": 50
+                    },
+            {
+                      "nome": "IZZO GIUSEPPINA",
+                      "mese": "2024-11",
+                      "turni": 25
+                    },
+            {
+                      "nome": "IZZO ROSSELLA",
+                      "mese": "2024-11",
+                      "turni": 12
+                    },
+            {
+                      "nome": "NICOLOSI FRANCESCA",
+                      "mese": "2024-11",
+                      "turni": 1
+                    },
+            {
+                      "nome": "SCOTTI GIULIA SONIA",
+                      "mese": "2024-11",
+                      "turni": 1
+                    },
+            {
+                      "nome": "VENDITTI FRANCESCO SAVERIO",
+                      "mese": "2024-11",
+                      "turni": 17
+                    },
+            {
+                      "nome": "VERSINO LUDOVICO",
+                      "mese": "2024-11",
+                      "turni": 3
+                    },
+            {
+                      "nome": "VIDALI VALERIA",
+                      "mese": "2024-11",
+                      "turni": 8
+                    },
+            {
+                      "nome": "WARD MONICA",
+                      "mese": "2024-11",
+                      "turni": 5
+                    }            
 ];
 
 export const getDirettoriTurnCountsForPeriod = (period) => {
