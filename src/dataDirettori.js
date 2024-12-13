@@ -905,8 +905,8 @@ export const direttoriData = [
             "nome": "PASQUERO GERMANA",
             "mese": "2024-10",
             "turni": 20
-          }        
-  
+          },
+            
 ];
 
 export const getDirettoriTurnCountsForPeriod = (period) => {
