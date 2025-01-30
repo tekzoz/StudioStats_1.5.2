@@ -596,8 +596,72 @@ export const assistentiData = [
                     nome: "SCACCO DE SANTIS MANUELA",
                     mese: "2024-11",
                     turni: 22
-                  }
-        
+                  },
+                    {
+                              nome: "CARBINI ALICE",
+                              mese: "2024-12",
+                              turni: 32
+                            },
+                    {
+                              nome: "CONTI FEDERICA",
+                              mese: "2024-12",
+                              turni: 24
+                            },
+                    {
+                              nome: "CORTESE ELISABETTA",
+                              mese: "2024-12",
+                              turni: 16
+                            },
+                    {
+                              nome: "FABRICATORE ANDREA",
+                              mese: "2024-12",
+                              turni: 24
+                            },
+                    {
+                              nome: "GIRARDI ELISABETTA",
+                              mese: "2024-12",
+                              turni: 43
+                            },
+                    {
+                              nome: "NICOLOSI FRANCESCA",
+                              mese: "2024-12",
+                              turni: 35
+                            },
+                    {
+                              nome: "PARLATO JEANNE",
+                              mese: "2024-12",
+                              turni: 2
+                            },
+                    {
+                              nome: "PICCHIO MAURIZIO",
+                              mese: "2024-12",
+                              turni: 35
+                            },
+                    {
+                              nome: "RAZZI SABINA",
+                              mese: "2024-12",
+                              turni: 17
+                            },
+                    {
+                              nome: "ROMA MANUELE",
+                              mese: "2024-12",
+                              turni: 40
+                            },
+                    {
+                              nome: "ROMEO SIMONA",
+                              mese: "2024-12",
+                              turni: 20
+                            },
+                    {
+                              nome: "SAITTA FIORENZA",
+                              mese: "2024-12",
+                              turni: 7
+                            },
+                    {
+                              nome: "SCACCO DE SANTIS MANUELA",
+                              mese: "2024-12",
+                              turni: 11
+                            }       
 
   ];
   
