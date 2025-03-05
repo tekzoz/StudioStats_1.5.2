@@ -1221,6 +1221,106 @@ export const direttoriData = [
                                           "mese": "2025-01",
                                           "turni": 25
                                         },
+                                          {
+                                                    "nome": "ANCIDONI ROSSELLA",
+                                                    "mese": "2025-02",
+                                                    "turni": 26
+                                                  },
+                                          {
+                                                    "nome": "BALDINI ANTONELLA",
+                                                    "mese": "2025-02",
+                                                    "turni": 1
+                                                  },
+                                          {
+                                                    "nome": "BALDINI ORESTE",
+                                                    "mese": "2025-02",
+                                                    "turni": 39
+                                                  },
+                                          {
+                                                    "nome": "BALDINI RITA",
+                                                    "mese": "2025-02",
+                                                    "turni": 5
+                                                  },
+                                          {
+                                                    "nome": "BENASSI STEFANO",
+                                                    "mese": "2025-02",
+                                                    "turni": 7
+                                                  },
+                                          {
+                                                    "nome": "CAPUTO ARIANNA",
+                                                    "mese": "2025-02",
+                                                    "turni": 18
+                                                  },
+                                          {
+                                                    "nome": "CASTRACANE BARBARA",
+                                                    "mese": "2025-02",
+                                                    "turni": 16
+                                                  },
+                                          {
+                                                    "nome": "CATANIA GIULIA",
+                                                    "mese": "2025-02",
+                                                    "turni": 50
+                                                  },
+                                          {
+                                                    "nome": "CATANIA MYRIAM",
+                                                    "mese": "2025-02",
+                                                    "turni": 14
+                                                  },
+                                          {
+                                                    "nome": "DE FLAVIIS FABRIZIO",
+                                                    "mese": "2025-02",
+                                                    "turni": 15
+                                                  },
+                                          {
+                                                    "nome": "IZZO FIAMMETTA",
+                                                    "mese": "2025-02",
+                                                    "turni": 16
+                                                  },
+                                          {
+                                                    "nome": "IZZO GIUSEPPINA",
+                                                    "mese": "2025-02",
+                                                    "turni": 17
+                                                  },
+                                          {
+                                                    "nome": "IZZO ROSSELLA",
+                                                    "mese": "2025-02",
+                                                    "turni": 39
+                                                  },
+                                          {
+                                                    "nome": "LATINI ILARIA",
+                                                    "mese": "2025-02",
+                                                    "turni": 20
+                                                  },
+                                          {
+                                                    "nome": "MARCUCCI NICOLA",
+                                                    "mese": "2025-02",
+                                                    "turni": 17
+                                                  },
+                                          {
+                                                    "nome": "PEZZULLI FRANCESCO",
+                                                    "mese": "2025-02",
+                                                    "turni": 2
+                                                  },
+                                          {
+                                                    "nome": "SCOTTI GIULIA SONIA",
+                                                    "mese": "2025-02",
+                                                    "turni": 4
+                                                  },
+                                          {
+                                                    "nome": "VENDITTI FRANCESCO SAVERIO",
+                                                    "mese": "2025-02",
+                                                    "turni": 7
+                                                  },
+                                          {
+                                                    "nome": "VERSINO LUDOVICO",
+                                                    "mese": "2025-02",
+                                                    "turni": 10
+                                                  },
+                                          {
+                                                    "nome": "WARD MONICA",
+                                                    "mese": "2025-02",
+                                                    "turni": 6
+                                                  },
                                 
 ];
 

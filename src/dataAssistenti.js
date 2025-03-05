@@ -716,7 +716,69 @@ export const assistentiData = [
                                         nome: "SAITTA FIORENZA",
                                         mese: "2025-01",
                                         turni: 2
-                                      }
+                                      },
+                                      
+                                        {
+                                                  nome: "CARBINI ALICE",
+                                                  mese: "2025-02",
+                                                  turni: 38
+                                                },
+                                        {
+                                                  nome: "CONTI FEDERICA",
+                                                  mese: "2025-02",
+                                                  turni: 23
+                                                },
+                                        {
+                                                  nome: "CORTESE ELISABETTA",
+                                                  mese: "2025-02",
+                                                  turni: 41
+                                                },
+                                        {
+                                                  nome: "FABRICATORE ANDREA",
+                                                  mese: "2025-02",
+                                                  turni: 54
+                                                },
+                                        {
+                                                  nome: "GIRARDI ELISABETTA",
+                                                  mese: "2025-02",
+                                                  turni: 36
+                                                },
+                                        {
+                                                  nome: "NICOLOSI FRANCESCA",
+                                                  mese: "2025-02",
+                                                  turni: 18
+                                                },
+                                        {
+                                                  nome: "Nicodemo Giovanna",
+                                                  mese: "2025-02",
+                                                  turni: 1
+                                                },
+                                        {
+                                                  nome: "PARLATO JEANNE",
+                                                  mese: "2025-02",
+                                                  turni: 6
+                                                },
+                                        {
+                                                  nome: "PICCHIO MAURIZIO",
+                                                  mese: "2025-02",
+                                                  turni: 32
+                                                },
+                                        {
+                                                  nome: "ROMA MANUELE",
+                                                  mese: "2025-02",
+                                                  turni: 33
+                                                },
+                                        {
+                                                  nome: "ROMEO SIMONA",
+                                                  mese: "2025-02",
+                                                  turni: 27
+                                                },
+                                        {
+                                                  nome: "SAITTA FIORENZA",
+                                                  mese: "2025-02",
+                                                  turni: 10
+                                                }
+                                        
                              
 
   ];
