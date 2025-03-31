@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { Share2, RefreshCw } from 'lucide-react';
+import { Share2, RefreshCw, Copy, ExternalLink } from 'lucide-react';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
 import { 
@@ -10,10 +10,10 @@ import {
   getAvailableYears
 } from './data';
 import { 
-  OPENAI_API_URL, 
-  OPENAI_API_KEY, 
-  getOpenAIRequestConfig 
-} from './openaiConfig';
+  GEMINI_API_URL, 
+  GEMINI_API_KEY, 
+  getGeminiRequestConfig 
+} from './geminiConfig';
 
 // Styled components (invariati)
 
@@ -299,60 +299,55 @@ const generateColorPalette = (numColors) => {
   );
 };
 
-// Funzione reale per la chiamata API (sostituisce la versione mock)
-const fetchOpenAIAnalysis = async (prompt) => {
+// Nuova funzione per l'API Gemini
+const fetchGeminiAnalysis = async (prompt) => {
   // Se non è stata configurata la chiave API, mostra un errore
-  if (OPENAI_API_KEY === 'INSERISCI_LA_TUA_CHIAVE_API_QUI') {
-    return `# ⚠️ Configurazione API OpenAI richiesta
+  if (GEMINI_API_KEY === 'LA_TUA_CHIAVE_API') {
+    return `# ⚠️ Configurazione API Gemini richiesta
 
-Per utilizzare questa funzionalità, è necessario configurare una chiave API OpenAI valida.
+Per utilizzare questa funzionalità, è necessario configurare una chiave API Gemini valida.
 
 ## Istruzioni per la configurazione:
 
-1. Ottieni una chiave API da [OpenAI](https://platform.openai.com)
-2. Apri il file \`src/openaiConfig.js\`
-3. Sostituisci \`INSERISCI_LA_TUA_CHIAVE_API_QUI\` con la tua chiave API
-4. Salva il file e riavvia l'applicazione
-
-Una volta configurato, potrai generare analisi dettagliate e personalizzate basate sui dati dello studio.`;
+1. Ottieni una chiave API da [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Apri il file \`src/geminiConfig.js\`
+3. Sostituisci \`LA_TUA_CHIAVE_API\` con la tua chiave API
+4. Salva il file e riavvia l'applicazione`;
   }
 
   try {
     // Crea la configurazione completa della richiesta
-    const requestConfig = getOpenAIRequestConfig(prompt);
-    
-    // Imposta gli headers con l'autenticazione
-    const headers = {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${OPENAI_API_KEY}`
-    };
+    const requestConfig = getGeminiRequestConfig(prompt);
     
     // Effettua la chiamata API
-    const response = await axios.post(OPENAI_API_URL, requestConfig, { headers });
+    const response = await axios.post(
+      `${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, 
+      requestConfig
+    );
     
     // Estrai e restituisci il testo generato
-    return response.data.choices[0].message.content;
+    return response.data.candidates[0].content.parts[0].text;
   } catch (error) {
-    console.error('Errore nella chiamata API OpenAI:', error);
+    console.error('Errore nella chiamata API Gemini:', error);
     
     // Gestisci gli errori comuni
     if (error.response) {
       // Errori di autenticazione
       if (error.response.status === 401) {
-        return "# ⚠️ Errore di autenticazione\n\nLa chiave API OpenAI non è valida. Verifica la tua chiave in `src/openaiConfig.js`.";
+        return "# ⚠️ Errore di autenticazione\n\nLa chiave API Gemini non è valida. Verifica la tua chiave in `src/geminiConfig.js`.";
       }
       
       // Errori di quota o limiti
       if (error.response.status === 429) {
-        return "# ⚠️ Limite di richieste superato\n\nHai superato il limite di richieste per la tua chiave API OpenAI. Riprova più tardi o verifica il tuo piano di abbonamento.";
+        return "# ⚠️ Limite di richieste superato\n\nHai superato il limite di richieste per la tua chiave API Gemini. Riprova più tardi.";
       }
       
       // Altri errori
-      return `# ⚠️ Errore nella chiamata API\n\nSi è verificato un errore (${error.response.status}) durante la chiamata all'API OpenAI. Dettagli: ${error.response.data.error?.message || 'Errore sconosciuto'}`;
+      return `# ⚠️ Errore nella chiamata API\n\nSi è verificato un errore (${error.response.status}) durante la chiamata all'API Gemini. Dettagli: ${error.response.data.error?.message || 'Errore sconosciuto'}`;
     }
     
     // Errori di rete o di altro tipo
-    return "# ⚠️ Errore di connessione\n\nNon è stato possibile contattare l'API OpenAI. Controlla la tua connessione internet e riprova.";
+    return "# ⚠️ Errore di connessione\n\nNon è stato possibile contattare l'API Gemini. Controlla la tua connessione internet e riprova.";
   }
 };
 
@@ -361,7 +356,7 @@ const generateSimulatedAnalysis = (yearToAnalyze, currentMonth, totalTurni, aver
   const month = currentMonth > 1 ? currentMonth - 1 : 12;
   return `# Analisi della Performance Studio Pumaisdue - ${yearToAnalyze} (SIMULAZIONE)
 
-> ⚠️ **Nota**: Questa è un'analisi simulata generata localmente perché l'API OpenAI non è attualmente disponibile a causa di limiti di utilizzo.
+> ⚠️ **Nota**: Questa è un'analisi simulata generata localmente perché l'API Gemini non è attualmente disponibile a causa di limiti di utilizzo.
 
 ## Riepilogo Esecutivo
 L'analisi dei dati di performance fino a ${getMonthName(month)} ${yearToAnalyze} mostra una tendenza complessivamente positiva rispetto agli anni precedenti. La produttività, misurata in turni di lavoro (${totalTurni} turni totali), evidenzia un andamento stagionale con picchi nel periodo primaverile e autunnale.
@@ -386,8 +381,8 @@ Per ottimizzare ulteriormente la performance, suggeriamo di:
 
 ## Nota Tecnica
 Per utilizzare l'analisi AI reale:
-1. Attendi che i limiti di richieste OpenAI si azzerino (solitamente dopo alcune ore)
-2. Considera l'aggiornamento del tuo piano OpenAI per limiti più elevati
+1. Attendi che i limiti di richieste Gemini si azzerino (solitamente dopo alcune ore)
+2. Considera l'aggiornamento del tuo piano Gemini per limiti più elevati
 3. Implementa strategie di caching per ridurre le chiamate API necessarie
 
 ---
@@ -638,7 +633,7 @@ const PerformanceTrendView = ({ setView }) => {
     setIsGeneratingAnalysis(true);
     
     try {
-      // Prepara i dati per l'API OpenAI
+      // Prepara i dati per l'API Gemini
       const year = currentYear;
       const month = currentMonth > 1 ? currentMonth - 1 : 12;
       const yearToAnalyze = month === 12 ? year - 1 : year;
@@ -707,33 +702,52 @@ const PerformanceTrendView = ({ setView }) => {
       
       // Prepara il prompt per l'API
       const prompt = `
-        Sei un esperto analista di dati per uno studio di doppiaggio chiamato Studio Pumaisdue. Analizza i seguenti dati sui turni di lavoro e fornisci un report dettagliato in italiano.
+        Sei un esperto analista di dati del settore audiovisivo con specifiche competenze nel doppiaggio. La tua analisi è richiesta dallo Studio Pumaisdue, un prestigioso studio di doppiaggio italiano. Esamina attentamente i seguenti dati sui turni di lavoro e produci un report strategico dettagliato.
         
+        ===DATI DI BASE===
         Anno in analisi: ${yearToAnalyze}
         Mese attuale: ${getMonthName(month)}
-        Turni totali fino ad ora: ${totalTurni}
+        Turni totali completati fino a ${getMonthName(month)}: ${totalTurni}
         Media mensile dei turni: ${averageMonthlyTurni.toFixed(2)}
         
-        Dati mensili per l'anno ${yearToAnalyze}:
-        ${JSON.stringify(currentYearMonthly)}
+        ===DATI MENSILI DETTAGLIATI PER L'ANNO ${yearToAnalyze}===
+        ${JSON.stringify(currentYearMonthly, null, 2)}
         
-        Dati degli anni precedenti:
-        ${JSON.stringify(previousYearsData)}
+        ===DATI STORICI DEGLI ANNI PRECEDENTI===
+        ${JSON.stringify(previousYearsData, null, 2)}
         
-        Fornisci un'analisi approfondita che includa:
-        1. Riepilogo esecutivo: breve panoramica della performance attuale
-        2. Confronto dettagliato con gli anni precedenti
-        3. Tendenze stagionali: pattern nei dati su base trimestrale
-        4. Previsioni per il resto dell'anno: stima della produttività totale
-        5. Raccomandazioni concrete per migliorare la performance
-        6. Identificazione di anomalie o pattern particolari nei dati
+        La tua analisi deve essere COMPLETA e APPROFONDITA, includendo:
         
-        Formatta il tuo report utilizzando Markdown con sezioni ben definite da titoli e sottotitoli. Il testo dovrebbe essere professionale, dettagliato e orientato all'azione, scritto in un linguaggio chiaro e diviso in paragrafi per facilitare la lettura.
+        1. **RIEPILOGO ESECUTIVO**: Una panoramica concisa della performance attuale con punti chiave per il management.
+        
+        2. **ANALISI COMPARATIVA**: Un confronto dettagliato con gli anni precedenti, includendo:
+           - Variazioni percentuali mese per mese
+           - Trend di crescita/diminuzione
+           - Posizionamento dell'anno corrente rispetto alla storia dello studio
+        
+        3. **ANALISI STAGIONALE**:
+           - Pattern trimestrali e mensili identificabili
+           - Identificazione di periodi di alta/bassa produttività
+           - Confronto della stagionalità con gli anni precedenti
+        
+        4. **PREVISIONI FUTURE**:
+           - Proiezione dettagliata per i mesi rimanenti dell'anno
+           - Stima della produttività annuale totale attesa
+           - Considerazioni sui fattori esterni che potrebbero influenzare le previsioni
+        
+        5. **APPROFONDIMENTO SULLE ANOMALIE**:
+           - Identificazione di periodi o trend anomali nei dati
+           - Possibili spiegazioni per queste anomalie
+           - Strategie per affrontare o trarre vantaggio da questi pattern
+        
+        Formatta il tuo report in Markdown con una struttura chiara e professionale. Usa titoli (##), sottotitoli (###), elenchi puntati e, dove appropriato, enfasi (**testo**) per evidenziare concetti chiave. Il linguaggio deve essere professionale ma accessibile, orientato all'azione e specifico per il settore del doppiaggio.
+        
+        Lo studio utilizzerà questo report per decisioni strategiche importanti, quindi sii preciso, obiettivo e fornisci informazioni che possano realmente guidare il processo decisionale.
       `;
       
       try {
-        // Chiama l'API OpenAI reale
-        const response = await fetchOpenAIAnalysis(prompt);
+        // Chiama l'API Gemini
+        const response = await fetchGeminiAnalysis(prompt);
         
         // Verifica se c'è stato un errore di rate limit
         if (response.includes("Limite di richieste superato")) {
@@ -813,6 +827,63 @@ const PerformanceTrendView = ({ setView }) => {
       }).catch(console.error);
     } else {
       alert("La condivisione non è supportata su questo browser. Copia e incolla il testo seguente:\n\n" + shareText);
+    }
+  };
+
+  // Funzione per copiare il report negli appunti
+  const copyReportToClipboard = () => {
+    try {
+      // Recupera solo il testo senza formattazione Markdown
+      const plainText = aiAnalysis.replace(/#{1,6}\s(.*)/g, '$1\n')  // Rimuove i simboli # per i titoli
+                               .replace(/\*\*(.*?)\*\*/g, '$1')      // Rimuove i ** per il grassetto
+                               .replace(/\_(.*?)\_/g, '$1')          // Rimuove _ per il corsivo
+                               .replace(/\[(.*?)\]\((.*?)\)/g, '$1 ($2)'); // Converte i link in formato testo
+      
+      navigator.clipboard.writeText(plainText)
+        .then(() => {
+          alert('Report copiato negli appunti!');
+        })
+        .catch(err => {
+          console.error('Errore durante la copia negli appunti:', err);
+          alert('Impossibile copiare il report. Controlla le autorizzazioni del browser.');
+        });
+    } catch (error) {
+      console.error('Errore nella formattazione del testo:', error);
+    }
+  };
+  
+  // Funzione per condividere il report sui social
+  const shareReportOnSocial = () => {
+    // Crea un titolo per la condivisione
+    const title = `Analisi Performance Studio Pumaisdue - ${currentYear}`;
+    
+    // Testo breve per la condivisione
+    const summary = `Analisi delle performance dello Studio Pumaisdue per l'anno ${currentYear}. Dati aggiornati al ${getMonthName(currentMonth)}.`;
+    
+    // Usa l'API Web Share se disponibile
+    if (navigator.share) {
+      navigator.share({
+        title: title,
+        text: summary,
+        // Nota: non includiamo una URL perché questo è un'app locale
+      })
+      .then(() => console.log('Condivisione completata'))
+      .catch((error) => console.error('Errore durante la condivisione:', error));
+    } else {
+      // Fallback per browser che non supportano Web Share API
+      const socialText = `${title}\n\n${summary}\n\nDati analizzati con StudioStats.`;
+      
+      // Apre una finestra di dialogo per copiare il testo
+      const result = window.confirm(
+        'La condivisione diretta non è supportata in questo browser. ' +
+        'Vuoi copiare il testo per condividerlo manualmente?'
+      );
+      
+      if (result) {
+        navigator.clipboard.writeText(socialText)
+          .then(() => alert('Testo copiato negli appunti! Ora puoi incollarlo sul social che preferisci.'))
+          .catch(err => console.error('Errore durante la copia:', err));
+      }
     }
   };
 
@@ -901,7 +972,7 @@ const PerformanceTrendView = ({ setView }) => {
                 </ReactMarkdown>
               </MarkdownContent>
               
-              <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
+              <div style={{ display: 'flex', gap: '12px', marginTop: '16px', flexWrap: 'wrap' }}>
                 <Button 
                   onClick={() => generateAIAnalysis(true)} 
                   disabled={isGeneratingAnalysis}
@@ -916,12 +987,28 @@ const PerformanceTrendView = ({ setView }) => {
                     </>
                   )}
                 </Button>
+                
+                <Button 
+                  onClick={copyReportToClipboard}
+                  disabled={isGeneratingAnalysis}
+                  style={{ backgroundColor: '#4CAF50' }}
+                >
+                  <Copy size={18} /> Copia report
+                </Button>
+                
+                <Button 
+                  onClick={shareReportOnSocial}
+                  disabled={isGeneratingAnalysis}
+                  style={{ backgroundColor: '#2196F3' }}
+                >
+                  <ExternalLink size={18} /> Condividi report
+                </Button>
               </div>
             </div>
           ) : (
             <div>
               <p>Genera un'analisi dettagliata sull'anno in corso utilizzando l'intelligenza artificiale.</p>
-              <p>Questa funzionalità utilizza l'API OpenAI per analizzare i dati e fornire insight approfonditi.</p>
+              <p>Questa funzionalità utilizza l'API Gemini per analizzare i dati e fornire insight approfonditi.</p>
               
               <Button 
                 onClick={() => generateAIAnalysis(false)} 
