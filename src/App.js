@@ -4,12 +4,12 @@ import LastMonthView from './LastMonthView';
 import LastYearView from './LastYearView';
 import CompareMonthsView from './CompareMonthsView';
 import CompareYearsView from './CompareYearsView';
-import DataInputView from './DataInputView';
 import InformationView from './InformationView';
 import StatisticheFonici from './StatisticheFonici';
 import PerformanceTrendView from './PerformanceTrendView';
 import StatisticheAssistenti from './StatisticheAssistenti'; // Importazione aggiunta
 import StatisticheDirettori from './StatisticheDirettori';   // Importazione aggiunta
+import RejectionAnalyzerView from './RejectionAnalyzerView'; // Importazione aggiunta
 
 const App = () => {
   const [currentView, setCurrentView] = React.useState('main');
@@ -26,8 +26,6 @@ const App = () => {
         return <CompareMonthsView setView={setCurrentView} />;
       case 'compareYears':
         return <CompareYearsView setView={setCurrentView} />;
-      case 'dataInput':
-        return <DataInputView setView={setCurrentView} />;
       case 'information':
         return <InformationView setView={setCurrentView} />;
       case 'statisticheFonici':
@@ -38,6 +36,8 @@ const App = () => {
         return <StatisticheAssistenti setView={setCurrentView} />; // Caso aggiunto
       case 'statisticheDirettori':
         return <StatisticheDirettori setView={setCurrentView} />;  // Caso aggiunto
+      case 'rejectionAnalyzer':
+        return <RejectionAnalyzerView setView={setCurrentView} />; // Caso aggiunto
       default:
         return <MainView setView={setCurrentView} />;
     }

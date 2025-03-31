@@ -1,0 +1,94 @@
+{
+    "qc_report_data": {
+      "updated_on": "2025-03-31",
+      "description": "Cumulative QC audio data from Jan 2025 onwards",
+      "notes": "Tutti i dati si riferiscono a errori audio-only; aggiornamento manuale mensile."
+    },
+    "months": [
+      {
+        "year": 2025,
+        "month": 1,
+        "projects_analyzed": 10,
+        "total_rejections": 40,
+        "rejections_severity_3": 12,
+        "top_error_types": [
+          { "type": "Missing Dialogue", "occurrences": 10 },
+          { "type": "Dialogue sync – long", "occurrences": 8 },
+          { "type": "Extraneous efforts", "occurrences": 6 },
+          { "type": "True peak out of spec", "occurrences": 3 },
+          { "type": "Pop, tick, click", "occurrences": 3 }
+        ],
+        "top_projects_by_errors": [
+          {
+            "project_name": "Newtopia",
+            "episodes_counted": 3,
+            "total_errors": 15,
+            "severity_3_errors": 5
+          },
+          {
+            "project_name": "House of David",
+            "episodes_counted": 2,
+            "total_errors": 10,
+            "severity_3_errors": 3
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "projects_analyzed": 15,
+        "total_rejections": 52,
+        "rejections_severity_3": 14,
+        "top_error_types": [
+          { "type": "Missing Dialogue", "occurrences": 12 },
+          { "type": "Dialogue sync – long", "occurrences": 9 },
+          { "type": "Extraneous efforts", "occurrences": 7 },
+          { "type": "Missing walla", "occurrences": 5 },
+          { "type": "Pop, tick, click", "occurrences": 3 }
+        ],
+        "top_projects_by_errors": [
+          {
+            "project_name": "Newtopia",
+            "episodes_counted": 4,
+            "total_errors": 18,
+            "severity_3_errors": 7
+          },
+          {
+            "project_name": "House of David",
+            "episodes_counted": 3,
+            "total_errors": 12,
+            "severity_3_errors": 4
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "projects_analyzed": 12,
+        "total_rejections": 50,
+        "rejections_severity_3": 15,
+        "top_error_types": [
+          { "type": "Missing Dialogue", "occurrences": 10 },
+          { "type": "Dialogue sync – long", "occurrences": 8 },
+          { "type": "True peak out of spec", "occurrences": 3 },
+          { "type": "Extraneous efforts", "occurrences": 3 },
+          { "type": "Pop, tick, click", "occurrences": 2 }
+        ],
+        "top_projects_by_errors": [
+          {
+            "project_name": "Another Simple Favor",
+            "episodes_counted": 1,
+            "total_errors": 8,
+            "severity_3_errors": 2
+          },
+          {
+            "project_name": "Primos",
+            "episodes_counted": 2,
+            "total_errors": 12,
+            "severity_3_errors": 3
+          }
+        ]
+      }
+    ]
+  }
+  

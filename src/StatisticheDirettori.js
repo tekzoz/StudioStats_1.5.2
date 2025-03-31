@@ -52,6 +52,18 @@ const StatisticheDirettori = ({ setView }) => {
           </div>
         </Grid>
       </Content>
+      
+      {/* Footer */}
+      <div style={{
+        textAlign: 'center',
+        marginTop: '30px',
+        paddingTop: '20px',
+        borderTop: '1px solid #e5e7eb',
+        fontSize: '14px',
+        color: '#6b7280',
+      }}>
+        <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</p>
+      </div>
     </Container>
   );
 };

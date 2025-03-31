@@ -210,7 +210,7 @@ const LandingPage = ({ onEnter }) => {
             <EnterButton onClick={onEnter}>Entra nella Dashboard</EnterButton>
             <AdditionalInfo>
               Per una migliore esperienza, ruotare il telefono in orizzontale.<br />
-              Versione 1.2.2
+              Versione 1.6.0
             </AdditionalInfo>
           </ContentWrapper>
         )}

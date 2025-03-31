@@ -81,6 +81,26 @@ const LastMonthView = ({ setView }) => {
     year: displayYear
   };
 
+  // Calcolo la percentuale di utilizzo delle sale
+  // Assumo che ogni turno sia di 3 ore, con 10 sale disponibili e 3 fasce orarie (9 ore al giorno)
+  const maxTurniGiornalieri = 10 * 3; // 10 sale * 3 fasce orarie = 30 turni massimi giornalieri
+  const percentualeUtilizzo = (latestMonthData.mediaGiornaliera / maxTurniGiornalieri) * 100;
+  
+  // Arrotondo la percentuale al numero intero più vicino
+  const percentualeUtilizzoArrotondata = Math.round(percentualeUtilizzo);
+  
+  // Confronto con il mese precedente e la media annuale
+  const utilizzoMesePrecedente = (previousMonthData.mediaGiornaliera / maxTurniGiornalieri) * 100;
+  const utilizzoMediaAnnuale = ((annualAverageData.mediaAnnuale / 30) / maxTurniGiornalieri) * 100;
+  
+  const comparisonDataUtilizzo = {
+    prevMonth: calculateComparison(percentualeUtilizzoArrotondata, Math.round(utilizzoMesePrecedente)),
+    annual: calculateComparison(percentualeUtilizzoArrotondata, Math.round(utilizzoMediaAnnuale)),
+    prevMonthName: previousMonthName,
+    prevMonthYear: previousMonthYear,
+    year: displayYear
+  };
+
   const stats = [
     { 
       icon: <Calendar />, 
@@ -99,7 +119,18 @@ const LastMonthView = ({ setView }) => {
     { 
       icon: <Gauge />, 
       label: 'Utilizzo delle Sale di Doppiaggio', 
-      component: <PerformanceGauge value={roundToHalf(latestMonthData.mediaGiornaliera)} />,
+      component: (
+        <div>
+          <PerformanceGauge value={percentualeUtilizzoArrotondata} maxValue={100} />
+          <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '36px', fontWeight: 'bold', color: '#1F2937' }}>
+            {percentualeUtilizzoArrotondata}%
+          </div>
+          <div style={{ textAlign: 'center', fontSize: '14px', color: '#6B7280', marginTop: '4px' }}>
+            Media di {roundToHalf(latestMonthData.mediaGiornaliera).toFixed(1)} turni su {maxTurniGiornalieri} possibili
+          </div>
+        </div>
+      ),
+      comparison: comparisonDataUtilizzo,
       backgroundColor: '#F0E6FF'
     },
   ];
@@ -158,6 +189,18 @@ const LastMonthView = ({ setView }) => {
           {stats.map((stat, index) => (
             <StatCard key={index} {...stat} />
           ))}
+        </div>
+        
+        {/* Footer */}
+        <div style={{
+          textAlign: 'center',
+          marginTop: '30px',
+          paddingTop: '20px',
+          borderTop: '1px solid #e5e7eb',
+          fontSize: '14px',
+          color: '#6b7280',
+        }}>
+          <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</p>
         </div>
       </div>
     </div>

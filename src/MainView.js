@@ -8,7 +8,7 @@ import {
   PerformanceTrendIcon,
   InformationIcon,
 } from './Icons';
-import { PlusCircle, Mic, User, Users } from 'lucide-react'; // Importa le nuove icone
+import { PlusCircle, Mic, User, Users, AlertTriangle } from 'lucide-react'; // Importa le nuove icone
 
 const DashboardContainer = styled.div`
   background-color: #f0f9ff;
@@ -71,8 +71,8 @@ const DashboardCard = styled.div`
   aspect-ratio: 1 / 1;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s, opacity 0.3s, scale 0.3s;
-  opacity: ${(props) => (props.isVisible ? 1 : 0)};
-  scale: ${(props) => (props.isVisible ? 1 : 0.8)};
+  opacity: ${(props) => (props.$isVisible ? 1 : 0)};
+  scale: ${(props) => (props.$isVisible ? 1 : 0.8)};
 
   &:hover {
     transform: translateY(-5px);
@@ -168,16 +168,16 @@ const MainView = ({ setView }) => {
       onClick: () => setView('performanceTrend'),
     },
     {
+      icon: <AlertTriangle size="100%" color="#d97706" />,
+      label: 'Rejection Analyzer',
+      color: '#FEF3C7',
+      onClick: () => setView('rejectionAnalyzer'),
+    },
+    {
       icon: <InformationIcon />,
       label: 'Informazioni',
       color: '#E0E7FF',
       onClick: () => setView('information'),
-    },
-    {
-      icon: <PlusCircle size="100%" />,
-      label: 'Inserisci Dati',
-      color: '#FDE68A',
-      onClick: () => setView('dataInput'),
     },
   ];
 
@@ -219,7 +219,7 @@ const MainView = ({ setView }) => {
               key={index}
               color={card.color}
               onClick={card.onClick}
-              isVisible={visibleCards.includes(index)}
+              $isVisible={visibleCards.includes(index)}
               role="button"
               aria-label={card.label}
             >
@@ -229,7 +229,7 @@ const MainView = ({ setView }) => {
           ))}
         </DashboardGrid>
       </DashboardContent>
-      <Footer>&copy; 2024 Marco Augusto Comba | Versione 1.5.1</Footer>
+      <Footer>&copy; StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</Footer>
     </DashboardContainer>
   );
 };

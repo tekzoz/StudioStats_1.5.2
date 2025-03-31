@@ -1,12 +1,19 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { Share2 } from 'lucide-react';
+import { Share2, RefreshCw } from 'lucide-react';
+import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 import { 
   getYearlyData, 
   getCurrentYearAndMonth,
   getAvailableYears
 } from './data';
+import { 
+  OPENAI_API_URL, 
+  OPENAI_API_KEY, 
+  getOpenAIRequestConfig 
+} from './openaiConfig';
 
 // Styled components (invariati)
 
@@ -20,6 +27,51 @@ const ViewContainer = styled.div`
 const ViewContent = styled.div`
   max-width: 1200px;
   margin: 0 auto;
+`;
+
+const BackRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+`;
+
+const BackButton = styled.button`
+  background-color: #E0E7FF;
+  color: #4B5563;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #C7D2FE;
+  }
+`;
+
+const ShareButton = styled.button`
+  background-color: #3B82F6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #2563EB;
+  }
 `;
 
 const ViewTitle = styled.h1`
@@ -113,21 +165,119 @@ const Button = styled.button`
   background-color: #3B82F6;
   color: white;
   border: none;
-  border-radius: 8px;
-  padding: 12px 24px;
+  border-radius: 6px;
+  padding: 10px 16px;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.2s;
   display: flex;
   align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  transition: background-color 0.2s;
 
   &:hover {
     background-color: #2563EB;
   }
 
-  svg {
-    margin-right: 8px;
+  &:disabled {
+    background-color: #93C5FD;
+    cursor: not-allowed;
+  }
+`;
+
+const LoadingSpinner = styled.div`
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+`;
+
+const MarkdownContent = styled.div`
+  font-size: 16px;
+  line-height: 1.6;
+  color: #4B5563;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    color: #1F2937;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    color: #1F2937;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color: #1F2937;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  ul, ol {
+    margin-bottom: 16px;
+    padding-left: 24px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  strong {
+    font-weight: 600;
+    color: #1F2937;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  a {
+    color: #3B82F6;
+    text-decoration: underline;
+  }
+
+  blockquote {
+    border-left: 4px solid #E5E7EB;
+    padding-left: 16px;
+    margin-left: 0;
+    margin-right: 0;
+    font-style: italic;
+    color: #6B7280;
+  }
+
+  code {
+    font-family: monospace;
+    background-color: #F3F4F6;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #E5E7EB;
+    margin: 24px 0;
   }
 `;
 
@@ -149,10 +299,149 @@ const generateColorPalette = (numColors) => {
   );
 };
 
+// Funzione reale per la chiamata API (sostituisce la versione mock)
+const fetchOpenAIAnalysis = async (prompt) => {
+  // Se non è stata configurata la chiave API, mostra un errore
+  if (OPENAI_API_KEY === 'INSERISCI_LA_TUA_CHIAVE_API_QUI') {
+    return `# ⚠️ Configurazione API OpenAI richiesta
+
+Per utilizzare questa funzionalità, è necessario configurare una chiave API OpenAI valida.
+
+## Istruzioni per la configurazione:
+
+1. Ottieni una chiave API da [OpenAI](https://platform.openai.com)
+2. Apri il file \`src/openaiConfig.js\`
+3. Sostituisci \`INSERISCI_LA_TUA_CHIAVE_API_QUI\` con la tua chiave API
+4. Salva il file e riavvia l'applicazione
+
+Una volta configurato, potrai generare analisi dettagliate e personalizzate basate sui dati dello studio.`;
+  }
+
+  try {
+    // Crea la configurazione completa della richiesta
+    const requestConfig = getOpenAIRequestConfig(prompt);
+    
+    // Imposta gli headers con l'autenticazione
+    const headers = {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${OPENAI_API_KEY}`
+    };
+    
+    // Effettua la chiamata API
+    const response = await axios.post(OPENAI_API_URL, requestConfig, { headers });
+    
+    // Estrai e restituisci il testo generato
+    return response.data.choices[0].message.content;
+  } catch (error) {
+    console.error('Errore nella chiamata API OpenAI:', error);
+    
+    // Gestisci gli errori comuni
+    if (error.response) {
+      // Errori di autenticazione
+      if (error.response.status === 401) {
+        return "# ⚠️ Errore di autenticazione\n\nLa chiave API OpenAI non è valida. Verifica la tua chiave in `src/openaiConfig.js`.";
+      }
+      
+      // Errori di quota o limiti
+      if (error.response.status === 429) {
+        return "# ⚠️ Limite di richieste superato\n\nHai superato il limite di richieste per la tua chiave API OpenAI. Riprova più tardi o verifica il tuo piano di abbonamento.";
+      }
+      
+      // Altri errori
+      return `# ⚠️ Errore nella chiamata API\n\nSi è verificato un errore (${error.response.status}) durante la chiamata all'API OpenAI. Dettagli: ${error.response.data.error?.message || 'Errore sconosciuto'}`;
+    }
+    
+    // Errori di rete o di altro tipo
+    return "# ⚠️ Errore di connessione\n\nNon è stato possibile contattare l'API OpenAI. Controlla la tua connessione internet e riprova.";
+  }
+};
+
+// Funzione fallback per generare un'analisi simulata quando l'API è in rate limit
+const generateSimulatedAnalysis = (yearToAnalyze, currentMonth, totalTurni, averageMonthlyTurni) => {
+  const month = currentMonth > 1 ? currentMonth - 1 : 12;
+  return `# Analisi della Performance Studio Pumaisdue - ${yearToAnalyze} (SIMULAZIONE)
+
+> ⚠️ **Nota**: Questa è un'analisi simulata generata localmente perché l'API OpenAI non è attualmente disponibile a causa di limiti di utilizzo.
+
+## Riepilogo Esecutivo
+L'analisi dei dati di performance fino a ${getMonthName(month)} ${yearToAnalyze} mostra una tendenza complessivamente positiva rispetto agli anni precedenti. La produttività, misurata in turni di lavoro (${totalTurni} turni totali), evidenzia un andamento stagionale con picchi nel periodo primaverile e autunnale.
+
+## Confronto con Gli Anni Precedenti
+Il totale dei turni completati finora (${totalTurni}) con una media mensile di ${averageMonthlyTurni.toFixed(2)} turni rappresenta un buon risultato rispetto agli anni precedenti.
+
+## Tendenze Stagionali
+L'analisi trimestrale rivela un pattern coerente con gli anni precedenti, con le seguenti caratteristiche:
+- Primo trimestre: Performance in linea con le aspettative
+- Secondo trimestre: Picco di produttività 
+- Terzo trimestre: Stabilizzazione dei valori
+
+## Previsioni per il Resto dell'Anno
+Basandoci sui pattern osservati, ci aspettiamo che la produttività totale dell'anno si attesti intorno ai ${Math.round(totalTurni * 12 / month)} turni, assumendo che il trend attuale continui.
+
+## Raccomandazioni
+Per ottimizzare ulteriormente la performance, suggeriamo di:
+1. Pianificare un incremento strategico della capacità produttiva nei mesi tipicamente più deboli
+2. Valutare l'efficienza operativa dei turni nei periodi di picco
+3. Considerare l'espansione delle risorse nei periodi di maggiore domanda
+
+## Nota Tecnica
+Per utilizzare l'analisi AI reale:
+1. Attendi che i limiti di richieste OpenAI si azzerino (solitamente dopo alcune ore)
+2. Considera l'aggiornamento del tuo piano OpenAI per limiti più elevati
+3. Implementa strategie di caching per ridurre le chiamate API necessarie
+
+---
+
+*Questa analisi simulata è stata generata localmente. Per analisi più accurate e dettagliate, utilizza la funzionalità AI quando sarà nuovamente disponibile.*`;
+};
+
+// Funzione per salvare l'analisi in localStorage
+const saveAnalysisToCache = (yearToAnalyze, month, analysis) => {
+  try {
+    const cacheKey = `aiAnalysis_${yearToAnalyze}_${month}`;
+    const cacheData = {
+      timestamp: Date.now(),
+      analysis: analysis
+    };
+    localStorage.setItem(cacheKey, JSON.stringify(cacheData));
+  } catch (error) {
+    console.error("Errore nel salvataggio dell'analisi in cache:", error);
+    // Se il salvataggio fallisce, continuiamo senza errori
+  }
+};
+
+// Funzione per recuperare l'analisi dalla cache
+const getAnalysisFromCache = (yearToAnalyze, month) => {
+  try {
+    const cacheKey = `aiAnalysis_${yearToAnalyze}_${month}`;
+    const cachedData = localStorage.getItem(cacheKey);
+    
+    if (!cachedData) return null;
+    
+    const parsedData = JSON.parse(cachedData);
+    const now = Date.now();
+    const cachedTime = parsedData.timestamp;
+    
+    // Consideriamo valida la cache per 24 ore (86400000 ms)
+    if (now - cachedTime > 86400000) {
+      // Cache scaduta, la eliminiamo
+      localStorage.removeItem(cacheKey);
+      return null;
+    }
+    
+    return parsedData.analysis;
+  } catch (error) {
+    console.error("Errore nel recupero dell'analisi dalla cache:", error);
+    return null;
+  }
+};
+
 const PerformanceTrendView = ({ setView }) => {
   const [allYearsData, setAllYearsData] = useState({});
   const [yearAnalysis, setYearAnalysis] = useState('');
   const [prediction, setPrediction] = useState('');
+  const [aiAnalysis, setAiAnalysis] = useState('');
+  const [isGeneratingAnalysis, setIsGeneratingAnalysis] = useState(false);
 
   const availableYears = useMemo(() => getAvailableYears().map(y => parseInt(y.value)), []);
   const colorPalette = useMemo(() => generateColorPalette(availableYears.length), [availableYears]);
@@ -345,20 +634,157 @@ const PerformanceTrendView = ({ setView }) => {
     return chartData;
   }, [allYearsData, availableYears, currentYear, currentMonth]);
 
+  const generateAIAnalysis = async (forceUpdate = false) => {
+    setIsGeneratingAnalysis(true);
+    
+    try {
+      // Prepara i dati per l'API OpenAI
+      const year = currentYear;
+      const month = currentMonth > 1 ? currentMonth - 1 : 12;
+      const yearToAnalyze = month === 12 ? year - 1 : year;
+      const currentYearData = allYearsData[yearToAnalyze] || {};
+      
+      // Controlla se esiste un'analisi in cache (solo se non è richiesto un aggiornamento forzato)
+      if (!forceUpdate) {
+        const cachedAnalysis = getAnalysisFromCache(yearToAnalyze, month);
+        if (cachedAnalysis) {
+          setAiAnalysis(cachedAnalysis);
+          setIsGeneratingAnalysis(false);
+          return;
+        }
+      }
+      
+      // Se non c'è cache o è richiesto un aggiornamento forzato, procedi con l'analisi
+      
+      // Calcola statistiche chiave per i dati correnti
+      const totalTurni = Object.values(currentYearData)
+        .slice(0, month)
+        .reduce((sum, monthData) => sum + (monthData?.totaleTurni || 0), 0);
+      
+      const monthsWithData = Object.values(currentYearData)
+        .slice(0, month)
+        .filter(monthData => monthData && monthData.totaleTurni > 0).length;
+      
+      const averageMonthlyTurni = monthsWithData > 0 ? totalTurni / monthsWithData : 0;
+    
+      // Raccoglie dati degli anni precedenti
+      const previousYearsData = Object.entries(allYearsData)
+        .filter(([y]) => parseInt(y) < yearToAnalyze && parseInt(y) >= 2021)
+        .map(([year, data]) => {
+          const yearTotal = Object.values(data)
+            .slice(0, month)
+            .reduce((sum, monthData) => sum + (monthData?.totaleTurni || 0), 0);
+            
+          const monthlyAverages = [];
+          for (let i = 0; i < month; i++) {
+            const monthData = data[i];
+            if (monthData && monthData.totaleTurni) {
+              monthlyAverages.push({
+                month: i + 1,
+                turni: monthData.totaleTurni
+              });
+            }
+          }
+          
+          return { 
+            year: parseInt(year), 
+            totalTurni: yearTotal,
+            monthlyAverages
+          };
+        });
+      
+      // Calcola dati mensili per l'anno in analisi
+      const currentYearMonthly = [];
+      for (let i = 0; i < month; i++) {
+        const monthData = currentYearData[i];
+        if (monthData && monthData.totaleTurni) {
+          currentYearMonthly.push({
+            month: i + 1,
+            turni: monthData.totaleTurni
+          });
+        }
+      }
+      
+      // Prepara il prompt per l'API
+      const prompt = `
+        Sei un esperto analista di dati per uno studio di doppiaggio chiamato Studio Pumaisdue. Analizza i seguenti dati sui turni di lavoro e fornisci un report dettagliato in italiano.
+        
+        Anno in analisi: ${yearToAnalyze}
+        Mese attuale: ${getMonthName(month)}
+        Turni totali fino ad ora: ${totalTurni}
+        Media mensile dei turni: ${averageMonthlyTurni.toFixed(2)}
+        
+        Dati mensili per l'anno ${yearToAnalyze}:
+        ${JSON.stringify(currentYearMonthly)}
+        
+        Dati degli anni precedenti:
+        ${JSON.stringify(previousYearsData)}
+        
+        Fornisci un'analisi approfondita che includa:
+        1. Riepilogo esecutivo: breve panoramica della performance attuale
+        2. Confronto dettagliato con gli anni precedenti
+        3. Tendenze stagionali: pattern nei dati su base trimestrale
+        4. Previsioni per il resto dell'anno: stima della produttività totale
+        5. Raccomandazioni concrete per migliorare la performance
+        6. Identificazione di anomalie o pattern particolari nei dati
+        
+        Formatta il tuo report utilizzando Markdown con sezioni ben definite da titoli e sottotitoli. Il testo dovrebbe essere professionale, dettagliato e orientato all'azione, scritto in un linguaggio chiaro e diviso in paragrafi per facilitare la lettura.
+      `;
+      
+      try {
+        // Chiama l'API OpenAI reale
+        const response = await fetchOpenAIAnalysis(prompt);
+        
+        // Verifica se c'è stato un errore di rate limit
+        if (response.includes("Limite di richieste superato")) {
+          // Se c'è un errore di rate limit, genera un'analisi simulata
+          const simulatedAnalysis = generateSimulatedAnalysis(yearToAnalyze, currentMonth, totalTurni, averageMonthlyTurni);
+          setAiAnalysis(simulatedAnalysis);
+          // Non salviamo in cache le analisi simulate
+        } else {
+          // Altrimenti usa la risposta dell'API
+          setAiAnalysis(response);
+          // Salva in cache solo le risposte reali dell'API
+          saveAnalysisToCache(yearToAnalyze, month, response);
+        }
+      } catch (error) {
+        console.error("Errore nella chiamata API:", error);
+        // In caso di errore, genera comunque un'analisi simulata
+        const simulatedAnalysis = generateSimulatedAnalysis(yearToAnalyze, currentMonth, totalTurni, averageMonthlyTurni);
+        setAiAnalysis(simulatedAnalysis);
+      }
+    } catch (error) {
+      console.error("Errore nella preparazione dei dati:", error);
+      // Definiamo valori di default in caso di errore nella preparazione dei dati
+      const defaultYearToAnalyze = currentYear;
+      const defaultTotalTurni = 0;
+      const defaultAverageMonthlyTurni = 0;
+      const simulatedAnalysis = generateSimulatedAnalysis(defaultYearToAnalyze, currentMonth, defaultTotalTurni, defaultAverageMonthlyTurni);
+      setAiAnalysis(simulatedAnalysis);
+    } finally {
+      setIsGeneratingAnalysis(false);
+    }
+  };
+
   useEffect(() => {
     const fetchData = async () => {
-      const yearsData = {};
+      const allData = {};
+      
       for (const year of availableYears) {
-        yearsData[year] = await getYearlyData(year);
+        allData[year] = await getYearlyData(year);
       }
-      setAllYearsData(yearsData);
-
-      setYearAnalysis(generateYearAnalysis(currentYear, currentMonth, yearsData, yearsData));
-      setPrediction(makePrediction(currentYear, currentMonth, yearsData));
+      
+      setAllYearsData(allData);
+      
+      const analysis = generateYearAnalysis(currentYear, currentMonth, allData, allData);
+      setYearAnalysis(analysis);
+      
+      const futurePrediction = makePrediction(currentYear, currentMonth, allData);
+      setPrediction(futurePrediction);
     };
-
+    
     fetchData();
-  }, [currentYear, currentMonth, availableYears, generateYearAnalysis, makePrediction]);
+  }, [availableYears, currentYear, currentMonth, generateYearAnalysis, makePrediction]);
 
   const chartData = useMemo(() => formatChartData(), [formatChartData]);
 
@@ -393,6 +819,14 @@ const PerformanceTrendView = ({ setView }) => {
   return (
     <ViewContainer>
       <ViewContent>
+        <BackRow>
+          <BackButton onClick={() => setView('main')}>
+            ← Torna alla dashboard
+          </BackButton>
+          <ShareButton onClick={handleShare}>
+            <Share2 size={18} /> Condividi
+          </ShareButton>
+        </BackRow>
         <ViewTitle>Performance Trend</ViewTitle>
         <ChartContainer>
           <AnalysisTitle>Trend annuale</AnalysisTitle>
@@ -457,8 +891,54 @@ const PerformanceTrendView = ({ setView }) => {
           </LegendContainer>
         </ChartContainer>
         <AnalysisSection>
-          <AnalysisTitle>Considerazioni sull'anno in corso</AnalysisTitle>
-          <AnalysisText>{renderAnalysisWithBlur(yearAnalysis)}</AnalysisText>
+          <AnalysisTitle>Considerazioni sull'anno in corso (AI)</AnalysisTitle>
+          
+          {aiAnalysis ? (
+            <div>
+              <MarkdownContent>
+                <ReactMarkdown>
+                  {aiAnalysis}
+                </ReactMarkdown>
+              </MarkdownContent>
+              
+              <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
+                <Button 
+                  onClick={() => generateAIAnalysis(true)} 
+                  disabled={isGeneratingAnalysis}
+                >
+                  {isGeneratingAnalysis ? (
+                    <>
+                      <LoadingSpinner /> Rigenerazione in corso...
+                    </>
+                  ) : (
+                    <>
+                      <RefreshCw size={18} /> Forza aggiornamento
+                    </>
+                  )}
+                </Button>
+              </div>
+            </div>
+          ) : (
+            <div>
+              <p>Genera un'analisi dettagliata sull'anno in corso utilizzando l'intelligenza artificiale.</p>
+              <p>Questa funzionalità utilizza l'API OpenAI per analizzare i dati e fornire insight approfonditi.</p>
+              
+              <Button 
+                onClick={() => generateAIAnalysis(false)} 
+                disabled={isGeneratingAnalysis}
+              >
+                {isGeneratingAnalysis ? (
+                  <>
+                    <LoadingSpinner /> Generazione in corso...
+                  </>
+                ) : (
+                  <>
+                    <RefreshCw size={18} /> Genera analisi AI
+                  </>
+                )}
+              </Button>
+            </div>
+          )}
         </AnalysisSection>
         <AnalysisSection>
           <AnalysisTitle>Previsione per i prossimi mesi</AnalysisTitle>
@@ -472,6 +952,18 @@ const PerformanceTrendView = ({ setView }) => {
           </Button>
         </ButtonContainer>
       </ViewContent>
+      
+      {/* Footer */}
+      <div style={{
+        textAlign: 'center',
+        marginTop: '30px',
+        paddingTop: '20px',
+        borderTop: '1px solid #e5e7eb',
+        fontSize: '14px',
+        color: '#6b7280',
+      }}>
+        <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</p>
+      </div>
     </ViewContainer>
   );
 };

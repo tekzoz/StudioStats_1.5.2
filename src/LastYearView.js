@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowLeft, Calendar, TrendingUp, TrendingDown, Activity, List, Clock } from 'lucide-react';
 import { getYearlyData } from './data';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Label } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, Label, Legend } from 'recharts';
 
 const monthNames = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
 const monthNamesShort = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
@@ -343,6 +343,17 @@ const LastYearView = ({ setView, year = new Date().getFullYear() }) => {
           data={processedData.data} 
           lastAvailableMonth={processedData.lastAvailableMonth}
         />
+      </div>
+
+      {/* Footer */}
+      <div style={{
+        backgroundColor: '#4B5563',
+        padding: '20px',
+        marginTop: '20px',
+        borderRadius: '12px',
+        textAlign: 'center',
+      }}>
+        <p style={{ color: 'white', fontSize: '14px' }}>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</p>
       </div>
     </div>
   );

@@ -1,5 +1,22 @@
 import React from 'react';
 import { ArrowLeft, Info } from 'lucide-react';
+import styled from 'styled-components';
+
+const InfoItem = styled.div`
+  display: flex;
+  margin-bottom: 16px;
+  align-items: center;
+`;
+
+const InfoLabel = styled.span`
+  font-weight: bold;
+  margin-right: 8px;
+  color: #4B5563;
+`;
+
+const InfoValue = styled.span`
+  color: #1F2937;
+`;
 
 const InformationView = ({ setView }) => {
   return (
@@ -64,14 +81,10 @@ const InformationView = ({ setView }) => {
           }}>
             Questa applicazione è stata sviluppata per fornire statistiche e analisi dei turni per lo Studio Pumaisdue.
           </p>
-          <p style={{
-            fontSize: '16px',
-            lineHeight: '1.5',
-            color: '#4B5563',
-            marginBottom: '16px',
-          }}>
-            Versione: 1.5.0
-          </p>
+          <InfoItem>
+            <InfoLabel>Versione:</InfoLabel>
+            <InfoValue>1.6.0</InfoValue>
+          </InfoItem>
           <p style={{
             fontSize: '16px',
             lineHeight: '1.5',
@@ -210,6 +223,18 @@ const InformationView = ({ setView }) => {
             <li>Previsioni per i mesi futuri basate sui dati storici</li>
             <li>Possibilità di condividere i risultati dell'analisi</li>
           </ul>
+        </div>
+        
+        {/* Footer */}
+        <div style={{
+          textAlign: 'center',
+          marginTop: '30px',
+          paddingTop: '20px',
+          borderTop: '1px solid #e5e7eb',
+          fontSize: '14px',
+          color: '#6b7280',
+        }}>
+          <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</p>
         </div>
       </div>
     </div>
