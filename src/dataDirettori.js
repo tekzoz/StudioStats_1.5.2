@@ -1429,6 +1429,111 @@ export const direttoriData = [
           "mese": "2025-03",
           "turni": 16
         },
+          {
+                    "nome": "ANCIDONI ROSSELLA",
+                    "mese": "2025-04",
+                    "turni": 22
+                  },
+          {
+                    "nome": "BALDINI ORESTE",
+                    "mese": "2025-04",
+                    "turni": 18
+                  },
+          {
+                    "nome": "BALDINI RITA",
+                    "mese": "2025-04",
+                    "turni": 19
+                  },
+          {
+                    "nome": "BENASSI STEFANO",
+                    "mese": "2025-04",
+                    "turni": 23
+                  },
+          {
+                    "nome": "CAPUTO ARIANNA",
+                    "mese": "2025-04",
+                    "turni": 20
+                  },
+          {
+                    "nome": "CASTRACANE BARBARA",
+                    "mese": "2025-04",
+                    "turni": 19
+                  },
+          {
+                    "nome": "CATANIA GIULIA",
+                    "mese": "2025-04",
+                    "turni": 15
+                  },
+          {
+                    "nome": "CATANIA MYRIAM",
+                    "mese": "2025-04",
+                    "turni": 15
+                  },
+          {
+                    "nome": "CIGLIANO ALESSIO",
+                    "mese": "2025-04",
+                    "turni": 22
+                  },
+          {
+                    "nome": "DE FLAVIIS FABRIZIO",
+                    "mese": "2025-04",
+                    "turni": 43
+                  },
+          {
+                    "nome": "IZZO FIAMMETTA",
+                    "mese": "2025-04",
+                    "turni": 17
+                  },
+          {
+                    "nome": "IZZO GIUSEPPINA",
+                    "mese": "2025-04",
+                    "turni": 33
+                  },
+          {
+                    "nome": "IZZO ROSSELLA",
+                    "mese": "2025-04",
+                    "turni": 21
+                  },
+          {
+                    "nome": "LATINI ILARIA",
+                    "mese": "2025-04",
+                    "turni": 21
+                  },
+          {
+                    "nome": "MAZZOTTA FABRIZIO",
+                    "mese": "2025-04",
+                    "turni": 27
+                  },
+          {
+                    "nome": "PEZZULLI FRANCESCO",
+                    "mese": "2025-04",
+                    "turni": 11
+                  },
+          {
+                    "nome": "QUARTA ALESSANDRO",
+                    "mese": "2025-04",
+                    "turni": 1
+                  },
+          {
+                    "nome": "VENDITTI FRANCESCO SAVERIO",
+                    "mese": "2025-04",
+                    "turni": 23
+                  },
+          {
+                    "nome": "VERSINO LUDOVICO",
+                    "mese": "2025-04",
+                    "turni": 1
+                  },
+          {
+                    "nome": "VIDALI VALERIA",
+                    "mese": "2025-04",
+                    "turni": 11
+                  },
+          {
+                    "nome": "WARD MONICA",
+                    "mese": "2025-04",
+                    "turni": 1
+                  },
 
 ];
 
