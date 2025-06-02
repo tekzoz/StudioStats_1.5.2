@@ -17075,13 +17075,6 @@ export const foniciData = [
     turni: 1
   },
   {
-    nome: "FEDERICO MANUTI",
-    data: "2024-10-01",
-    turno: "13:30-16:30",
-    sala: "PUMAIS",
-    turni: 1
-  },
-  {
     nome: "GIANMARIA DINALLO",
     data: "2024-10-02",
     turno: "9:30-12:30",
@@ -18227,13 +18220,6 @@ export const foniciData = [
     data: "2024-10-15",
     turno: "13:30-16:30",
     sala: "6 FIAMMA",
-    turni: 1
-  },
-  {
-    nome: "PAOLO SIMONETTI",
-    data: "2024-10-15",
-    turno: "9:30-12:30",
-    sala: "PUMAIS",
     turni: 1
   },
   {
@@ -20631,13 +20617,6 @@ export const foniciData = [
     turni: 1
   },
   {
-    nome: "MASSIMO LOMBARDO",
-    data: "2024-11-08",
-    turno: "12:30-13:30",
-    sala: "PUMAIS",
-    turni: 1
-  },
-  {
     nome: "RODOLFO CIUFFO",
     data: "2024-11-11",
     turno: "13:30-16:30",
@@ -26130,13 +26109,6 @@ export const foniciData = [
     data: "2025-01-24",
     turno: "16:30-19:30",
     sala: "2 STEFANO",
-    turni: 1
-  },
-  {
-    nome: "RODOLFO CIUFFO",
-    data: "2025-01-24",
-    turno: "9:30-12:30",
-    sala: "PUMAIS",
     turni: 1
   },
   {
@@ -29657,7 +29629,6 @@ export const foniciData = [
       {nome: "SANTIS MASSIMO DE", data: "2025-04-17", turno: "9:30-12:30", sala: "5 GIUPPY", turni: 1},
       {nome: "VALENTINA CAPECCI", data: "2025-04-17", turno: "13:30-16:30", sala: "4 FRANCESCO", turni: 1},
       {nome: "MATTEO FLANDINA", data: "2025-04-17", turno: "16:30-19:30", sala: "6 FIAMMA", turni: 1},
-      {nome: "MASSIMO LOMBARDO", data: "2025-04-17", turno: "12:30-13:30", sala: "PUMAIS", turni: 1},
       {nome: "CRISTIANO LELLINI", data: "2025-04-18", turno: "9:30-12:30", sala: "9 MYRIAM", turni: 1},
       {nome: "GIANMARIA DINALLO", data: "2025-04-18", turno: "9:30-12:30", sala: "2 STEFANO", turni: 1},
       {nome: "VALENTINA CAPECCI", data: "2025-04-18", turno: "13:30-16:30", sala: "4 FRANCESCO", turni: 1},
