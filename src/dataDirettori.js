@@ -1535,6 +1535,102 @@ export const direttoriData = [
                     "turni": 1
                   },
 
+                  {
+                              "nome": "ANCIDONI ROSSELLA",
+                              "mese": "2025-05",
+                              "turni": 18
+                            },
+                    {
+                              "nome": "BALDINI ORESTE",
+                              "mese": "2025-05",
+                              "turni": 44
+                            },
+                    {
+                              "nome": "BALDINI RITA",
+                              "mese": "2025-05",
+                              "turni": 6
+                            },
+                    {
+                              "nome": "BENASSI STEFANO",
+                              "mese": "2025-05",
+                              "turni": 24
+                            },
+                    {
+                              "nome": "CAPUTO ARIANNA",
+                              "mese": "2025-05",
+                              "turni": 6
+                            },
+                    {
+                              "nome": "CASTRACANE BARBARA",
+                              "mese": "2025-05",
+                              "turni": 24
+                            },
+                    {
+                              "nome": "CATANIA GIULIA",
+                              "mese": "2025-05",
+                              "turni": 45
+                            },
+                    {
+                              "nome": "CATANIA MYRIAM",
+                              "mese": "2025-05",
+                              "turni": 25
+                            },
+                    {
+                              "nome": "CIGLIANO ALESSIO",
+                              "mese": "2025-05",
+                              "turni": 19
+                            },
+                    {
+                              "nome": "DE FLAVIIS FABRIZIO",
+                              "mese": "2025-05",
+                              "turni": 46
+                            },
+                    {
+                              "nome": "IZZO FIAMMETTA",
+                              "mese": "2025-05",
+                              "turni": 20
+                            },
+                    {
+                              "nome": "IZZO GIUSEPPINA",
+                              "mese": "2025-05",
+                              "turni": 24
+                            },
+                    {
+                              "nome": "IZZO ROSSELLA",
+                              "mese": "2025-05",
+                              "turni": 51
+                            },
+                    {
+                              "nome": "LATINI ILARIA",
+                              "mese": "2025-05",
+                              "turni": 21
+                            },
+                    {
+                              "nome": "MAZZOTTA FABRIZIO",
+                              "mese": "2025-05",
+                              "turni": 32
+                            },
+                    {
+                              "nome": "PEZZULLI FRANCESCO",
+                              "mese": "2025-05",
+                              "turni": 14
+                            },
+                    {
+                              "nome": "QUARTA ALESSANDRO",
+                              "mese": "2025-05",
+                              "turni": 1
+                            },
+                    {
+                              "nome": "VENDITTI FRANCESCO SAVERIO",
+                              "mese": "2025-05",
+                              "turni": 5
+                            },
+                    {
+                              "nome": "VIDALI VALERIA",
+                              "mese": "2025-05",
+                              "turni": 16
+                            },
+
 ];
 
 export const getDirettoriTurnCountsForPeriod = (period) => {
