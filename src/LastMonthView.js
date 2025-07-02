@@ -153,14 +153,14 @@ const LastMonthView = ({ setView }) => {
   const sameMonthBestYearData = getSameMonthBestPreviousYear();
   const bestMonthData = getBestMonthByDailyAverage();
 
-  const currentDate = new Date();
-  const lastMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
-  const previousMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() - 2, 1);
+  // Calcolo dinamico basato sui dati effettivi invece della data di sistema
   const monthNames = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
-  const displayMonth = monthNames[lastMonth.getMonth()];
-  const displayYear = lastMonth.getFullYear();
-  const previousMonthName = monthNames[previousMonth.getMonth()];
-  const previousMonthYear = previousMonth.getFullYear();
+  
+  // Ora otteniamo direttamente mese e anno dai dati effettivi
+  const displayMonth = monthNames[latestMonthData.month - 1];
+  const displayYear = latestMonthData.year;
+  const previousMonthName = monthNames[previousMonthData.month - 1];
+  const previousMonthYear = previousMonthData.year;
 
   const comparisonDataTurni = {
     prevMonth: calculateComparison(latestMonthData.totaleTurni, previousMonthData.totaleTurni),

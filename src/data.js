@@ -31534,7 +31534,9 @@ export const getLatestMonthData = () => {
     totaleTurni: calculateTotalShifts(lastMonth),
     mediaGiornaliera: calculateAverageWorkdayShifts(lastMonth),
     massimoTurni: findMaxShiftsDay(lastMonth),
-    minimoTurni: findMinShiftsDay(lastMonth)
+    minimoTurni: findMinShiftsDay(lastMonth),
+    year: lastMonth.year,
+    month: lastMonth.month
   };
 };
 
@@ -31545,7 +31547,9 @@ export const getPreviousMonthData = () => {
       totaleTurni: calculateTotalShifts(previousMonth),
       mediaGiornaliera: calculateAverageWorkdayShifts(previousMonth),
       massimoTurni: findMaxShiftsDay(previousMonth),
-      minimoTurni: findMinShiftsDay(previousMonth)
+      minimoTurni: findMinShiftsDay(previousMonth),
+      year: previousMonth.year,
+      month: previousMonth.month
     };
   }
   // Se non c'è un mese precedente disponibile, restituisci dati fittizi
@@ -31553,7 +31557,9 @@ export const getPreviousMonthData = () => {
     totaleTurni: 280,
     mediaGiornaliera: 9.3,
     massimoTurni: { day: 15, shifts: 20 },
-    minimoTurni: { day: 30, shifts: 1 }
+    minimoTurni: { day: 30, shifts: 1 },
+    year: 2025,
+    month: 5
   };
 };
 
