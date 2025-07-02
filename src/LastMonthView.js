@@ -1,9 +1,9 @@
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, Gauge } from 'lucide-react';
-import { getLatestMonthData, getPreviousMonthData, getAnnualAverageData } from './data';
+import { getLatestMonthData, getPreviousMonthData, getAnnualAverageData, getSameMonthPreviousYear, getSameMonthBestPreviousYear, getCorrectAnnualAverage } from './data';
 import PerformanceGauge from './PerformanceGauge';
 
-const StatCard = ({ icon, label, value, comparison, backgroundColor, component }) => (
+const StatCard = ({ icon, label, value, comparison, backgroundColor, component, showUnit = false }) => (
   <div style={{
     backgroundColor: backgroundColor,
     borderRadius: '12px',
@@ -25,11 +25,21 @@ const StatCard = ({ icon, label, value, comparison, backgroundColor, component }
     {comparison && (
       <div style={{ marginTop: '8px', fontSize: '14px' }}>
         <div style={{ color: comparison.prevMonth.value === 'N/A' ? 'gray' : (parseFloat(comparison.prevMonth.value) > 0 ? 'green' : 'red') }}>
-          {comparison.prevMonth.value} ({comparison.prevMonth.percentage}) rispetto a {comparison.prevMonthName} {comparison.prevMonthYear}
+          {comparison.prevMonth.value}{showUnit ? ' turni' : ''} ({comparison.prevMonth.percentage}) rispetto a {comparison.prevMonthName} {comparison.prevMonthYear}
         </div>
         <div style={{ color: comparison.annual.value === 'N/A' ? 'gray' : (parseFloat(comparison.annual.value) > 0 ? 'green' : 'red') }}>
-          {comparison.annual.value} ({comparison.annual.percentage}) rispetto alla media annuale {comparison.year}
+          {comparison.annual.value}{showUnit ? ' turni' : ''} ({comparison.annual.percentage}) rispetto alla media annuale {comparison.year}
         </div>
+        {comparison.sameMonthPrevYear && (
+          <div style={{ color: comparison.sameMonthPrevYear.value === 'N/A' ? 'gray' : (parseFloat(comparison.sameMonthPrevYear.value) > 0 ? 'green' : 'red') }}>
+            {comparison.sameMonthPrevYear.value}{showUnit ? ' turni' : ''} ({comparison.sameMonthPrevYear.percentage}) rispetto a {comparison.monthName} {comparison.sameMonthPrevYear.year}
+          </div>
+        )}
+        {comparison.sameMonthBestYear && (
+          <div style={{ color: comparison.sameMonthBestYear.value === 'N/A' ? 'gray' : (parseFloat(comparison.sameMonthBestYear.value) > 0 ? 'green' : 'red') }}>
+            {comparison.sameMonthBestYear.value}{showUnit ? ' turni' : ''} ({comparison.sameMonthBestYear.percentage}) rispetto a {comparison.monthName} {comparison.sameMonthBestYear.year} (anno migliore)
+          </div>
+        )}
       </div>
     )}
   </div>
@@ -54,7 +64,9 @@ const roundToHalf = (num) => {
 const LastMonthView = ({ setView }) => {
   const latestMonthData = getLatestMonthData();
   const previousMonthData = getPreviousMonthData();
-  const annualAverageData = getAnnualAverageData();
+  const annualAverageData = getCorrectAnnualAverage(); // Usa la media corretta
+  const sameMonthPrevYearData = getSameMonthPreviousYear();
+  const sameMonthBestYearData = getSameMonthBestPreviousYear();
 
   const currentDate = new Date();
   const lastMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
@@ -68,10 +80,21 @@ const LastMonthView = ({ setView }) => {
   const comparisonDataTurni = {
     prevMonth: calculateComparison(latestMonthData.totaleTurni, previousMonthData.totaleTurni),
     annual: calculateComparison(latestMonthData.totaleTurni, annualAverageData.mediaAnnuale),
+    sameMonthPrevYear: sameMonthPrevYearData ? calculateComparison(latestMonthData.totaleTurni, sameMonthPrevYearData.totaleTurni) : null,
+    sameMonthBestYear: sameMonthBestYearData ? calculateComparison(latestMonthData.totaleTurni, sameMonthBestYearData.totaleTurni) : null,
     prevMonthName: previousMonthName,
     prevMonthYear: previousMonthYear,
+    monthName: displayMonth,
     year: displayYear
   };
+  
+  // Aggiunge gli anni ai confronti
+  if (comparisonDataTurni.sameMonthPrevYear) {
+    comparisonDataTurni.sameMonthPrevYear.year = sameMonthPrevYearData.year;
+  }
+  if (comparisonDataTurni.sameMonthBestYear) {
+    comparisonDataTurni.sameMonthBestYear.year = sameMonthBestYearData.year;
+  }
 
   const comparisonDataMedia = {
     prevMonth: calculateComparison(roundToHalf(latestMonthData.mediaGiornaliera), roundToHalf(previousMonthData.mediaGiornaliera)),
@@ -107,7 +130,8 @@ const LastMonthView = ({ setView }) => {
       label: 'Totale Turni di Doppiaggio', 
       value: latestMonthData.totaleTurni,
       comparison: comparisonDataTurni,
-      backgroundColor: '#E6F3FF'
+      backgroundColor: '#E6F3FF',
+      showUnit: true
     },
     { 
       icon: <Clock />, 

@@ -31609,3 +31609,67 @@ export const getYearlyData = (year) => {
 
   return yearData;
 };
+
+// Nuove funzioni per i confronti con anni precedenti
+export const getSameMonthPreviousYear = () => {
+  const lastMonth = monthsData[monthsData.length - 1];
+  const targetYear = lastMonth.year - 1;
+  const targetMonth = lastMonth.month;
+  
+  const previousYearMonth = monthsData.find(m => m.year === targetYear && m.month === targetMonth);
+  
+  if (previousYearMonth) {
+    return {
+      totaleTurni: calculateTotalShifts(previousYearMonth),
+      mediaGiornaliera: calculateAverageWorkdayShifts(previousYearMonth),
+      year: targetYear,
+      month: targetMonth
+    };
+  }
+  
+  return null;
+};
+
+export const getSameMonthBestPreviousYear = () => {
+  const lastMonth = monthsData[monthsData.length - 1];
+  const targetMonth = lastMonth.month;
+  
+  // Trova tutti i dati dello stesso mese negli anni precedenti
+  const sameMonthData = monthsData.filter(m => 
+    m.month === targetMonth && m.year < lastMonth.year
+  );
+  
+  if (sameMonthData.length === 0) return null;
+  
+  // Trova l'anno con il maggior numero di turni per questo mese
+  const bestYear = sameMonthData.reduce((best, current) => {
+    const currentTotal = calculateTotalShifts(current);
+    const bestTotal = calculateTotalShifts(best);
+    return currentTotal > bestTotal ? current : best;
+  });
+  
+  return {
+    totaleTurni: calculateTotalShifts(bestYear),
+    mediaGiornaliera: calculateAverageWorkdayShifts(bestYear),
+    year: bestYear.year,
+    month: bestYear.month
+  };
+};
+
+export const getCorrectAnnualAverage = () => {
+  const lastMonth = monthsData[monthsData.length - 1];
+  const currentYear = lastMonth.year;
+  
+  // Calcola la media solo sui mesi dell'anno corrente
+  const currentYearData = monthsData.filter(m => m.year === currentYear);
+  
+  if (currentYearData.length === 0) return { mediaAnnuale: 0 };
+  
+  const totalTurni = currentYearData.reduce((total, month) => total + calculateTotalShifts(month), 0);
+  const averageTurni = totalTurni / currentYearData.length;
+  
+  return {
+    mediaAnnuale: averageTurni,
+    monthsCount: currentYearData.length
+  };
+};
