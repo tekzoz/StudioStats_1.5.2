@@ -1079,4 +1079,46 @@ export const assistentiData = [
       .map(([nome, turni]) => ({ nome, turni }))
       .sort((a, b) => b.turni - a.turni);
   };
+
+  // Funzione per ottenere i dati dell'ultimo mese con confronto al mese precedente
+  export const getAssistentiTurnCountsWithTrend = () => {
+    // Ottieni i dati dell'ultimo mese completo
+    const lastMonthData = getAssistentiTurnCountsForPeriod('mese');
+    
+    // Calcola le date per il mese precedente a quello analizzato
+    const today = new Date();
+    // L'ultimo mese completo è il mese precedente a quello corrente
+    const lastCompleteMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+    // Il mese precedente a quello è due mesi fa
+    const previousMonth = new Date(today.getFullYear(), today.getMonth() - 2, 1);
+    const endPreviousMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+    
+    // Filtra i dati per il mese precedente
+    const prevMonthData = assistentiData.filter(({ mese }) => {
+      const dataMese = new Date(mese + '-01');
+      return dataMese >= previousMonth && dataMese < endPreviousMonth;
+    });
+    
+    // Calcola i conteggi per il mese precedente
+    const prevMonthCounts = {};
+    prevMonthData.forEach(({ nome, turni }) => {
+      prevMonthCounts[nome] = (prevMonthCounts[nome] || 0) + turni;
+    });
+    
+    // Combina i dati aggiungendo informazioni di trend
+    const dataWithTrend = lastMonthData.map(current => {
+      const prevTurni = prevMonthCounts[current.nome] || 0;
+      const trend = current.turni > prevTurni ? 'up' : current.turni < prevTurni ? 'down' : 'stable';
+      const difference = current.turni - prevTurni;
+      
+      return {
+        ...current,
+        trend,
+        difference,
+        prevTurni
+      };
+    });
+    
+    return dataWithTrend;
+  };
   

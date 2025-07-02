@@ -8,14 +8,14 @@ import {
   Classifica,
   ChartRecharts as Chart,
 } from './Components';
-import { getAssistentiTurnCountsForPeriod } from './dataAssistenti';
+import { getAssistentiTurnCountsForPeriod, getAssistentiTurnCountsWithTrend } from './dataAssistenti';
 
 const StatisticheAssistenti = ({ setView }) => {
   const [assistentiData, setAssistentiData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const ultimoMese = getAssistentiTurnCountsForPeriod('mese');
+    const ultimoMese = getAssistentiTurnCountsWithTrend();
     const ultimoQuadrimestre = getAssistentiTurnCountsForPeriod('quadrimestre');
     const ultimoAnno = getAssistentiTurnCountsForPeriod('anno');
 
@@ -40,7 +40,7 @@ const StatisticheAssistenti = ({ setView }) => {
         </BackButton>
         <Title>Statistiche Assistenti</Title>
         <Grid>
-          <Classifica title="Ultimo Mese" data={assistentiData.ultimoMese} />
+          <Classifica title="Ultimo Mese" data={assistentiData.ultimoMese} showTrend={true} />
           <Classifica title="Ultimo Quadrimestre" data={assistentiData.ultimoQuadrimestre} />
           <Classifica title="Da Inizio Anno" data={assistentiData.ultimoAnno} />
         </Grid>

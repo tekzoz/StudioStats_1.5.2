@@ -10,14 +10,14 @@ import {
   Classifica,
   ChartRecharts as Chart, // Importa il componente Chart
 } from './Components';
-import { getDirettoriTurnCountsForPeriod } from './dataDirettori';
+import { getDirettoriTurnCountsForPeriod, getDirettoriTurnCountsWithTrend } from './dataDirettori';
 
 const StatisticheDirettori = ({ setView }) => {
   const [direttoriData, setDirettoriData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const ultimoMese = getDirettoriTurnCountsForPeriod('mese');
+    const ultimoMese = getDirettoriTurnCountsWithTrend();
     const ultimoQuadrimestre = getDirettoriTurnCountsForPeriod('quadrimestre');
     const ultimoAnno = getDirettoriTurnCountsForPeriod('anno');
 
@@ -42,7 +42,7 @@ const StatisticheDirettori = ({ setView }) => {
         </BackButton>
         <Title>Statistiche Direttori</Title>
         <Grid>
-          <Classifica title="Ultimo Mese" data={direttoriData.ultimoMese} />
+          <Classifica title="Ultimo Mese" data={direttoriData.ultimoMese} showTrend={true} />
           <Classifica title="Ultimo Quadrimestre" data={direttoriData.ultimoQuadrimestre} />
           <Classifica title="Da Inizio Anno" data={direttoriData.ultimoAnno} />
         </Grid>
