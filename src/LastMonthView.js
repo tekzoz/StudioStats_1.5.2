@@ -98,11 +98,22 @@ const LastMonthView = ({ setView }) => {
 
   const comparisonDataMedia = {
     prevMonth: calculateComparison(roundToHalf(latestMonthData.mediaGiornaliera), roundToHalf(previousMonthData.mediaGiornaliera)),
-    annual: calculateComparison(roundToHalf(latestMonthData.mediaGiornaliera), roundToHalf(annualAverageData.mediaAnnuale / 30)), // Approssimazione
+    annual: calculateComparison(roundToHalf(latestMonthData.mediaGiornaliera), roundToHalf(annualAverageData.mediaAnnuale / annualAverageData.monthsCount)), // Media corretta
+    sameMonthPrevYear: sameMonthPrevYearData ? calculateComparison(roundToHalf(latestMonthData.mediaGiornaliera), roundToHalf(sameMonthPrevYearData.mediaGiornaliera)) : null,
+    sameMonthBestYear: sameMonthBestYearData ? calculateComparison(roundToHalf(latestMonthData.mediaGiornaliera), roundToHalf(sameMonthBestYearData.mediaGiornaliera)) : null,
     prevMonthName: previousMonthName,
     prevMonthYear: previousMonthYear,
+    monthName: displayMonth,
     year: displayYear
   };
+  
+  // Aggiunge gli anni ai confronti per la media
+  if (comparisonDataMedia.sameMonthPrevYear) {
+    comparisonDataMedia.sameMonthPrevYear.year = sameMonthPrevYearData.year;
+  }
+  if (comparisonDataMedia.sameMonthBestYear) {
+    comparisonDataMedia.sameMonthBestYear.year = sameMonthBestYearData.year;
+  }
 
   // Calcolo la percentuale di utilizzo delle sale
   // Assumo che ogni turno sia di 3 ore, con 10 sale disponibili e 3 fasce orarie (9 ore al giorno)
@@ -138,7 +149,8 @@ const LastMonthView = ({ setView }) => {
       label: 'Media Turni di Doppiaggio Giornaliera (Lun-Ven)', 
       value: roundToHalf(latestMonthData.mediaGiornaliera).toFixed(1),
       comparison: comparisonDataMedia,
-      backgroundColor: '#FFF0E6'
+      backgroundColor: '#FFF0E6',
+      showUnit: true
     },
     { 
       icon: <Gauge />, 
