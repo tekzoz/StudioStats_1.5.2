@@ -774,13 +774,14 @@ const PerformanceTrendView = ({ setView }) => {
            - Confronto della stagionalità evidenziata dai dati
         
         4. **PREVISIONI FUTURE**:
-           - Proiezione per i mesi rimanenti basata sui trend evidenziati
+           - Proiezione per i mesi rimanenti basata sui trend evidenziati tenendo in considerazione le medie mensili mese per mese degli anni passati
            - Stima della produttività annuale totale attesa
+           - posizionamento della produttività annuale attesa rispetto alla storia dello studio
            - Considerazioni sui fattori che potrebbero influenzare le previsioni
         
         5. **RACCOMANDAZIONI STRATEGICHE**:
            - Strategie basate sui pattern identificati
-           - Suggerimenti per ottimizzare le risorse nei diversi periodi
+           - Suggerimenti per ottimizzare le risorse nei diversi periodi, specificando quando togliere o aggiungere risorse lavorative al team
            - Indicazioni su quando aumentare o diminuire collaboratori esterni
         
         Formatta il tuo report in Markdown con una struttura chiara e professionale. Usa titoli (##), sottotitoli (###), elenchi puntati e, dove appropriato, enfasi (**testo**) per evidenziare concetti chiave. Il linguaggio deve essere professionale ma accessibile, orientato all'azione e specifico per il settore del doppiaggio.
@@ -1092,7 +1093,7 @@ const PerformanceTrendView = ({ setView }) => {
         fontSize: '14px',
         color: '#6b7280',
       }}>
-        <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</p>
+        <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.1</p>
       </div>
     </ViewContainer>
   );

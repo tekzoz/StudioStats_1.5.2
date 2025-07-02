@@ -83,7 +83,7 @@ const InformationView = ({ setView }) => {
           </p>
           <InfoItem>
             <InfoLabel>Versione:</InfoLabel>
-            <InfoValue>1.6.0</InfoValue>
+            <InfoValue>1.6.1</InfoValue>
           </InfoItem>
           <p style={{
             fontSize: '16px',
@@ -234,7 +234,7 @@ const InformationView = ({ setView }) => {
           fontSize: '14px',
           color: '#6b7280',
         }}>
-          <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</p>
+          <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.1</p>
         </div>
       </div>
     </div>

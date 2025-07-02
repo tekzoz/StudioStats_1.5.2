@@ -150,7 +150,7 @@ const StatisticheFonici = ({ setView }) => {
           fontSize: '14px',
           color: '#6b7280',
         }}>
-          <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</p>
+          <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.1</p>
         </div>
       </Content>
     </Container>

@@ -353,7 +353,7 @@ const LastYearView = ({ setView, year = new Date().getFullYear() }) => {
         borderRadius: '12px',
         textAlign: 'center',
       }}>
-        <p style={{ color: 'white', fontSize: '14px' }}>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</p>
+        <p style={{ color: 'white', fontSize: '14px' }}>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.1</p>
       </div>
     </div>
   );

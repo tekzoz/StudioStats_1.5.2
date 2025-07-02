@@ -229,7 +229,7 @@ const MainView = ({ setView }) => {
           ))}
         </DashboardGrid>
       </DashboardContent>
-      <Footer>&copy; StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</Footer>
+      <Footer>&copy; StudioStats 2025 Marco Augusto Comba | Versione 1.6.1</Footer>
     </DashboardContainer>
   );
 };

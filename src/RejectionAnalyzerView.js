@@ -719,7 +719,7 @@ const RejectionAnalyzerView = ({ setView }) => {
         <Footer>
           <p>Fonte dati: QC report estratti Sferastudios (solo audio). Aggiornato manualmente ogni fine mese.</p>
           <p>Nessun errore video incluso.</p>
-          <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</p>
+          <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.1</p>
         </Footer>
 
       </Content>

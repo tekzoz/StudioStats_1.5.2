@@ -3,68 +3,76 @@ import { ArrowLeft, Calendar, Clock, Gauge } from 'lucide-react';
 import { getLatestMonthData, getPreviousMonthData, getAnnualAverageData, getSameMonthPreviousYear, getSameMonthBestPreviousYear, getCorrectAnnualAverage, getBestMonthByDailyAverage } from './data';
 import PerformanceGauge from './PerformanceGauge';
 
-const TripleStatCard = ({ icon, label, currentData, previousData, bestData, backgroundColor }) => (
-  <div style={{
-    backgroundColor: backgroundColor,
-    borderRadius: '12px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    padding: '24px',
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: '24px',
-  }}>
-    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
-      {React.cloneElement(icon, { size: 24, color: '#4B5563' })}
-      <span style={{ marginLeft: '12px', fontSize: '18px', fontWeight: '500', color: '#4B5563' }}>{label}</span>
-    </div>
-    
-    {/* Mese corrente */}
-    <div style={{ marginBottom: '16px' }}>
-      <div style={{ fontSize: '16px', fontWeight: '500', color: '#4B5563', marginBottom: '4px' }}>
-        Media Turni di Doppiaggio Giornaliera {currentData.monthName} {currentData.year} (Lun-Ven)
+const TripleStatCard = ({ icon, label, currentData, previousData, bestData, backgroundColor }) => {
+  // Determina quale sia il mese migliore tra precedente e storico
+  const bestValue = bestData ? parseFloat(bestData.value) : 0;
+  const previousValue = parseFloat(previousData.value);
+  const isBestMonth = bestValue > previousValue;
+  
+  return (
+    <div style={{
+      backgroundColor: backgroundColor,
+      borderRadius: '12px',
+      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+      padding: '24px',
+      display: 'flex',
+      flexDirection: 'column',
+      marginBottom: '24px',
+      textAlign: 'center',
+    }}>
+      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px', justifyContent: 'center' }}>
+        {React.cloneElement(icon, { size: 24, color: '#4B5563' })}
+        <span style={{ marginLeft: '12px', fontSize: '18px', fontWeight: '500', color: '#4B5563' }}>{label}</span>
       </div>
-      <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#1F2937' }}>
-        {currentData.value}
-      </div>
-    </div>
-    
-    {/* Mese precedente */}
-    <div style={{ marginBottom: '16px' }}>
-      <div style={{ fontSize: '16px', fontWeight: '500', color: '#4B5563', marginBottom: '4px' }}>
-        Media Turni di Doppiaggio Giornaliera {previousData.monthName} {previousData.year} (Lun-Ven)
-      </div>
-      <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1F2937' }}>
-        {previousData.value} 
-        <span style={{ 
-          fontSize: '14px', 
-          marginLeft: '8px',
-          color: previousData.comparison && parseFloat(previousData.comparison.value) > 0 ? 'green' : 'red'
-        }}>
-          ({previousData.comparison?.percentage}) rispetto a {currentData.monthName} {currentData.year}
-        </span>
-      </div>
-    </div>
-    
-    {/* Mese migliore */}
-    {bestData && (
-      <div>
+      
+      {/* Mese corrente */}
+      <div style={{ marginBottom: '16px' }}>
         <div style={{ fontSize: '16px', fontWeight: '500', color: '#4B5563', marginBottom: '4px' }}>
-          Media Turni di Doppiaggio Giornaliera {bestData.monthName} {bestData.year} (Lun-Ven)
+          Media Turni di Doppiaggio Giornaliera {currentData.monthName} {currentData.year} (Lun-Ven)
+        </div>
+        <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#1F2937' }}>
+          {currentData.value}
+        </div>
+      </div>
+      
+      {/* Mese precedente */}
+      <div style={{ marginBottom: '16px' }}>
+        <div style={{ fontSize: '16px', fontWeight: '500', color: '#4B5563', marginBottom: '4px' }}>
+          Media Turni di Doppiaggio Giornaliera {previousData.monthName} {previousData.year}{!isBestMonth ? ' (migliore mese)' : ''} (Lun-Ven)
         </div>
         <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1F2937' }}>
-          {bestData.value} 
-          <span style={{ 
-            fontSize: '14px', 
-            marginLeft: '8px',
-            color: bestData.comparison && parseFloat(bestData.comparison.value) > 0 ? 'green' : 'red'
-          }}>
-            ({bestData.comparison?.percentage}) rispetto a {currentData.monthName} {currentData.year}
-          </span>
+          {previousData.value}
+        </div>
+        <div style={{ 
+          fontSize: '14px', 
+          color: previousData.comparison && parseFloat(previousData.comparison.value) > 0 ? 'green' : 'red',
+          marginTop: '4px'
+        }}>
+          ({previousData.comparison?.percentage}) rispetto a {currentData.monthName} {currentData.year}
         </div>
       </div>
-    )}
-  </div>
-);
+      
+      {/* Mese migliore storico */}
+      {bestData && (
+        <div>
+          <div style={{ fontSize: '16px', fontWeight: '500', color: '#4B5563', marginBottom: '4px' }}>
+            Media Turni di Doppiaggio Giornaliera {bestData.monthName} {bestData.year}{isBestMonth ? ' (migliore mese)' : ''} (Lun-Ven)
+          </div>
+          <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1F2937' }}>
+            {bestData.value}
+          </div>
+          <div style={{ 
+            fontSize: '14px', 
+            color: bestData.comparison && parseFloat(bestData.comparison.value) > 0 ? 'green' : 'red',
+            marginTop: '4px'
+          }}>
+            ({bestData.comparison?.percentage}) rispetto a {currentData.monthName} {currentData.year}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const StatCard = ({ icon, label, value, comparison, backgroundColor, component, showUnit = false }) => (
   <div style={{
@@ -88,19 +96,19 @@ const StatCard = ({ icon, label, value, comparison, backgroundColor, component, 
     {comparison && (
       <div style={{ marginTop: '8px', fontSize: '14px' }}>
         <div style={{ color: comparison.prevMonth.value === 'N/A' ? 'gray' : (parseFloat(comparison.prevMonth.value) > 0 ? 'green' : 'red') }}>
-          {comparison.prevMonth.value}{showUnit ? ' turni' : ''} ({comparison.prevMonth.percentage}) rispetto a {comparison.prevMonthName} {comparison.prevMonthYear}
+          {comparison.prevMonth.value}{showUnit ? ' turni' : ''} ({comparison.prevMonth.percentage}) rispetto a {comparison.prevMonthName} {comparison.prevMonthYear}{showUnit ? ' (numero turni)' : ''}
         </div>
         <div style={{ color: comparison.annual.value === 'N/A' ? 'gray' : (parseFloat(comparison.annual.value) > 0 ? 'green' : 'red') }}>
-          {comparison.annual.value}{showUnit ? ' turni' : ''} ({comparison.annual.percentage}) rispetto alla media annuale {comparison.year}
+          {comparison.annual.value}{showUnit ? ' turni' : ''} ({comparison.annual.percentage}) rispetto alla media annuale {comparison.year}{showUnit ? ' (numero turni)' : ''}
         </div>
         {comparison.sameMonthPrevYear && (
           <div style={{ color: comparison.sameMonthPrevYear.value === 'N/A' ? 'gray' : (parseFloat(comparison.sameMonthPrevYear.value) > 0 ? 'green' : 'red') }}>
-            {comparison.sameMonthPrevYear.value}{showUnit ? ' turni' : ''} ({comparison.sameMonthPrevYear.percentage}) rispetto a {comparison.monthName} {comparison.sameMonthPrevYear.year}
+            {comparison.sameMonthPrevYear.value}{showUnit ? ' turni' : ''} ({comparison.sameMonthPrevYear.percentage}) rispetto a {comparison.monthName} {comparison.sameMonthPrevYear.year}{showUnit ? ' (numero turni)' : ''}
           </div>
         )}
         {comparison.sameMonthBestYear && (
           <div style={{ color: comparison.sameMonthBestYear.value === 'N/A' ? 'gray' : (parseFloat(comparison.sameMonthBestYear.value) > 0 ? 'green' : 'red') }}>
-            {comparison.sameMonthBestYear.value}{showUnit ? ' turni' : ''} ({comparison.sameMonthBestYear.percentage}) rispetto a {comparison.monthName} {comparison.sameMonthBestYear.year} (anno migliore)
+            {comparison.sameMonthBestYear.value}{showUnit ? ' turni' : ''} ({comparison.sameMonthBestYear.percentage}) rispetto a {comparison.monthName} {comparison.sameMonthBestYear.year} (anno migliore){showUnit ? ' (numero turni)' : ''}
           </div>
         )}
       </div>
@@ -336,7 +344,7 @@ const LastMonthView = ({ setView }) => {
           fontSize: '14px',
           color: '#6b7280',
         }}>
-          <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.0</p>
+          <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.1</p>
         </div>
       </div>
     </div>
