@@ -702,8 +702,8 @@ const PerformanceTrendView = ({ setView }) => {
       
       // Prepara il prompt per l'API
       const prompt = `
-        Sei un esperto analista di dati del settore audiovisivo con specifiche competenze nel doppiaggio. La tua analisi è richiesta dallo Studio Pumaisdue, un prestigioso studio di doppiaggio italiano. Esamina attentamente i seguenti dati sui turni di lavoro e produci un report strategico dettagliato.
-        
+        Sei un esperto analista di dati del settore audiovisivo con specifiche competenze nel doppiaggio. La tua analisi è richiesta dal board dello Studio Pumaisdue, un prestigioso studio di doppiaggio italiano. Esamina attentamente i seguenti dati sui turni di lavoro e produci un report strategico dettagliato.
+        Verifica i dati prima di pubblicare il report.
         ===DATI DI BASE===
         Anno in analisi: ${yearToAnalyze}
         Mese attuale: ${getMonthName(month)}
@@ -718,12 +718,13 @@ const PerformanceTrendView = ({ setView }) => {
         
         La tua analisi deve essere COMPLETA e APPROFONDITA, includendo:
         
-        1. **RIEPILOGO ESECUTIVO**: Una panoramica concisa della performance attuale con punti chiave per il management.
+        1. **RIEPILOGO ESECUTIVO**: Una panoramica concisa della performance attuale con punti chiave per il management. Un riassunto delle performance contro gli anni precedenti mese su mese. 
         
         2. **ANALISI COMPARATIVA**: Un confronto dettagliato con gli anni precedenti, includendo:
            - Variazioni percentuali mese per mese
            - Trend di crescita/diminuzione
            - Posizionamento dell'anno corrente rispetto alla storia dello studio
+           - Individuazione e spiegazione di un eventuale pattern comune tra i diversi mesi dei diversi anni
         
         3. **ANALISI STAGIONALE**:
            - Pattern trimestrali e mensili identificabili
@@ -733,12 +734,11 @@ const PerformanceTrendView = ({ setView }) => {
         4. **PREVISIONI FUTURE**:
            - Proiezione dettagliata per i mesi rimanenti dell'anno
            - Stima della produttività annuale totale attesa
-           - Considerazioni sui fattori esterni che potrebbero influenzare le previsioni
         
         5. **APPROFONDIMENTO SULLE ANOMALIE**:
            - Identificazione di periodi o trend anomali nei dati
            - Possibili spiegazioni per queste anomalie
-           - Strategie per affrontare o trarre vantaggio da questi pattern
+           - Strategie per affrontare questi pattern con warning su quando potrebbe essere necessario aumentare o diminuire le forze lavoro di collaboratori esterni dei diversi settori.
         
         Formatta il tuo report in Markdown con una struttura chiara e professionale. Usa titoli (##), sottotitoli (###), elenchi puntati e, dove appropriato, enfasi (**testo**) per evidenziare concetti chiave. Il linguaggio deve essere professionale ma accessibile, orientato all'azione e specifico per il settore del doppiaggio.
         
