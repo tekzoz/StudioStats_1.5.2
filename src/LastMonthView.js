@@ -240,7 +240,9 @@ const LastMonthView = ({ setView }) => {
   
   // Confronto con il mese precedente e la media annuale
   const utilizzoMesePrecedente = (previousMonthData.mediaGiornaliera / maxTurniGiornalieri) * 100;
-  const utilizzoMediaAnnuale = ((annualAverageData.mediaAnnuale / 30) / maxTurniGiornalieri) * 100;
+  // CORRETTO: calcolo la media giornaliera annuale corretta
+  const mediaGiornalieraAnnuale = annualAverageData.mediaAnnuale / annualAverageData.monthsCount;
+  const utilizzoMediaAnnuale = (mediaGiornalieraAnnuale / maxTurniGiornalieri) * 100;
   
   const comparisonDataUtilizzo = {
     prevMonth: calculateComparison(percentualeUtilizzoArrotondata, Math.round(utilizzoMesePrecedente)),
@@ -263,7 +265,7 @@ const LastMonthView = ({ setView }) => {
       icon: <Gauge />, 
       label: 'Utilizzo delle Sale di Doppiaggio', 
       component: (
-        <div>
+        <div style={{ textAlign: 'center' }}>
           <PerformanceGauge value={percentualeUtilizzoArrotondata} maxValue={100} />
           <div style={{ textAlign: 'center', marginTop: '10px', fontSize: '36px', fontWeight: 'bold', color: '#1F2937' }}>
             {percentualeUtilizzoArrotondata}%
