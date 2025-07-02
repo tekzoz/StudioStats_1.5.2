@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ArrowLeft } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { getFoniciTurnCountsForPeriod, getUtilizzoSaleForPeriod, getBilanciamentoFonici } from './data';
+import { getFoniciTurnCountsForPeriod, getUtilizzoSaleForPeriod, getBilanciamentoFonici, getFoniciTurnCountsWithTrend } from './data';
 import {
   Container,
   Content,
@@ -63,7 +63,7 @@ const StatisticheFonici = ({ setView }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const ultimoMese = getFoniciTurnCountsForPeriod('mese');
+    const ultimoMese = getFoniciTurnCountsWithTrend();
     const ultimoQuadrimestre = getFoniciTurnCountsForPeriod('quadrimestre');
     const ultimoAnno = getFoniciTurnCountsForPeriod('anno');
 
@@ -109,7 +109,7 @@ const StatisticheFonici = ({ setView }) => {
 
         {/* Classifica dei fonici */}
         <Grid>
-          <Classifica title="Ultimo Mese" data={foniciData.ultimoMese} />
+          <Classifica title="Ultimo Mese" data={foniciData.ultimoMese} showTrend={true} />
           <Classifica title="Ultimo Quadrimestre" data={foniciData.ultimoQuadrimestre} />
           <Classifica title="Da inizio Anno" data={foniciData.ultimoAnno} highlightTopN={8} // Aggiunto per evidenziare i primi 8
           />

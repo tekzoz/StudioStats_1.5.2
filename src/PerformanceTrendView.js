@@ -666,9 +666,11 @@ const PerformanceTrendView = ({ setView }) => {
       const previousYearsData = Object.entries(allYearsData)
         .filter(([y]) => parseInt(y) < yearToAnalyze && parseInt(y) >= 2021);
       
-      // Calcola le medie storiche per ogni mese
+      // Calcola le medie storiche per tutti i 12 mesi dell'anno
       const historicalMonthlyAverages = {};
-      for (let monthIndex = 0; monthIndex < month; monthIndex++) {
+      const allMonthsHistoricalData = {};
+      
+      for (let monthIndex = 0; monthIndex < 12; monthIndex++) {
         const monthNumber = monthIndex + 1;
         let totalTurniForMonth = 0;
         let yearsWithDataForMonth = 0;
@@ -680,9 +682,16 @@ const PerformanceTrendView = ({ setView }) => {
           }
         });
         
-        historicalMonthlyAverages[monthNumber] = yearsWithDataForMonth > 0 
+        const averageForMonth = yearsWithDataForMonth > 0 
           ? totalTurniForMonth / yearsWithDataForMonth 
           : 0;
+          
+        historicalMonthlyAverages[monthNumber] = averageForMonth;
+        allMonthsHistoricalData[monthNumber] = {
+          monthName: getMonthName(monthNumber),
+          mediaStorica: Math.round(averageForMonth),
+          anniConDati: yearsWithDataForMonth
+        };
       }
       
       // Calcola dati mensili per l'anno in analisi con confronto vs media storica
@@ -751,9 +760,15 @@ const PerformanceTrendView = ({ setView }) => {
         Totali annuali degli anni precedenti (per contesto):
         ${JSON.stringify(historicalSummary, null, 2)}
         
+        ===MEDIE STORICHE MENSILI (TUTTI I 12 MESI)===
+        Le seguenti sono le medie storiche reali calcolate per ogni mese dell'anno basate sui dati degli anni precedenti:
+        ${JSON.stringify(allMonthsHistoricalData, null, 2)}
+        
         ===ISTRUZIONI SPECIFICHE===
-        IMPORTANTE: Usa ESCLUSIVAMENTE i dati del confronto mensile dettagliato sopra riportato per le tue valutazioni di performance. 
-        Ogni mese ha già il calcolo preciso della variazione percentuale e la classificazione della performance rispetto alla media storica.
+        IMPORTANTE: 
+        1. Usa ESCLUSIVAMENTE i dati del confronto mensile dettagliato sopra riportato per le tue valutazioni di performance dei mesi già trascorsi.
+        2. Per le PREVISIONI dei mesi futuri, usa ESCLUSIVAMENTE le medie storiche mensili fornite nella sezione "MEDIE STORICHE MENSILI". NON inventare o ipotizzare valori.
+        3. Ogni mese ha già il calcolo preciso della variazione percentuale e la classificazione della performance rispetto alla media storica.
         
         La tua analisi deve essere COMPLETA e APPROFONDITA, includendo:
         
@@ -774,9 +789,11 @@ const PerformanceTrendView = ({ setView }) => {
            - Confronto della stagionalità evidenziata dai dati
         
         4. **PREVISIONI FUTURE**:
-           - Proiezione per i mesi rimanenti basata sui trend evidenziati tenendo in considerazione le medie mensili mese per mese degli anni passati
-           - Stima della produttività annuale totale attesa
-           - posizionamento della produttività annuale attesa rispetto alla storia dello studio
+           - Per i mesi rimanenti dell'anno, usa ESCLUSIVAMENTE i valori delle medie storiche mensili fornite sopra
+           - NON utilizzare valori ipotetici o inventati come "Luglio: 350, Agosto: 300" ecc.
+           - Calcola la stima della produttività annuale totale sommando i turni effettivi già realizzati alle medie storiche reali per i mesi mancanti
+           - Specifica chiaramente che le previsioni sono basate sulle medie storiche reali degli anni precedenti
+           - Posizionamento della produttività annuale attesa rispetto alla storia dello studio
            - Considerazioni sui fattori che potrebbero influenzare le previsioni
         
         5. **RACCOMANDAZIONI STRATEGICHE**:

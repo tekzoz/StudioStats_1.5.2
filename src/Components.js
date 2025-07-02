@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, TrendingUp, TrendingDown } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 // Styled Components
@@ -109,7 +109,7 @@ export const ClassificaItem = styled.li`
   font-size: 14px;
   margin-bottom: 6px;
   display: grid;
-  grid-template-columns: 24px 1fr 70px;
+  grid-template-columns: 24px 1fr 20px 70px;
   align-items: center;
 
   &:nth-child(1) { font-weight: bold; color: #FFA500; }
@@ -119,7 +119,7 @@ export const ClassificaItem = styled.li`
   @media (min-width: 768px) {
     font-size: 16px;
     margin-bottom: 8px;
-    grid-template-columns: 30px 1fr 80px;
+    grid-template-columns: 30px 1fr 24px 80px;
   }
 `;
 
@@ -137,7 +137,7 @@ export const HighlightBox = styled.div`
 
 // Componenti Funzionali
 
-export const Classifica = ({ data = [], title, highlightTopN, isAnnual }) => (
+export const Classifica = ({ data = [], title, highlightTopN, isAnnual, showTrend = false }) => (
   <Card>
     <CardTitle>{title}</CardTitle>
     {data.length > 0 ? (
@@ -154,6 +154,14 @@ export const Classifica = ({ data = [], title, highlightTopN, isAnnual }) => (
                   >
                     <span>{index + 1}.</span>
                     <span>{item.nome}</span>
+                    {showTrend && item.trend && (
+                      <span>
+                        {item.trend === 'up' && <TrendingUp size={16} color="#10B981" />}
+                        {item.trend === 'down' && <TrendingDown size={16} color="#EF4444" />}
+                        {item.trend === 'stable' && <span style={{ width: '16px', display: 'inline-block' }}></span>}
+                      </span>
+                    )}
+                    {!showTrend && <span></span>}
                     <TurniSpan>{item.turni} turni</TurniSpan>
                   </ClassificaItem>
                 ))}
@@ -168,6 +176,14 @@ export const Classifica = ({ data = [], title, highlightTopN, isAnnual }) => (
                 >
                   <span>{highlightTopN + index + 1}.</span>
                   <span>{item.nome}</span>
+                  {showTrend && item.trend && (
+                    <span>
+                      {item.trend === 'up' && <TrendingUp size={16} color="#10B981" />}
+                      {item.trend === 'down' && <TrendingDown size={16} color="#EF4444" />}
+                      {item.trend === 'stable' && <span style={{ width: '16px', display: 'inline-block' }}></span>}
+                    </span>
+                  )}
+                  {!showTrend && <span></span>}
                   <TurniSpan>{item.turni} turni</TurniSpan>
                 </ClassificaItem>
               ))}
@@ -183,6 +199,14 @@ export const Classifica = ({ data = [], title, highlightTopN, isAnnual }) => (
               >
                 <span>{index + 1}.</span>
                 <span>{item.nome}</span>
+                {showTrend && item.trend && (
+                  <span>
+                    {item.trend === 'up' && <TrendingUp size={16} color="#10B981" />}
+                    {item.trend === 'down' && <TrendingDown size={16} color="#EF4444" />}
+                    {item.trend === 'stable' && <span style={{ width: '16px', display: 'inline-block' }}></span>}
+                  </span>
+                )}
+                {!showTrend && <span></span>}
                 <TurniSpan>{item.turni} turni</TurniSpan>
               </ClassificaItem>
             ))}

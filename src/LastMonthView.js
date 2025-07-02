@@ -275,7 +275,6 @@ const LastMonthView = ({ setView }) => {
           </div>
         </div>
       ),
-      comparison: comparisonDataUtilizzo,
       backgroundColor: '#F0E6FF'
     },
   ];

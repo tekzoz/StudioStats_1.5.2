@@ -30659,6 +30659,52 @@ export const getFoniciTurnCountsForPeriod = (period) => {
     .sort((a, b) => b.turni - a.turni);
 };
 
+// Funzione per ottenere i dati dell'ultimo mese con confronto al mese precedente
+export const getFoniciTurnCountsWithTrend = () => {
+  // Ottieni i dati dell'ultimo mese e del mese precedente
+  const lastMonthData = getFoniciTurnCountsForPeriod('mese');
+  
+  // Per ottenere il mese precedente, dobbiamo calcolare manualmente
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentMonth = now.getMonth() + 1;
+  
+  // Calcola il mese precedente
+  let prevYear = currentYear;
+  let prevMonth = currentMonth - 1;
+  if (prevMonth === 0) {
+    prevMonth = 12;
+    prevYear = currentYear - 1;
+  }
+  
+  // Filtra i dati per il mese precedente
+  const prevMonthData = foniciData.filter(item => 
+    item.year === prevYear && item.month === prevMonth
+  );
+  
+  // Calcola i conteggi per il mese precedente
+  const prevMonthCounts = {};
+  prevMonthData.forEach(({ nome, turni }) => {
+    prevMonthCounts[nome] = (prevMonthCounts[nome] || 0) + turni;
+  });
+  
+  // Combina i dati aggiungendo informazioni di trend
+  const dataWithTrend = lastMonthData.map(current => {
+    const prevTurni = prevMonthCounts[current.nome] || 0;
+    const trend = current.turni > prevTurni ? 'up' : current.turni < prevTurni ? 'down' : 'stable';
+    const difference = current.turni - prevTurni;
+    
+    return {
+      ...current,
+      trend,
+      difference,
+      prevTurni
+    };
+  });
+  
+  return dataWithTrend;
+};
+
 // **Qui aggiungi la funzione getBilanciamentoFonici**
 
 export const getBilanciamentoFonici = () => {
