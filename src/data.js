@@ -30661,26 +30661,22 @@ export const getFoniciTurnCountsForPeriod = (period) => {
 
 // Funzione per ottenere i dati dell'ultimo mese con confronto al mese precedente
 export const getFoniciTurnCountsWithTrend = () => {
-  // Ottieni i dati dell'ultimo mese e del mese precedente
+  // Ottieni i dati dell'ultimo mese completo
   const lastMonthData = getFoniciTurnCountsForPeriod('mese');
   
-  // Per ottenere il mese precedente, dobbiamo calcolare manualmente
-  const now = new Date();
-  const currentYear = now.getFullYear();
-  const currentMonth = now.getMonth() + 1;
+  // Calcola le date per il mese precedente a quello analizzato
+  const today = new Date();
+  // L'ultimo mese completo è il mese precedente a quello corrente
+  const lastCompleteMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+  // Il mese precedente a quello è due mesi fa
+  const previousMonth = new Date(today.getFullYear(), today.getMonth() - 2, 1);
+  const endPreviousMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);
   
-  // Calcola il mese precedente
-  let prevYear = currentYear;
-  let prevMonth = currentMonth - 1;
-  if (prevMonth === 0) {
-    prevMonth = 12;
-    prevYear = currentYear - 1;
-  }
-  
-  // Filtra i dati per il mese precedente
-  const prevMonthData = foniciData.filter(item => 
-    item.year === prevYear && item.month === prevMonth
-  );
+  // Filtra i dati per il mese precedente usando la stessa logica di getFoniciDataForPeriod
+  const prevMonthData = foniciData.filter((fonico) => {
+    const fonicoDate = new Date(fonico.data);
+    return fonicoDate >= previousMonth && fonicoDate < endPreviousMonth;
+  });
   
   // Calcola i conteggi per il mese precedente
   const prevMonthCounts = {};

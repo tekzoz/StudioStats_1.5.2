@@ -118,6 +118,7 @@ const SummaryCard = styled.div`
   background-color: #F3F4F6;
   border-radius: 8px;
   padding: 16px;
+  text-align: center;
 `;
 
 const SummaryTitle = styled.h3`
@@ -136,6 +137,7 @@ const SummaryValue = styled.div`
 const DifferenceRow = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   font-size: 14px;
   color: ${props => props.$isPositive ? '#10B981' : '#EF4444'};
@@ -473,7 +475,8 @@ const CompareYearsView = ({ setView }) => {
                             padding: '10px', 
                             backgroundColor: isPositive ? 'rgba(16, 185, 129, 0.1)' : 'rgba(239, 68, 68, 0.1)', 
                             borderRadius: '6px',
-                            fontSize: '16px' 
+                            fontSize: '16px',
+                            textAlign: 'center'
                           }}>
                             {descrizione}
                           </div>

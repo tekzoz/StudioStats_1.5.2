@@ -732,15 +732,31 @@ const PerformanceTrendView = ({ setView }) => {
       }
       
       // Prepara dati storici riassuntivi per contesto
-      const historicalSummary = previousYearsData.map(([year, data]) => {
+      const historicalSummary = [];
+      
+      // Aggiungi gli anni precedenti (anni completi)
+      previousYearsData.forEach(([year, data]) => {
         const yearTotal = Object.values(data)
-          .slice(0, month)
           .reduce((sum, monthData) => sum + (monthData?.totaleTurni || 0), 0);
-        return { 
+        historicalSummary.push({ 
           year: parseInt(year), 
-          totalTurni: yearTotal
-        };
+          totalTurni: yearTotal,
+          note: "(anno completo)"
+        });
       });
+      
+      // Aggiungi l'anno corrente (limitato al mese attuale)
+      const currentYearTotal = Object.values(currentYearData)
+        .slice(0, month)
+        .reduce((sum, monthData) => sum + (monthData?.totaleTurni || 0), 0);
+      historicalSummary.push({
+        year: yearToAnalyze,
+        totalTurni: currentYearTotal,
+        note: `(fino a ${getMonthName(month)})`
+      });
+      
+      // Ordina per anno
+      historicalSummary.sort((a, b) => a.year - b.year);
       
       // Prepara il prompt per l'API
       const prompt = `
@@ -757,7 +773,8 @@ const PerformanceTrendView = ({ setView }) => {
         ${JSON.stringify(currentYearMonthlyWithComparison, null, 2)}
         
         ===DATI STORICI RIASSUNTIVI===
-        Totali annuali degli anni precedenti (per contesto):
+        Totali annuali di tutti gli anni disponibili (per contesto nelle previsioni):
+        NOTA: Gli anni precedenti mostrano i totali completi (12 mesi), l'anno corrente mostra solo i dati fino al mese analizzato.
         ${JSON.stringify(historicalSummary, null, 2)}
         
         ===MEDIE STORICHE MENSILI (TUTTI I 12 MESI)===
@@ -793,7 +810,8 @@ const PerformanceTrendView = ({ setView }) => {
            - NON utilizzare valori ipotetici o inventati come "Luglio: 350, Agosto: 300" ecc.
            - Calcola la stima della produttività annuale totale sommando i turni effettivi già realizzati alle medie storiche reali per i mesi mancanti
            - Specifica chiaramente che le previsioni sono basate sulle medie storiche reali degli anni precedenti
-           - Posizionamento della produttività annuale attesa rispetto alla storia dello studio
+           - Per il posizionamento rispetto alla storia dello studio, USA ESCLUSIVAMENTE i dati storici riassuntivi forniti che mostrano i totali completi degli anni precedenti
+           - IMPORTANTE: I totali annuali degli anni precedenti nei dati storici riassuntivi sono COMPLETI (12 mesi), quindi usali per confronti accurati
            - Considerazioni sui fattori che potrebbero influenzare le previsioni
         
         5. **RACCOMANDAZIONI STRATEGICHE**:
