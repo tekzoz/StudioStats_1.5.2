@@ -10,6 +10,7 @@ import PerformanceTrendView from './PerformanceTrendView';
 import StatisticheAssistenti from './StatisticheAssistenti'; // Importazione aggiunta
 import StatisticheDirettori from './StatisticheDirettori';   // Importazione aggiunta
 import RejectionAnalyzerView from './RejectionAnalyzerView'; // Importazione aggiunta
+import TemporarilyUnavailableView from './TemporarilyUnavailableView'; // Nuova importazione
 
 const App = () => {
   const [currentView, setCurrentView] = React.useState('main');
@@ -37,7 +38,7 @@ const App = () => {
       case 'statisticheDirettori':
         return <StatisticheDirettori setView={setCurrentView} />;  // Caso aggiunto
       case 'rejectionAnalyzer':
-        return <RejectionAnalyzerView setView={setCurrentView} />; // Caso aggiunto
+        return <TemporarilyUnavailableView setView={setCurrentView} />; // Reindirizzato alla pagina temporaneamente non disponibile
       default:
         return <MainView setView={setCurrentView} />;
     }

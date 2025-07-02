@@ -79,11 +79,15 @@ const InformationView = ({ setView }) => {
             color: '#4B5563',
             marginBottom: '16px',
           }}>
-            Questa applicazione è stata sviluppata per fornire statistiche e analisi dei turni per lo Studio Pumaisdue.
+            StudioStats è una piattaforma avanzata di analisi e gestione delle statistiche per lo Studio Pumaisdue, sviluppata per ottimizzare la gestione dei turni e fornire insight dettagliati sulle performance operative.
           </p>
           <InfoItem>
             <InfoLabel>Versione:</InfoLabel>
             <InfoValue>1.6.1</InfoValue>
+          </InfoItem>
+          <InfoItem>
+            <InfoLabel>Ultima Modifica:</InfoLabel>
+            <InfoValue>Gennaio 2025</InfoValue>
           </InfoItem>
           <p style={{
             fontSize: '16px',
@@ -140,13 +144,16 @@ const InformationView = ({ setView }) => {
             color: '#4B5563',
             paddingLeft: '20px',
           }}>
-            <li style={{ marginBottom: '8px' }}>Ultimo Mese: Visualizza le statistiche del mese più recente.</li>
-            <li style={{ marginBottom: '8px' }}>Ultimo Anno: Mostra un riepilogo dell'ultimo anno di attività.</li>
-            <li style={{ marginBottom: '8px' }}>Confronta Mesi: Permette di confrontare le statistiche di due mesi diversi.</li>
-            <li style={{ marginBottom: '8px' }}>Confronta Anni: Offre un confronto tra due anni selezionati.</li>
-            <li style={{ marginBottom: '8px' }}>Statistiche Fonici: Fornisce una panoramica dettagliata delle prestazioni dei fonici.</li>
-            <li style={{ marginBottom: '8px' }}>Performance Trend: Analizza e visualizza i trend di performance nel tempo.</li>
-            <li style={{ marginBottom: '8px' }}>Inserisci Dati: Consente l'inserimento di nuovi dati nel sistema.</li>
+            <li style={{ marginBottom: '8px' }}><strong>Ultimo Mese:</strong> Visualizza le statistiche del mese più recente con indicatori di trend.</li>
+            <li style={{ marginBottom: '8px' }}><strong>Ultimo Anno:</strong> Mostra un riepilogo dell'ultimo anno di attività con grafici comparativi.</li>
+            <li style={{ marginBottom: '8px' }}><strong>Confronta Mesi:</strong> Permette di confrontare le statistiche di due mesi diversi con analisi dettagliate.</li>
+            <li style={{ marginBottom: '8px' }}><strong>Confronta Anni:</strong> Offre un confronto tra due anni selezionati con metriche avanzate.</li>
+            <li style={{ marginBottom: '8px' }}><strong>Statistiche Fonici:</strong> Fornisce una panoramica dettagliata delle prestazioni dei fonici con trend mensili.</li>
+            <li style={{ marginBottom: '8px' }}><strong>Statistiche Direttori:</strong> Analisi specifica per le performance dei direttori di doppiaggio.</li>
+            <li style={{ marginBottom: '8px' }}><strong>Statistiche Assistenti:</strong> Monitoraggio dedicato alle prestazioni degli assistenti alla regia.</li>
+            <li style={{ marginBottom: '8px' }}><strong>Performance Trend:</strong> Analizza e visualizza i trend di performance nel tempo con report AI.</li>
+            <li style={{ marginBottom: '8px' }}><strong>Analisi Rifiuti:</strong> Strumento per analizzare e comprendere i pattern dei rifiuti di registrazione.</li>
+            <li style={{ marginBottom: '8px' }}><strong>Inserisci Dati:</strong> Consente l'inserimento di nuovi dati nel sistema con validazione automatica.</li>
           </ul>
         </div>
 
@@ -163,7 +170,7 @@ const InformationView = ({ setView }) => {
             marginBottom: '16px',
             color: '#374151',
           }}>
-            Dettagli sulle Funzionalità
+            Funzionalità Avanzate (v1.6.1)
           </h2>
           
           <h3 style={{
@@ -173,7 +180,7 @@ const InformationView = ({ setView }) => {
             marginBottom: '12px',
             color: '#374151',
           }}>
-            Statistiche Fonici
+            🔥 Indicatori di Trend in Tempo Reale
           </h3>
           <p style={{
             fontSize: '16px',
@@ -181,7 +188,7 @@ const InformationView = ({ setView }) => {
             color: '#4B5563',
             marginBottom: '16px',
           }}>
-            Questa sezione offre una visione dettagliata delle prestazioni dei fonici:
+            <strong>NOVITÀ:</strong> Tutte le pagine statistiche ora mostrano frecce di trend che indicano la variazione rispetto al mese precedente:
           </p>
           <ul style={{
             fontSize: '16px',
@@ -190,9 +197,10 @@ const InformationView = ({ setView }) => {
             paddingLeft: '20px',
             marginBottom: '16px',
           }}>
-            <li>Classifiche di utilizzo per l'ultimo mese, quadrimestre e anno</li>
-            <li>Grafici comparativi per visualizzare le prestazioni</li>
-            <li>Suggerimenti per il bilanciamento dei turni tra i fonici</li>
+            <li><span style={{color: '#10B981'}}>🔺 Freccia Verde</span>: Aumento turni rispetto al mese precedente</li>
+            <li><span style={{color: '#EF4444'}}>🔻 Freccia Rossa</span>: Diminuzione turni rispetto al mese precedente</li>
+            <li>Nessuna freccia: Performance stabile (variazione minima)</li>
+            <li>Disponibile per Fonici, Direttori e Assistenti</li>
           </ul>
 
           <h3 style={{
@@ -202,7 +210,83 @@ const InformationView = ({ setView }) => {
             marginBottom: '12px',
             color: '#374151',
           }}>
-            Performance Trend
+            📊 Statistiche per Categoria Professionale
+          </h3>
+          
+          <h4 style={{
+            fontSize: '18px',
+            fontWeight: '600',
+            marginTop: '12px',
+            marginBottom: '8px',
+            color: '#4B5563',
+          }}>
+            Statistiche Fonici
+          </h4>
+          <ul style={{
+            fontSize: '16px',
+            lineHeight: '1.5',
+            color: '#4B5563',
+            paddingLeft: '20px',
+            marginBottom: '12px',
+          }}>
+            <li>Classifiche ultimo mese, quadrimestre e anno con trend</li>
+            <li>Distribuzione per sale di registrazione</li>
+            <li>Grafici comparativi e suggerimenti di bilanciamento</li>
+            <li>Analisi della frequenza di utilizzo per ottimizzare le assegnazioni</li>
+          </ul>
+
+          <h4 style={{
+            fontSize: '18px',
+            fontWeight: '600',
+            marginTop: '12px',
+            marginBottom: '8px',
+            color: '#4B5563',
+          }}>
+            Statistiche Direttori
+          </h4>
+          <ul style={{
+            fontSize: '16px',
+            lineHeight: '1.5',
+            color: '#4B5563',
+            paddingLeft: '20px',
+            marginBottom: '12px',
+          }}>
+            <li>Panoramica dedicata delle performance dei direttori di doppiaggio</li>
+            <li>Classifiche mensili, quadrimestrali e annuali</li>
+            <li>Indicatori di trend per monitorare variazioni mensili</li>
+            <li>Analisi dei carichi di lavoro per equa distribuzione</li>
+          </ul>
+
+          <h4 style={{
+            fontSize: '18px',
+            fontWeight: '600',
+            marginTop: '12px',
+            marginBottom: '8px',
+            color: '#4B5563',
+          }}>
+            Statistiche Assistenti
+          </h4>
+          <ul style={{
+            fontSize: '16px',
+            lineHeight: '1.5',
+            color: '#4B5563',
+            paddingLeft: '20px',
+            marginBottom: '16px',
+          }}>
+            <li>Monitoraggio specifico per assistenti alla regia</li>
+            <li>Dashboard dedicata con metriche personalizzate</li>
+            <li>Trend analysis per ottimizzare le collaborazioni</li>
+            <li>Supporto decisionale per la gestione del team</li>
+          </ul>
+
+          <h3 style={{
+            fontSize: '20px',
+            fontWeight: 'bold',
+            marginTop: '16px',
+            marginBottom: '12px',
+            color: '#374151',
+          }}>
+            🤖 Report AI Potenziato
           </h3>
           <p style={{
             fontSize: '16px',
@@ -210,19 +294,108 @@ const InformationView = ({ setView }) => {
             color: '#4B5563',
             marginBottom: '16px',
           }}>
-            Questa funzionalità analizza e visualizza i trend di performance nel tempo:
+            <strong>AGGIORNAMENTO:</strong> Il sistema di analisi AI è stato significativamente migliorato:
           </p>
           <ul style={{
             fontSize: '16px',
             lineHeight: '1.5',
             color: '#4B5563',
             paddingLeft: '20px',
+            marginBottom: '16px',
           }}>
-            <li>Grafico del trend annuale con confronto tra gli anni</li>
-            <li>Analisi dettagliata dell'anno in corso</li>
-            <li>Previsioni per i mesi futuri basate sui dati storici</li>
-            <li>Possibilità di condividere i risultati dell'analisi</li>
+            <li>Utilizza esclusivamente dati storici reali (non più valori ipotetici)</li>
+            <li>Analisi basata su medie storiche calcolate da anni precedenti</li>
+            <li>Previsioni più accurate per i mesi futuri</li>
+            <li>Confronti intelligenti con dati storici completi</li>
+            <li>Report dettagliati con insight operativi pratici</li>
           </ul>
+
+          <h3 style={{
+            fontSize: '20px',
+            fontWeight: 'bold',
+            marginTop: '16px',
+            marginBottom: '12px',
+            color: '#374151',
+          }}>
+            📈 Analisi Comparative Avanzate
+          </h3>
+          <ul style={{
+            fontSize: '16px',
+            lineHeight: '1.5',
+            color: '#4B5563',
+            paddingLeft: '20px',
+            marginBottom: '16px',
+          }}>
+            <li>Confronti mese-mese con differenze percentuali</li>
+            <li>Confronti anno-anno con analisi evolutive</li>
+            <li>Grafici interattivi per visualizzazioni dinamiche</li>
+            <li>Esportazione dati per reporting esterno</li>
+          </ul>
+
+          <h3 style={{
+            fontSize: '20px',
+            fontWeight: 'bold',
+            marginTop: '16px',
+            marginBottom: '12px',
+            color: '#374151',
+          }}>
+            ⚙️ Funzionalità di Sistema
+          </h3>
+          <ul style={{
+            fontSize: '16px',
+            lineHeight: '1.5',
+            color: '#4B5563',
+            paddingLeft: '20px',
+          }}>
+            <li>Interfaccia responsive ottimizzata per tutti i dispositivi</li>
+            <li>Architettura modulare per facile manutenzione</li>
+            <li>Sistema di validazione dati integrato</li>
+            <li>Backup automatico delle configurazioni</li>
+            <li>Performance ottimizzate per gestione dataset estesi</li>
+          </ul>
+        </div>
+
+        <div style={{
+          backgroundColor: '#F3F4F6',
+          padding: '20px',
+          borderRadius: '8px',
+          marginTop: '24px',
+          border: '1px solid #E5E7EB',
+        }}>
+          <h3 style={{
+            fontSize: '18px',
+            fontWeight: 'bold',
+            marginBottom: '12px',
+            color: '#374151',
+            display: 'flex',
+            alignItems: 'center',
+          }}>
+            <Info size={20} style={{ marginRight: '8px', color: '#3B82F6' }} />
+            Note Tecniche
+          </h3>
+          <p style={{
+            fontSize: '14px',
+            lineHeight: '1.5',
+            color: '#6B7280',
+            marginBottom: '8px',
+          }}>
+            • Tecnologie: React, Styled Components, Recharts, Lucide Icons
+          </p>
+          <p style={{
+            fontSize: '14px',
+            lineHeight: '1.5',
+            color: '#6B7280',
+            marginBottom: '8px',
+          }}>
+            • Deploy: Vercel con database compatibile per performance ottimali
+          </p>
+          <p style={{
+            fontSize: '14px',
+            lineHeight: '1.5',
+            color: '#6B7280',
+          }}>
+            • Aggiornamenti: Sistema di versionamento automatico per tracciabilità
+          </p>
         </div>
         
         {/* Footer */}
@@ -235,6 +408,9 @@ const InformationView = ({ setView }) => {
           color: '#6b7280',
         }}>
           <p>© StudioStats 2025 Marco Augusto Comba | Versione 1.6.1</p>
+          <p style={{ marginTop: '8px', fontSize: '12px' }}>
+            Ultimo aggiornamento: Gennaio 2025 - Funzionalità Trend Analysis implementata
+          </p>
         </div>
       </div>
     </div>
