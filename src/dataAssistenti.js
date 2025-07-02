@@ -975,48 +975,108 @@ export const assistentiData = [
     "nome": "TUCCINARDI WANDA",
     "mese": "2024-04",
     "turni": 3
-  }
-];
-
-// Funzione per ottenere il conteggio dei turni per un periodo
-export const getAssistentiTurnCountsForPeriod = (period) => {
-  const today = new Date();
-
-  let startDate;
-  let endDate;
-
-  if (period === 'mese') {
-    // Ultimo mese completo
-    const lastMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);
-    const firstDayThisMonth = new Date(today.getFullYear(), today.getMonth(), 1);
-
-    startDate = lastMonth;
-    endDate = firstDayThisMonth;
-  } else if (period === 'quadrimestre') {
-    // Ultimi quattro mesi completi precedenti
-    startDate = new Date(today.getFullYear(), today.getMonth() - 4, 1);
-    endDate = new Date(today.getFullYear(), today.getMonth(), 1);
-  } else if (period === 'anno') {
-    // Dall'inizio dell'anno fino ad oggi
-    startDate = new Date(today.getFullYear(), 0, 1);
-    endDate = today;
-  }
-
-  // Filtra i dati nel range di date
-  const filteredData = assistentiData.filter(({ mese }) => {
-    const dataMese = new Date(mese + '-01');
-    return dataMese >= startDate && dataMese < endDate;
-  });
-
-  // Somma i turni per ogni assistente
-  const counts = {};
-  filteredData.forEach(({ nome, turni }) => {
-    counts[nome] = (counts[nome] || 0) + turni;
-  });
-
-  // Converti in array e ordina
-  return Object.entries(counts)
-    .map(([nome, turni]) => ({ nome, turni }))
-    .sort((a, b) => b.turni - a.turni);
-};
+  },
+      {
+              nome: "CARBINI ALICE",
+              mese: "2025-06",
+              turni: 46
+            },
+    {
+              nome: "CONTI FEDERICA",
+              mese: "2025-06",
+              turni: 36
+            },
+    {
+              nome: "CORTESE ELISABETTA",
+              mese: "2025-06",
+              turni: 29
+            },
+    {
+              nome: "FABRICATORE ANDREA",
+              mese: "2025-06",
+              turni: 36
+            },
+    {
+              nome: "GIRARDI ELISABETTA",
+              mese: "2025-06",
+              turni: 32
+            },
+    {
+              nome: "NICODEMO GIOVANNA",
+              mese: "2025-06",
+              turni: 4
+            },
+    {
+              nome: "NICOLOSI FRANCESCA",
+              mese: "2025-06",
+              turni: 32
+            },
+    {
+              nome: "PARLATO JEANNE",
+              mese: "2025-06",
+              turni: 10
+            },
+    {
+              nome: "PICCHIO MAURIZIO",
+              mese: "2025-06",
+              turni: 39
+            },
+    {
+              nome: "ROMA MANUELE",
+              mese: "2025-06",
+              turni: 37
+            },
+    {
+              nome: "ROMEO SIMONA",
+              mese: "2025-06",
+              turni: 40
+            },
+    {
+              nome: "SAITTA FIORENZA",
+              mese: "2025-06",
+              turni: 31
+            }
+  ];
+  
+  // Funzione per ottenere il conteggio dei turni per un periodo
+  export const getAssistentiTurnCountsForPeriod = (period) => {
+    const today = new Date();
+  
+    let startDate;
+    let endDate;
+  
+    if (period === 'mese') {
+      // Ultimo mese completo
+      const lastMonth = new Date(today.getFullYear(), today.getMonth() - 1, 1);
+      const firstDayThisMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+  
+      startDate = lastMonth;
+      endDate = firstDayThisMonth;
+    } else if (period === 'quadrimestre') {
+      // Ultimi quattro mesi completi precedenti
+      startDate = new Date(today.getFullYear(), today.getMonth() - 4, 1);
+      endDate = new Date(today.getFullYear(), today.getMonth(), 1);
+    } else if (period === 'anno') {
+      // Dall'inizio dell'anno fino ad oggi
+      startDate = new Date(today.getFullYear(), 0, 1);
+      endDate = today;
+    }
+  
+    // Filtra i dati nel range di date
+    const filteredData = assistentiData.filter(({ mese }) => {
+      const dataMese = new Date(mese + '-01');
+      return dataMese >= startDate && dataMese < endDate;
+    });
+  
+    // Somma i turni per ogni assistente
+    const counts = {};
+    filteredData.forEach(({ nome, turni }) => {
+      counts[nome] = (counts[nome] || 0) + turni;
+    });
+  
+    // Converti in array e ordina
+    return Object.entries(counts)
+      .map(([nome, turni]) => ({ nome, turni }))
+      .sort((a, b) => b.turni - a.turni);
+  };
   
