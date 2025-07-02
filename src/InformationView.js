@@ -87,7 +87,7 @@ const InformationView = ({ setView }) => {
           </InfoItem>
           <InfoItem>
             <InfoLabel>Ultima Modifica:</InfoLabel>
-            <InfoValue>Gennaio 2025</InfoValue>
+            <InfoValue>{new Date().toLocaleDateString('it-IT', { year: 'numeric', month: 'long' })}</InfoValue>
           </InfoItem>
           <p style={{
             fontSize: '16px',
@@ -355,48 +355,7 @@ const InformationView = ({ setView }) => {
           </ul>
         </div>
 
-        <div style={{
-          backgroundColor: '#F3F4F6',
-          padding: '20px',
-          borderRadius: '8px',
-          marginTop: '24px',
-          border: '1px solid #E5E7EB',
-        }}>
-          <h3 style={{
-            fontSize: '18px',
-            fontWeight: 'bold',
-            marginBottom: '12px',
-            color: '#374151',
-            display: 'flex',
-            alignItems: 'center',
-          }}>
-            <Info size={20} style={{ marginRight: '8px', color: '#3B82F6' }} />
-            Note Tecniche
-          </h3>
-          <p style={{
-            fontSize: '14px',
-            lineHeight: '1.5',
-            color: '#6B7280',
-            marginBottom: '8px',
-          }}>
-            • Tecnologie: React, Styled Components, Recharts, Lucide Icons
-          </p>
-          <p style={{
-            fontSize: '14px',
-            lineHeight: '1.5',
-            color: '#6B7280',
-            marginBottom: '8px',
-          }}>
-            • Deploy: Vercel con database compatibile per performance ottimali
-          </p>
-          <p style={{
-            fontSize: '14px',
-            lineHeight: '1.5',
-            color: '#6B7280',
-          }}>
-            • Aggiornamenti: Sistema di versionamento automatico per tracciabilità
-          </p>
-        </div>
+
         
         {/* Footer */}
         <div style={{
