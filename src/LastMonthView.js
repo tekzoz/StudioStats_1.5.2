@@ -1,7 +1,70 @@
 import React from 'react';
 import { ArrowLeft, Calendar, Clock, Gauge } from 'lucide-react';
-import { getLatestMonthData, getPreviousMonthData, getAnnualAverageData, getSameMonthPreviousYear, getSameMonthBestPreviousYear, getCorrectAnnualAverage } from './data';
+import { getLatestMonthData, getPreviousMonthData, getAnnualAverageData, getSameMonthPreviousYear, getSameMonthBestPreviousYear, getCorrectAnnualAverage, getBestMonthByDailyAverage } from './data';
 import PerformanceGauge from './PerformanceGauge';
+
+const TripleStatCard = ({ icon, label, currentData, previousData, bestData, backgroundColor }) => (
+  <div style={{
+    backgroundColor: backgroundColor,
+    borderRadius: '12px',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    padding: '24px',
+    display: 'flex',
+    flexDirection: 'column',
+    marginBottom: '24px',
+  }}>
+    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+      {React.cloneElement(icon, { size: 24, color: '#4B5563' })}
+      <span style={{ marginLeft: '12px', fontSize: '18px', fontWeight: '500', color: '#4B5563' }}>{label}</span>
+    </div>
+    
+    {/* Mese corrente */}
+    <div style={{ marginBottom: '16px' }}>
+      <div style={{ fontSize: '16px', fontWeight: '500', color: '#4B5563', marginBottom: '4px' }}>
+        Media Turni di Doppiaggio Giornaliera {currentData.monthName} {currentData.year} (Lun-Ven)
+      </div>
+      <div style={{ fontSize: '32px', fontWeight: 'bold', color: '#1F2937' }}>
+        {currentData.value}
+      </div>
+    </div>
+    
+    {/* Mese precedente */}
+    <div style={{ marginBottom: '16px' }}>
+      <div style={{ fontSize: '16px', fontWeight: '500', color: '#4B5563', marginBottom: '4px' }}>
+        Media Turni di Doppiaggio Giornaliera {previousData.monthName} {previousData.year} (Lun-Ven)
+      </div>
+      <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1F2937' }}>
+        {previousData.value} 
+        <span style={{ 
+          fontSize: '14px', 
+          marginLeft: '8px',
+          color: previousData.comparison && parseFloat(previousData.comparison.value) > 0 ? 'green' : 'red'
+        }}>
+          ({previousData.comparison?.percentage}) rispetto a {currentData.monthName} {currentData.year}
+        </span>
+      </div>
+    </div>
+    
+    {/* Mese migliore */}
+    {bestData && (
+      <div>
+        <div style={{ fontSize: '16px', fontWeight: '500', color: '#4B5563', marginBottom: '4px' }}>
+          Media Turni di Doppiaggio Giornaliera {bestData.monthName} {bestData.year} (Lun-Ven)
+        </div>
+        <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1F2937' }}>
+          {bestData.value} 
+          <span style={{ 
+            fontSize: '14px', 
+            marginLeft: '8px',
+            color: bestData.comparison && parseFloat(bestData.comparison.value) > 0 ? 'green' : 'red'
+          }}>
+            ({bestData.comparison?.percentage}) rispetto a {currentData.monthName} {currentData.year}
+          </span>
+        </div>
+      </div>
+    )}
+  </div>
+);
 
 const StatCard = ({ icon, label, value, comparison, backgroundColor, component, showUnit = false }) => (
   <div style={{
@@ -57,6 +120,18 @@ const calculateComparison = (current, previous) => {
   };
 };
 
+const calculateInverseComparison = (base, target) => {
+  if (typeof base !== 'number' || typeof target !== 'number') {
+    return { value: 'N/A', percentage: 'N/A' };
+  }
+  const diff = base - target;
+  const percentage = ((diff / target) * 100).toFixed(1);
+  return {
+    value: diff > 0 ? `+${diff.toFixed(1)}` : diff.toFixed(1),
+    percentage: diff > 0 ? `+${percentage}%` : `${percentage}%`
+  };
+};
+
 const roundToHalf = (num) => {
   return Math.round(num * 2) / 2;
 };
@@ -67,6 +142,7 @@ const LastMonthView = ({ setView }) => {
   const annualAverageData = getCorrectAnnualAverage(); // Usa la media corretta
   const sameMonthPrevYearData = getSameMonthPreviousYear();
   const sameMonthBestYearData = getSameMonthBestPreviousYear();
+  const bestMonthData = getBestMonthByDailyAverage();
 
   const currentDate = new Date();
   const lastMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
@@ -115,6 +191,31 @@ const LastMonthView = ({ setView }) => {
     comparisonDataMedia.sameMonthBestYear.year = sameMonthBestYearData.year;
   }
 
+  // Preparazione dati per il nuovo componente TripleStatCard della media giornaliera
+  const currentAverage = roundToHalf(latestMonthData.mediaGiornaliera);
+  const previousAverage = roundToHalf(previousMonthData.mediaGiornaliera);
+  const bestAverage = bestMonthData ? roundToHalf(bestMonthData.mediaGiornaliera) : null;
+  
+  const averageData = {
+    current: {
+      value: currentAverage.toFixed(1),
+      monthName: displayMonth,
+      year: displayYear
+    },
+    previous: {
+      value: previousAverage.toFixed(1),
+      monthName: previousMonthName,
+      year: previousMonthYear,
+      comparison: calculateInverseComparison(previousAverage, currentAverage)
+    },
+    best: bestMonthData ? {
+      value: bestAverage.toFixed(1),
+      monthName: monthNames[bestMonthData.month - 1],
+      year: bestMonthData.year,
+      comparison: calculateInverseComparison(bestAverage, currentAverage)
+    } : null
+  };
+
   // Calcolo la percentuale di utilizzo delle sale
   // Assumo che ogni turno sia di 3 ore, con 10 sale disponibili e 3 fasce orarie (9 ore al giorno)
   const maxTurniGiornalieri = 10 * 3; // 10 sale * 3 fasce orarie = 30 turni massimi giornalieri
@@ -142,14 +243,6 @@ const LastMonthView = ({ setView }) => {
       value: latestMonthData.totaleTurni,
       comparison: comparisonDataTurni,
       backgroundColor: '#E6F3FF',
-      showUnit: true
-    },
-    { 
-      icon: <Clock />, 
-      label: 'Media Turni di Doppiaggio Giornaliera (Lun-Ven)', 
-      value: roundToHalf(latestMonthData.mediaGiornaliera).toFixed(1),
-      comparison: comparisonDataMedia,
-      backgroundColor: '#FFF0E6',
       showUnit: true
     },
     { 
@@ -222,9 +315,16 @@ const LastMonthView = ({ setView }) => {
         </h2>
         
         <div>
-          {stats.map((stat, index) => (
-            <StatCard key={index} {...stat} />
-          ))}
+          <StatCard {...stats[0]} />
+          <TripleStatCard 
+            icon={<Clock />}
+            label="Media Turni di Doppiaggio Giornaliera"
+            currentData={averageData.current}
+            previousData={averageData.previous}
+            bestData={averageData.best}
+            backgroundColor="#FFF0E6"
+          />
+          <StatCard {...stats[1]} />
         </div>
         
         {/* Footer */}

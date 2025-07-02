@@ -31673,3 +31673,21 @@ export const getCorrectAnnualAverage = () => {
     monthsCount: currentYearData.length
   };
 };
+
+export const getBestMonthByDailyAverage = () => {
+  if (monthsData.length === 0) return null;
+  
+  // Trova il mese con la media giornaliera più alta
+  const bestMonth = monthsData.reduce((best, current) => {
+    const currentAverage = calculateAverageWorkdayShifts(current);
+    const bestAverage = calculateAverageWorkdayShifts(best);
+    return currentAverage > bestAverage ? current : best;
+  });
+  
+  return {
+    totaleTurni: calculateTotalShifts(bestMonth),
+    mediaGiornaliera: calculateAverageWorkdayShifts(bestMonth),
+    year: bestMonth.year,
+    month: bestMonth.month
+  };
+};
