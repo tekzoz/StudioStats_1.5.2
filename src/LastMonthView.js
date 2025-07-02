@@ -83,8 +83,9 @@ const StatCard = ({ icon, label, value, comparison, backgroundColor, component, 
     display: 'flex',
     flexDirection: 'column',
     marginBottom: '24px',
+    textAlign: 'center',
   }}>
-    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
+    <div style={{ display: 'flex', alignItems: 'center', marginBottom: '16px', justifyContent: 'center' }}>
       {React.cloneElement(icon, { size: 24, color: '#4B5563' })}
       <span style={{ marginLeft: '12px', fontSize: '18px', fontWeight: '500', color: '#4B5563' }}>{label}</span>
     </div>
@@ -96,19 +97,19 @@ const StatCard = ({ icon, label, value, comparison, backgroundColor, component, 
     {comparison && (
       <div style={{ marginTop: '8px', fontSize: '14px' }}>
         <div style={{ color: comparison.prevMonth.value === 'N/A' ? 'gray' : (parseFloat(comparison.prevMonth.value) > 0 ? 'green' : 'red') }}>
-          {comparison.prevMonth.value}{showUnit ? ' turni' : ''} ({comparison.prevMonth.percentage}) rispetto a {comparison.prevMonthName} {comparison.prevMonthYear}{showUnit ? ' (numero turni)' : ''}
+          {comparison.prevMonth.value}{showUnit ? ' turni' : ''} ({comparison.prevMonth.percentage}) rispetto a {comparison.prevMonthName} {comparison.prevMonthYear}{showUnit && comparison.prevMonthValue ? ` (${comparison.prevMonthValue})` : ''}
         </div>
         <div style={{ color: comparison.annual.value === 'N/A' ? 'gray' : (parseFloat(comparison.annual.value) > 0 ? 'green' : 'red') }}>
-          {comparison.annual.value}{showUnit ? ' turni' : ''} ({comparison.annual.percentage}) rispetto alla media annuale {comparison.year}{showUnit ? ' (numero turni)' : ''}
+          {comparison.annual.value}{showUnit ? ' turni' : ''} ({comparison.annual.percentage}) rispetto alla media annuale {comparison.year}{showUnit && comparison.annualValue ? ` (${comparison.annualValue})` : ''}
         </div>
         {comparison.sameMonthPrevYear && (
           <div style={{ color: comparison.sameMonthPrevYear.value === 'N/A' ? 'gray' : (parseFloat(comparison.sameMonthPrevYear.value) > 0 ? 'green' : 'red') }}>
-            {comparison.sameMonthPrevYear.value}{showUnit ? ' turni' : ''} ({comparison.sameMonthPrevYear.percentage}) rispetto a {comparison.monthName} {comparison.sameMonthPrevYear.year}{showUnit ? ' (numero turni)' : ''}
+            {comparison.sameMonthPrevYear.value}{showUnit ? ' turni' : ''} ({comparison.sameMonthPrevYear.percentage}) rispetto a {comparison.monthName} {comparison.sameMonthPrevYear.year}{showUnit && comparison.sameMonthPrevYearValue ? ` (${comparison.sameMonthPrevYearValue})` : ''}
           </div>
         )}
         {comparison.sameMonthBestYear && (
           <div style={{ color: comparison.sameMonthBestYear.value === 'N/A' ? 'gray' : (parseFloat(comparison.sameMonthBestYear.value) > 0 ? 'green' : 'red') }}>
-            {comparison.sameMonthBestYear.value}{showUnit ? ' turni' : ''} ({comparison.sameMonthBestYear.percentage}) rispetto a {comparison.monthName} {comparison.sameMonthBestYear.year} (anno migliore){showUnit ? ' (numero turni)' : ''}
+            {comparison.sameMonthBestYear.value}{showUnit ? ' turni' : ''} ({comparison.sameMonthBestYear.percentage}) rispetto a {comparison.monthName} {comparison.sameMonthBestYear.year} (anno migliore){showUnit && comparison.sameMonthBestYearValue ? ` (${comparison.sameMonthBestYearValue})` : ''}
           </div>
         )}
       </div>
@@ -169,7 +170,12 @@ const LastMonthView = ({ setView }) => {
     prevMonthName: previousMonthName,
     prevMonthYear: previousMonthYear,
     monthName: displayMonth,
-    year: displayYear
+    year: displayYear,
+    // Aggiungo i valori effettivi dei turni
+    prevMonthValue: previousMonthData.totaleTurni,
+    annualValue: Math.round(annualAverageData.mediaAnnuale),
+    sameMonthPrevYearValue: sameMonthPrevYearData ? sameMonthPrevYearData.totaleTurni : null,
+    sameMonthBestYearValue: sameMonthBestYearData ? sameMonthBestYearData.totaleTurni : null
   };
   
   // Aggiunge gli anni ai confronti
