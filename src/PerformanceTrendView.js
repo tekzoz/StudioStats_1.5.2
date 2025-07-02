@@ -662,87 +662,130 @@ const PerformanceTrendView = ({ setView }) => {
       
       const averageMonthlyTurni = monthsWithData > 0 ? totalTurni / monthsWithData : 0;
     
-      // Raccoglie dati degli anni precedenti
+      // Raccoglie dati degli anni precedenti per calcolare le medie storiche per ogni mese
       const previousYearsData = Object.entries(allYearsData)
-        .filter(([y]) => parseInt(y) < yearToAnalyze && parseInt(y) >= 2021)
-        .map(([year, data]) => {
-          const yearTotal = Object.values(data)
-            .slice(0, month)
-            .reduce((sum, monthData) => sum + (monthData?.totaleTurni || 0), 0);
-            
-          const monthlyAverages = [];
-          for (let i = 0; i < month; i++) {
-            const monthData = data[i];
-            if (monthData && monthData.totaleTurni) {
-              monthlyAverages.push({
-                month: i + 1,
-                turni: monthData.totaleTurni
-              });
-            }
-          }
-          
-          return { 
-            year: parseInt(year), 
-            totalTurni: yearTotal,
-            monthlyAverages
-          };
-        });
+        .filter(([y]) => parseInt(y) < yearToAnalyze && parseInt(y) >= 2021);
       
-      // Calcola dati mensili per l'anno in analisi
-      const currentYearMonthly = [];
+      // Calcola le medie storiche per ogni mese
+      const historicalMonthlyAverages = {};
+      for (let monthIndex = 0; monthIndex < month; monthIndex++) {
+        const monthNumber = monthIndex + 1;
+        let totalTurniForMonth = 0;
+        let yearsWithDataForMonth = 0;
+        
+        previousYearsData.forEach(([year, data]) => {
+          if (data[monthIndex] && data[monthIndex].totaleTurni) {
+            totalTurniForMonth += data[monthIndex].totaleTurni;
+            yearsWithDataForMonth++;
+          }
+        });
+        
+        historicalMonthlyAverages[monthNumber] = yearsWithDataForMonth > 0 
+          ? totalTurniForMonth / yearsWithDataForMonth 
+          : 0;
+      }
+      
+      // Calcola dati mensili per l'anno in analisi con confronto vs media storica
+      const currentYearMonthlyWithComparison = [];
       for (let i = 0; i < month; i++) {
         const monthData = currentYearData[i];
-        if (monthData && monthData.totaleTurni) {
-          currentYearMonthly.push({
-            month: i + 1,
-            turni: monthData.totaleTurni
+        const monthNumber = i + 1;
+        const currentMonthTurni = monthData?.totaleTurni || 0;
+        const historicalAverage = historicalMonthlyAverages[monthNumber] || 0;
+        
+        if (currentMonthTurni > 0) {
+          const percentageChange = historicalAverage > 0 
+            ? ((currentMonthTurni - historicalAverage) / historicalAverage * 100)
+            : 0;
+          
+          let performanceDescription = '';
+          if (percentageChange > 15) {
+            performanceDescription = 'Significativamente superiore alla media storica';
+          } else if (percentageChange > 5) {
+            performanceDescription = 'Superiore alla media storica';
+          } else if (percentageChange > -5) {
+            performanceDescription = 'In linea con la media storica';
+          } else if (percentageChange > -15) {
+            performanceDescription = 'Inferiore alla media storica';
+          } else {
+            performanceDescription = 'Significativamente inferiore alla media storica';
+          }
+          
+          currentYearMonthlyWithComparison.push({
+            month: monthNumber,
+            monthName: getMonthName(monthNumber),
+            turniAttuali: currentMonthTurni,
+            mediaStorica: Math.round(historicalAverage),
+            variazione: Math.round(percentageChange * 100) / 100,
+            performance: performanceDescription
           });
         }
       }
       
+      // Prepara dati storici riassuntivi per contesto
+      const historicalSummary = previousYearsData.map(([year, data]) => {
+        const yearTotal = Object.values(data)
+          .slice(0, month)
+          .reduce((sum, monthData) => sum + (monthData?.totaleTurni || 0), 0);
+        return { 
+          year: parseInt(year), 
+          totalTurni: yearTotal
+        };
+      });
+      
       // Prepara il prompt per l'API
       const prompt = `
         Sei un esperto analista di dati del settore audiovisivo con specifiche competenze nel doppiaggio. La tua analisi è richiesta dal board dello Studio Pumaisdue, un prestigioso studio di doppiaggio italiano. Esamina attentamente i seguenti dati sui turni di lavoro e produci un report strategico dettagliato.
-        Verifica i dati prima di pubblicare il report.
+        
         ===DATI DI BASE===
         Anno in analisi: ${yearToAnalyze}
         Mese attuale: ${getMonthName(month)}
         Turni totali completati fino a ${getMonthName(month)}: ${totalTurni}
         Media mensile dei turni: ${averageMonthlyTurni.toFixed(2)}
         
-        ===DATI MENSILI DETTAGLIATI PER L'ANNO ${yearToAnalyze}===
-        ${JSON.stringify(currentYearMonthly, null, 2)}
+        ===CONFRONTO MENSILE DETTAGLIATO (${yearToAnalyze} vs Media Storica)===
+        I seguenti dati mostrano il confronto preciso tra i turni dell'anno corrente e le medie storiche calcolate:
+        ${JSON.stringify(currentYearMonthlyWithComparison, null, 2)}
         
-        ===DATI STORICI DEGLI ANNI PRECEDENTI===
-        ${JSON.stringify(previousYearsData, null, 2)}
+        ===DATI STORICI RIASSUNTIVI===
+        Totali annuali degli anni precedenti (per contesto):
+        ${JSON.stringify(historicalSummary, null, 2)}
+        
+        ===ISTRUZIONI SPECIFICHE===
+        IMPORTANTE: Usa ESCLUSIVAMENTE i dati del confronto mensile dettagliato sopra riportato per le tue valutazioni di performance. 
+        Ogni mese ha già il calcolo preciso della variazione percentuale e la classificazione della performance rispetto alla media storica.
         
         La tua analisi deve essere COMPLETA e APPROFONDITA, includendo:
         
-        1. **RIEPILOGO ESECUTIVO**: Una panoramica concisa della performance attuale con punti chiave per il management. Un riassunto delle performance contro gli anni precedenti mese su mese. 
+        1. **RIEPILOGO ESECUTIVO**: 
+           - Panoramica concisa basata sui confronti mensili già calcolati
+           - Sintesi dei punti chiave per il management
+           - Riassunto delle performance mese per mese come riportato nei dati
         
-        2. **ANALISI COMPARATIVA**: Un confronto dettagliato con gli anni precedenti, includendo:
-           - Variazioni percentuali mese per mese
-           - Trend di crescita/diminuzione
+        2. **ANALISI COMPARATIVA**: 
+           - Utilizza le variazioni percentuali già calcolate per ogni mese
+           - Analizza i trend di crescita/diminuzione basandoti sui dati forniti
            - Posizionamento dell'anno corrente rispetto alla storia dello studio
-           - Individuazione e spiegazione di un eventuale pattern comune tra i diversi mesi dei diversi anni
+           - Pattern comuni identificabili nei diversi mesi
         
         3. **ANALISI STAGIONALE**:
-           - Pattern trimestrali e mensili identificabili
+           - Pattern trimestrali e mensili basati sui confronti forniti
            - Identificazione di periodi di alta/bassa produttività
-           - Confronto della stagionalità con gli anni precedenti
+           - Confronto della stagionalità evidenziata dai dati
         
         4. **PREVISIONI FUTURE**:
-           - Proiezione dettagliata per i mesi rimanenti dell'anno
+           - Proiezione per i mesi rimanenti basata sui trend evidenziati
            - Stima della produttività annuale totale attesa
+           - Considerazioni sui fattori che potrebbero influenzare le previsioni
         
-        5. **APPROFONDIMENTO SULLE ANOMALIE**:
-           - Identificazione di periodi o trend anomali nei dati
-           - Possibili spiegazioni per queste anomalie
-           - Strategie per affrontare questi pattern con warning su quando potrebbe essere necessario aumentare o diminuire le forze lavoro di collaboratori esterni dei diversi settori.
+        5. **RACCOMANDAZIONI STRATEGICHE**:
+           - Strategie basate sui pattern identificati
+           - Suggerimenti per ottimizzare le risorse nei diversi periodi
+           - Indicazioni su quando aumentare o diminuire collaboratori esterni
         
         Formatta il tuo report in Markdown con una struttura chiara e professionale. Usa titoli (##), sottotitoli (###), elenchi puntati e, dove appropriato, enfasi (**testo**) per evidenziare concetti chiave. Il linguaggio deve essere professionale ma accessibile, orientato all'azione e specifico per il settore del doppiaggio.
         
-        Lo studio utilizzerà questo report per decisioni strategiche importanti, quindi sii preciso, obiettivo e fornisci informazioni che possano realmente guidare il processo decisionale.
+        Lo studio utilizzerà questo report per decisioni strategiche importanti, quindi sii preciso, obiettivo e basati SOLO sui dati di confronto forniti.
       `;
       
       try {
