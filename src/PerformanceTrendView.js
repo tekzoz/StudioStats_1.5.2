@@ -354,7 +354,17 @@ Per utilizzare questa funzionalità, è necessario configurare una chiave API Ge
 // Funzione fallback per generare un'analisi simulata quando l'API è in rate limit
 const generateSimulatedAnalysis = (yearToAnalyze, currentMonth, totalTurni, averageMonthlyTurni) => {
   const month = currentMonth > 1 ? currentMonth - 1 : 12;
-  return `# Analisi della Performance Studio Pumaisdue - ${yearToAnalyze} (SIMULAZIONE)
+  const currentDate = new Date();
+  const formatDate = (date) => {
+    return date.toLocaleDateString('it-IT', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+  
+  return `# REPORT STRATEGICO SULL'ANDAMENTO DEI TURNI DI DOPPIAGGIO
+## Data generazione: ${formatDate(currentDate)}
 
 > ⚠️ **Nota**: Questa è un'analisi simulata generata localmente perché l'API Gemini non è attualmente disponibile a causa di limiti di utilizzo.
 
@@ -759,8 +769,21 @@ const PerformanceTrendView = ({ setView }) => {
       historicalSummary.sort((a, b) => a.year - b.year);
       
       // Prepara il prompt per l'API
+      const currentDate = new Date();
+      const formatDate = (date) => {
+        return date.toLocaleDateString('it-IT', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric' 
+        });
+      };
+      
       const prompt = `
         Sei un esperto analista di dati del settore audiovisivo con specifiche competenze nel doppiaggio. La tua analisi è richiesta dal board dello Studio Pumaisdue, un prestigioso studio di doppiaggio italiano. Esamina attentamente i seguenti dati sui turni di lavoro e produci un report strategico dettagliato.
+        
+        IMPORTANTE: Il report deve iniziare OBBLIGATORIAMENTE con il titolo esatto:
+        # REPORT STRATEGICO SULL'ANDAMENTO DEI TURNI DI DOPPIAGGIO
+        ## Data generazione: ${formatDate(currentDate)}
         
         ===DATI DI BASE===
         Anno in analisi: ${yearToAnalyze}
