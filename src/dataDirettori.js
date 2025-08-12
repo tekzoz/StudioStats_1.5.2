@@ -1750,6 +1750,121 @@ export const direttoriData = [
           "mese": "2025-06",
           "turni": 18
         },
+          {
+                    "nome": "ANCIDONI ROSSELLA",
+                    "mese": "2025-07",
+                    "turni": 9
+                  },
+          {
+                    "nome": "AQUILONE FLAVIO",
+                    "mese": "2025-07",
+                    "turni": 8
+                  },
+          {
+                    "nome": "BALDINI ORESTE",
+                    "mese": "2025-07",
+                    "turni": 29
+                  },
+          {
+                    "nome": "BALDINI RITA",
+                    "mese": "2025-07",
+                    "turni": 2
+                  },
+          {
+                    "nome": "BENASSI STEFANO",
+                    "mese": "2025-07",
+                    "turni": 13
+                  },
+          {
+                    "nome": "CAPUTO ARIANNA",
+                    "mese": "2025-07",
+                    "turni": 37
+                  },
+          {
+                    "nome": "CASTAGNA GABRIELE",
+                    "mese": "2025-07",
+                    "turni": 24
+                  },
+          {
+                    "nome": "CASTRACANE BARBARA",
+                    "mese": "2025-07",
+                    "turni": 25
+                  },
+          {
+                    "nome": "CATANIA GIULIA",
+                    "mese": "2025-07",
+                    "turni": 16
+                  },
+          {
+                    "nome": "CATANIA MYRIAM",
+                    "mese": "2025-07",
+                    "turni": 8
+                  },
+          {
+                    "nome": "CIGLIANO ALESSIO",
+                    "mese": "2025-07",
+                    "turni": 9
+                  },
+          {
+                    "nome": "DE ANGELIS ELEONORA",
+                    "mese": "2025-07",
+                    "turni": 25
+                  },
+          {
+                    "nome": "DE FLAVIIS FABRIZIO",
+                    "mese": "2025-07",
+                    "turni": 3
+                  },
+          {
+                    "nome": "IZZO FIAMMETTA",
+                    "mese": "2025-07",
+                    "turni": 22
+                  },
+          {
+                    "nome": "IZZO GIUSEPPINA",
+                    "mese": "2025-07",
+                    "turni": 22
+                  },
+          {
+                    "nome": "IZZO ROSSELLA",
+                    "mese": "2025-07",
+                    "turni": 15
+                  },
+          {
+                    "nome": "LATINI ILARIA",
+                    "mese": "2025-07",
+                    "turni": 23
+                  },
+          {
+                    "nome": "MAZZOTTA FABRIZIO",
+                    "mese": "2025-07",
+                    "turni": 10
+                  },
+          {
+                    "nome": "NOBILI FEDERICO",
+                    "mese": "2025-07",
+                    "turni": 28
+                  },
+          {
+                    "nome": "SCOTTI GIULIA SONIA",
+                    "mese": "2025-07",
+                    "turni": 1
+                  },
+          {
+                    "nome": "VENDITTI FRANCESCO SAVERIO",
+                    "mese": "2025-07",
+                    "turni": 5
+                  },
+          {
+                    "nome": "VERSINO LUDOVICO",
+                    "mese": "2025-07",
+                    "turni": 1
+                  },
+          {
+                    "nome": "VIDALI VALERIA",
+                    "mese": "2025-07",
+                    "turni": 13
+                  },
 ];
 
 export const getDirettoriTurnCountsForPeriod = (period) => {
