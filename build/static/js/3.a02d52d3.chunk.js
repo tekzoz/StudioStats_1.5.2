@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkdashboard_pumaisdue=self.webpackChunkdashboard_pumaisdue||[]).push([[3],{2003:(a,e,s)=>{s.r(e),s.d(e,{availableYears:()=>l,dataVersion:()=>u});const l=[{value:"2025",label:"2025"},{value:"2024",label:"2024"}],u="1.0.0"}}]);
-//# sourceMappingURL=3.a02d52d3.chunk.js.map
