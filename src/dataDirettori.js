@@ -1865,6 +1865,81 @@ export const direttoriData = [
                     "mese": "2025-07",
                     "turni": 13
                   },
+                    {
+                              "nome": "AQUILONE FLAVIO",
+                              "mese": "2025-08",
+                              "turni": 2
+                            },
+                    {
+                              "nome": "BALDINI ORESTE",
+                              "mese": "2025-08",
+                              "turni": 14
+                            },
+                    {
+                              "nome": "BALDINI RITA",
+                              "mese": "2025-08",
+                              "turni": 8
+                            },
+                    {
+                              "nome": "BENASSI STEFANO",
+                              "mese": "2025-08",
+                              "turni": 4
+                            },
+                    {
+                              "nome": "CAPUTO ARIANNA",
+                              "mese": "2025-08",
+                              "turni": 7
+                            },
+                    {
+                              "nome": "CASTAGNA GABRIELE",
+                              "mese": "2025-08",
+                              "turni": 9
+                            },
+                    {
+                              "nome": "CATANIA GIULIA",
+                              "mese": "2025-08",
+                              "turni": 12
+                            },
+                    {
+                              "nome": "CATANIA MYRIAM",
+                              "mese": "2025-08",
+                              "turni": 4
+                            },
+                    {
+                              "nome": "DE FLAVIIS FABRIZIO",
+                              "mese": "2025-08",
+                              "turni": 22
+                            },
+                    {
+                              "nome": "GIORDANI LAURA",
+                              "mese": "2025-08",
+                              "turni": 4
+                            },
+                    {
+                              "nome": "IZZO FIAMMETTA",
+                              "mese": "2025-08",
+                              "turni": 5
+                            },
+                    {
+                              "nome": "IZZO GIUSEPPINA",
+                              "mese": "2025-08",
+                              "turni": 8
+                            },
+                    {
+                              "nome": "IZZO ROSSELLA",
+                              "mese": "2025-08",
+                              "turni": 25
+                            },
+                    {
+                              "nome": "LATINI ILARIA",
+                              "mese": "2025-08",
+                              "turni": 2
+                            },
+                    {
+                              "nome": "VENDITTI FRANCESCO SAVERIO",
+                              "mese": "2025-08",
+                              "turni": 18
+                            },
 ];
 
 export const getDirettoriTurnCountsForPeriod = (period) => {

@@ -1095,8 +1095,59 @@ export const assistentiData = [
                         nome: "SCACCO DE SANTIS MANUELA",
                         mese: "2025-07",
                         turni: 1
-                      }
-              
+                      },
+                      
+                        {
+                                  nome: "CORTESE ELISABETTA",
+                                  mese: "2025-08",
+                                  turni: 27
+                                },
+                        {
+                                  nome: "CORTESE FEDERICO",
+                                  mese: "2025-08",
+                                  turni: 12
+                                },
+                        {
+                                  nome: "FABRICATORE ANDREA",
+                                  mese: "2025-08",
+                                  turni: 25
+                                },
+                        {
+                                  nome: "GIRARDI ELISABETTA",
+                                  mese: "2025-08",
+                                  turni: 7
+                                },
+                        {
+                                  nome: "NICOLOSI FRANCESCA",
+                                  mese: "2025-08",
+                                  turni: 4
+                                },
+                        {
+                                  nome: "PARLATO JEANNE",
+                                  mese: "2025-08",
+                                  turni: 8
+                                },
+                        {
+                                  nome: "PICCHIO MAURIZIO",
+                                  mese: "2025-08",
+                                  turni: 10
+                                },
+                        {
+                                  nome: "ROMA MANUELE",
+                                  mese: "2025-08",
+                                  turni: 10
+                                },
+                        {
+                                  nome: "ROMEO SIMONA",
+                                  mese: "2025-08",
+                                  turni: 13
+                                },
+                        {
+                                  nome: "SAITTA FIORENZA",
+                                  mese: "2025-08",
+                                  turni: 14
+                                },
+            
   ];
   
   // Funzione per ottenere il conteggio dei turni per un periodo
