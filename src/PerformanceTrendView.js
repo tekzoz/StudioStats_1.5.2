@@ -112,26 +112,6 @@ const AnalysisText = styled.div`
   white-space: pre-wrap;
 `;
 
-const BlurredText = styled.div`
-  filter: blur(5px);
-  position: relative;
-  overflow: hidden;
-`;
-
-const OverlayText = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  font-size: 24px;
-  font-weight: bold;
-  color: red;
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 10;
-  filter: none;
-  text-shadow: 1px 1px 2px white, -1px -1px 2px white, 1px -1px 2px white, -1px 1px 2px white;
-`;
 
 const LegendContainer = styled.div`
   display: flex;
@@ -511,16 +491,17 @@ const cleanOldCache = () => {
 
 // Funzione per salvare l'analisi in localStorage con metadati migliorati
 const saveAnalysisToCache = (yearToAnalyze, month, analysis, isRealAnalysis = true) => {
+  const cacheKey = `aiAnalysis_${yearToAnalyze}_${month}`;
+  const cacheData = {
+    timestamp: Date.now(),
+    analysis: analysis,
+    isRealAnalysis: isRealAnalysis, // Distingue tra analisi reale e simulata
+    yearToAnalyze: yearToAnalyze,
+    month: month,
+    version: '1.1' // Versione del formato cache per future migrations
+  };
+  
   try {
-    const cacheKey = `aiAnalysis_${yearToAnalyze}_${month}`;
-    const cacheData = {
-      timestamp: Date.now(),
-      analysis: analysis,
-      isRealAnalysis: isRealAnalysis, // Distingue tra analisi reale e simulata
-      yearToAnalyze: yearToAnalyze,
-      month: month,
-      version: '1.1' // Versione del formato cache per future migrations
-    };
     localStorage.setItem(cacheKey, JSON.stringify(cacheData));
     
     // Pulizia periodica della cache
@@ -1124,21 +1105,6 @@ const PerformanceTrendView = ({ setView }) => {
     }
   };
 
-  const renderAnalysisWithBlur = (text) => {
-    const lines = text.split('\n');
-    return lines.map((line, index) => {
-      if (line.startsWith('Considerazioni') || line.trim() === '' || line.startsWith('Analisi') || line.startsWith('Conclusione')) {
-        return <div key={index}>{line}</div>;
-      } else {
-        return (
-          <div style={{ position: 'relative' }} key={index}>
-            <BlurredText>{line}</BlurredText>
-            <OverlayText>In fase di sviluppo</OverlayText>
-          </div>
-        );
-      }
-    });
-  };
 
   const handleShare = () => {
     const shareText = `Performance Trend ${currentYear}\n\n${yearAnalysis}\n\n${prediction}`;
@@ -1158,7 +1124,7 @@ const PerformanceTrendView = ({ setView }) => {
       // Recupera solo il testo senza formattazione Markdown
       const plainText = aiAnalysis.replace(/#{1,6}\s(.*)/g, '$1\n')  // Rimuove i simboli # per i titoli
                                .replace(/\*\*(.*?)\*\*/g, '$1')      // Rimuove i ** per il grassetto
-                               .replace(/\_(.*?)\_/g, '$1')          // Rimuove _ per il corsivo
+                               .replace(/_(.*?)_/g, '$1')            // Rimuove _ per il corsivo
                                .replace(/\[(.*?)\]\((.*?)\)/g, '$1 ($2)'); // Converte i link in formato testo
       
       navigator.clipboard.writeText(plainText)
