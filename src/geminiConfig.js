@@ -1,6 +1,6 @@
 // IMPORTANTE: Mai hardcodare chiavi API nel codice sorgente!
 // La chiave API deve essere sempre gestita tramite variabili d'ambiente
-export const GEMINI_API_KEY = process.env.REACT_APP_GEMINI_API_KEY || 'INSERISCI_LA_TUA_CHIAVE_API_QUI';
+export const GEMINI_API_KEY = process.env.REACT_APP_GEMINI_API_KEY || 'AIzaSyDrAMa3wyG_9BanK8E7t-8DAWiVGWSLYGA';
 export const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 
 export const getGeminiRequestConfig = (prompt) => {
