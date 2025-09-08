@@ -299,8 +299,11 @@ const generateColorPalette = (numColors) => {
   );
 };
 
-// Nuova funzione per l'API Gemini
-const fetchGeminiAnalysis = async (prompt) => {
+// Funzione per il delay nel retry con backoff esponenziale
+const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+// Nuova funzione per l'API Gemini con retry logic
+const fetchGeminiAnalysis = async (prompt, maxRetries = 3) => {
   // Se non è stata configurata la chiave API, mostra un errore
   if (GEMINI_API_KEY === 'LA_TUA_CHIAVE_API') {
     return `# ⚠️ Configurazione API Gemini richiesta
@@ -315,40 +318,115 @@ Per utilizzare questa funzionalità, è necessario configurare una chiave API Ge
 4. Salva il file e riavvia l'applicazione`;
   }
 
-  try {
-    // Crea la configurazione completa della richiesta
-    const requestConfig = getGeminiRequestConfig(prompt);
-    
-    // Effettua la chiamata API
-    const response = await axios.post(
-      `${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, 
-      requestConfig
-    );
-    
-    // Estrai e restituisci il testo generato
-    return response.data.candidates[0].content.parts[0].text;
-  } catch (error) {
-    console.error('Errore nella chiamata API Gemini:', error);
-    
-    // Gestisci gli errori comuni
-    if (error.response) {
-      // Errori di autenticazione
-      if (error.response.status === 401) {
-        return "# ⚠️ Errore di autenticazione\n\nLa chiave API Gemini non è valida. Verifica la tua chiave in `src/geminiConfig.js`.";
+  let lastError;
+  
+  for (let attempt = 0; attempt < maxRetries; attempt++) {
+    try {
+      // Crea la configurazione completa della richiesta
+      const requestConfig = getGeminiRequestConfig(prompt);
+      
+      // Effettua la chiamata API con timeout
+      const response = await axios.post(
+        `${GEMINI_API_URL}?key=${GEMINI_API_KEY}`, 
+        requestConfig,
+        {
+          timeout: 30000, // Timeout di 30 secondi
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        }
+      );
+      
+      // Estrai e restituisci il testo generato
+      return response.data.candidates[0].content.parts[0].text;
+    } catch (error) {
+      console.error(`Errore nella chiamata API Gemini (tentativo ${attempt + 1}/${maxRetries}):`, error);
+      lastError = error;
+      
+      // Gestisci gli errori comuni
+      if (error.response) {
+        // Errori di autenticazione - non ritentare
+        if (error.response.status === 401) {
+          return "# ⚠️ Errore di autenticazione\n\nLa chiave API Gemini non è valida. Verifica la tua chiave in `src/geminiConfig.js`.";
+        }
+        
+        // Errori di quota o limiti - ritenta con backoff esponenziale
+        if (error.response.status === 429) {
+          if (attempt < maxRetries - 1) {
+            const retryDelay = Math.pow(2, attempt) * 1000 + Math.random() * 1000; // 1s, 2s, 4s con jitter
+            console.log(`Rate limit raggiunto. Ritento tra ${Math.round(retryDelay / 1000)} secondi...`);
+            await delay(retryDelay);
+            continue;
+          } else {
+            return `# ⚠️ Limite di richieste persistente
+
+Hai superato il limite di richieste per la tua chiave API Gemini dopo ${maxRetries} tentativi.
+
+## Cosa puoi fare:
+
+1. **Attendi**: I limiti si resetteranno automaticamente (solitamente entro 1 ora)
+2. **Verifica la quota**: Controlla la tua quota API su [Google AI Studio](https://makersuite.google.com/app/apikey)
+3. **Upgrade**: Considera l'aggiornamento a un piano con limiti più elevati
+4. **Riduci le chiamate**: Usa la cache o riduci la frequenza delle richieste
+
+La prossima volta che generi l'analisi, dovrebbe funzionare se i limiti si sono resettati.`;
+          }
+        }
+        
+        // Errori del server (5xx) - ritenta
+        if (error.response.status >= 500 && error.response.status < 600) {
+          if (attempt < maxRetries - 1) {
+            const retryDelay = Math.pow(2, attempt) * 1000;
+            console.log(`Errore del server. Ritento tra ${Math.round(retryDelay / 1000)} secondi...`);
+            await delay(retryDelay);
+            continue;
+          }
+        }
+        
+        // Altri errori HTTP - non ritentare
+        return `# ⚠️ Errore nella chiamata API
+
+Si è verificato un errore (${error.response.status}) durante la chiamata all'API Gemini.
+
+**Dettagli**: ${error.response.data.error?.message || 'Errore sconosciuto'}
+
+**Suggerimenti**:
+- Controlla la validità della chiave API
+- Verifica la tua connessione internet
+- Riprova tra qualche minuto`;
       }
       
-      // Errori di quota o limiti
-      if (error.response.status === 429) {
-        return "# ⚠️ Limite di richieste superato\n\nHai superato il limite di richieste per la tua chiave API Gemini. Riprova più tardi.";
+      // Errori di rete - ritenta
+      if (error.code === 'ECONNABORTED' || error.code === 'ENOTFOUND' || error.message.includes('timeout')) {
+        if (attempt < maxRetries - 1) {
+          const retryDelay = Math.pow(2, attempt) * 1000;
+          console.log(`Errore di rete. Ritento tra ${Math.round(retryDelay / 1000)} secondi...`);
+          await delay(retryDelay);
+          continue;
+        }
       }
       
-      // Altri errori
-      return `# ⚠️ Errore nella chiamata API\n\nSi è verificato un errore (${error.response.status}) durante la chiamata all'API Gemini. Dettagli: ${error.response.data.error?.message || 'Errore sconosciuto'}`;
+      // Per altri tipi di errore, non ritentare
+      break;
     }
-    
-    // Errori di rete o di altro tipo
-    return "# ⚠️ Errore di connessione\n\nNon è stato possibile contattare l'API Gemini. Controlla la tua connessione internet e riprova.";
   }
+  
+  // Se tutti i tentativi sono falliti, restituisci l'ultimo errore
+  return `# ⚠️ Errore di connessione
+
+Non è stato possibile contattare l'API Gemini dopo ${maxRetries} tentativi.
+
+**Possibili cause**:
+- Problemi di connessione internet
+- Server API temporaneamente non disponibile
+- Limiti di rate raggiunti
+
+**Cosa fare**:
+- Controlla la tua connessione internet
+- Riprova tra qualche minuto
+- Se il problema persiste, potrebbe essere un'interruzione temporanea del servizio
+
+**Ultimo errore**: ${lastError?.message || 'Errore sconosciuto'}`;
 };
 
 // Funzione fallback per generare un'analisi simulata quando l'API è in rate limit
@@ -400,22 +478,70 @@ Per utilizzare l'analisi AI reale:
 *Questa analisi simulata è stata generata localmente. Per analisi più accurate e dettagliate, utilizza la funzionalità AI quando sarà nuovamente disponibile.*`;
 };
 
-// Funzione per salvare l'analisi in localStorage
-const saveAnalysisToCache = (yearToAnalyze, month, analysis) => {
+// Funzione per pulire la cache vecchia
+const cleanOldCache = () => {
+  try {
+    const keysToRemove = [];
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith('aiAnalysis_')) {
+        const cachedData = localStorage.getItem(key);
+        if (cachedData) {
+          const parsedData = JSON.parse(cachedData);
+          const now = Date.now();
+          const cachedTime = parsedData.timestamp;
+          
+          // Rimuovi cache più vecchia di 7 giorni
+          if (now - cachedTime > 7 * 24 * 60 * 60 * 1000) {
+            keysToRemove.push(key);
+          }
+        }
+      }
+    }
+    
+    keysToRemove.forEach(key => localStorage.removeItem(key));
+    
+    if (keysToRemove.length > 0) {
+      console.log(`Rimossi ${keysToRemove.length} elementi dalla cache scaduti`);
+    }
+  } catch (error) {
+    console.error("Errore nella pulizia della cache:", error);
+  }
+};
+
+// Funzione per salvare l'analisi in localStorage con metadati migliorati
+const saveAnalysisToCache = (yearToAnalyze, month, analysis, isRealAnalysis = true) => {
   try {
     const cacheKey = `aiAnalysis_${yearToAnalyze}_${month}`;
     const cacheData = {
       timestamp: Date.now(),
-      analysis: analysis
+      analysis: analysis,
+      isRealAnalysis: isRealAnalysis, // Distingue tra analisi reale e simulata
+      yearToAnalyze: yearToAnalyze,
+      month: month,
+      version: '1.1' // Versione del formato cache per future migrations
     };
     localStorage.setItem(cacheKey, JSON.stringify(cacheData));
+    
+    // Pulizia periodica della cache
+    if (Math.random() < 0.1) { // 10% di probabilità
+      cleanOldCache();
+    }
   } catch (error) {
     console.error("Errore nel salvataggio dell'analisi in cache:", error);
-    // Se il salvataggio fallisce, continuiamo senza errori
+    // Se il localStorage è pieno, proviamo a pulire e ritentare
+    if (error.name === 'QuotaExceededError') {
+      try {
+        cleanOldCache();
+        localStorage.setItem(cacheKey, JSON.stringify(cacheData));
+      } catch (retryError) {
+        console.error("Errore anche dopo la pulizia della cache:", retryError);
+      }
+    }
   }
 };
 
-// Funzione per recuperare l'analisi dalla cache
+// Funzione migliorata per recuperare l'analisi dalla cache
 const getAnalysisFromCache = (yearToAnalyze, month) => {
   try {
     const cacheKey = `aiAnalysis_${yearToAnalyze}_${month}`;
@@ -427,16 +553,68 @@ const getAnalysisFromCache = (yearToAnalyze, month) => {
     const now = Date.now();
     const cachedTime = parsedData.timestamp;
     
-    // Consideriamo valida la cache per 24 ore (86400000 ms)
-    if (now - cachedTime > 86400000) {
+    // Cache più lunga per analisi reali, più breve per simulazioni
+    const maxAge = parsedData.isRealAnalysis 
+      ? 7 * 24 * 60 * 60 * 1000  // 7 giorni per analisi reali
+      : 2 * 60 * 60 * 1000;      // 2 ore per analisi simulate
+    
+    if (now - cachedTime > maxAge) {
       // Cache scaduta, la eliminiamo
       localStorage.removeItem(cacheKey);
       return null;
     }
     
+    // Aggiungi informazioni di debug
+    console.log(`Cache hit per ${yearToAnalyze}/${month} - Tipo: ${parsedData.isRealAnalysis ? 'Reale' : 'Simulata'}, Età: ${Math.round((now - cachedTime) / (60 * 1000))} minuti`);
+    
     return parsedData.analysis;
   } catch (error) {
     console.error("Errore nel recupero dell'analisi dalla cache:", error);
+    return null;
+  }
+};
+
+// Funzione per ottenere statistiche della cache (utile per debug)
+const getCacheStats = () => {
+  try {
+    const stats = {
+      totalItems: 0,
+      realAnalysis: 0,
+      simulatedAnalysis: 0,
+      totalSize: 0,
+      oldestItem: null,
+      newestItem: null
+    };
+    
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith('aiAnalysis_')) {
+        const cachedData = localStorage.getItem(key);
+        if (cachedData) {
+          const parsedData = JSON.parse(cachedData);
+          stats.totalItems++;
+          stats.totalSize += cachedData.length;
+          
+          if (parsedData.isRealAnalysis) {
+            stats.realAnalysis++;
+          } else {
+            stats.simulatedAnalysis++;
+          }
+          
+          if (!stats.oldestItem || parsedData.timestamp < stats.oldestItem) {
+            stats.oldestItem = parsedData.timestamp;
+          }
+          
+          if (!stats.newestItem || parsedData.timestamp > stats.newestItem) {
+            stats.newestItem = parsedData.timestamp;
+          }
+        }
+      }
+    }
+    
+    return stats;
+  } catch (error) {
+    console.error("Errore nel recupero delle statistiche della cache:", error);
     return null;
   }
 };
@@ -447,6 +625,7 @@ const PerformanceTrendView = ({ setView }) => {
   const [prediction, setPrediction] = useState('');
   const [aiAnalysis, setAiAnalysis] = useState('');
   const [isGeneratingAnalysis, setIsGeneratingAnalysis] = useState(false);
+  const [showDiagnostics, setShowDiagnostics] = useState(false);
 
   const availableYears = useMemo(() => getAvailableYears().map(y => parseInt(y.value)), []);
   const colorPalette = useMemo(() => generateColorPalette(availableYears.length), [availableYears]);
@@ -851,23 +1030,26 @@ const PerformanceTrendView = ({ setView }) => {
         // Chiama l'API Gemini
         const response = await fetchGeminiAnalysis(prompt);
         
-        // Verifica se c'è stato un errore di rate limit
-        if (response.includes("Limite di richieste superato")) {
-          // Se c'è un errore di rate limit, genera un'analisi simulata
+        // Verifica se c'è stato un errore (messaggi di errore iniziano con "# ⚠️")
+        if (response.includes("# ⚠️")) {
+          // Se c'è stato un errore, genera un'analisi simulata
           const simulatedAnalysis = generateSimulatedAnalysis(yearToAnalyze, currentMonth, totalTurni, averageMonthlyTurni);
           setAiAnalysis(simulatedAnalysis);
-          // Non salviamo in cache le analisi simulate
+          // Salva l'analisi simulata in cache con flag appropriato
+          saveAnalysisToCache(yearToAnalyze, month, simulatedAnalysis, false);
         } else {
           // Altrimenti usa la risposta dell'API
           setAiAnalysis(response);
-          // Salva in cache solo le risposte reali dell'API
-          saveAnalysisToCache(yearToAnalyze, month, response);
+          // Salva in cache la risposta reale dell'API
+          saveAnalysisToCache(yearToAnalyze, month, response, true);
         }
       } catch (error) {
         console.error("Errore nella chiamata API:", error);
         // In caso di errore, genera comunque un'analisi simulata
         const simulatedAnalysis = generateSimulatedAnalysis(yearToAnalyze, currentMonth, totalTurni, averageMonthlyTurni);
         setAiAnalysis(simulatedAnalysis);
+        // Salva l'analisi simulata in cache
+        saveAnalysisToCache(yearToAnalyze, month, simulatedAnalysis, false);
       }
     } catch (error) {
       console.error("Errore nella preparazione dei dati:", error);
@@ -877,6 +1059,9 @@ const PerformanceTrendView = ({ setView }) => {
       const defaultAverageMonthlyTurni = 0;
       const simulatedAnalysis = generateSimulatedAnalysis(defaultYearToAnalyze, currentMonth, defaultTotalTurni, defaultAverageMonthlyTurni);
       setAiAnalysis(simulatedAnalysis);
+      // Salva l'analisi simulata in cache anche in caso di errori nella preparazione dati
+      const month = currentMonth > 1 ? currentMonth - 1 : 12;
+      saveAnalysisToCache(defaultYearToAnalyze, month, simulatedAnalysis, false);
     } finally {
       setIsGeneratingAnalysis(false);
     }
@@ -903,6 +1088,41 @@ const PerformanceTrendView = ({ setView }) => {
   }, [availableYears, currentYear, currentMonth, generateYearAnalysis, makePrediction]);
 
   const chartData = useMemo(() => formatChartData(), [formatChartData]);
+
+  // Funzioni per la diagnostica
+  const clearCache = () => {
+    try {
+      const keysToRemove = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith('aiAnalysis_')) {
+          keysToRemove.push(key);
+        }
+      }
+      
+      keysToRemove.forEach(key => localStorage.removeItem(key));
+      
+      alert(`Cache pulita! Rimossi ${keysToRemove.length} elementi.`);
+    } catch (error) {
+      console.error("Errore nella pulizia della cache:", error);
+      alert("Errore durante la pulizia della cache.");
+    }
+  };
+
+  const testApiConnection = async () => {
+    try {
+      const testPrompt = "Test di connessione API. Rispondi semplicemente con 'OK'.";
+      const response = await fetchGeminiAnalysis(testPrompt, 1);
+      
+      if (response.includes("# ⚠️")) {
+        alert("❌ Test API fallito:\n\n" + response.replace(/[#*]/g, ''));
+      } else {
+        alert("✅ Test API riuscito! L'API Gemini è funzionante.");
+      }
+    } catch (error) {
+      alert("❌ Errore nel test API:\n\n" + error.message);
+    }
+  };
 
   const renderAnalysisWithBlur = (text) => {
     const lines = text.split('\n');
@@ -1111,6 +1331,101 @@ const PerformanceTrendView = ({ setView }) => {
             <div>
               <p>Genera un'analisi dettagliata sull'anno in corso utilizzando l'intelligenza artificiale.</p>
               <p>Questa funzionalità utilizza l'API Gemini per analizzare i dati e fornire insight approfonditi.</p>
+              
+              <div style={{
+                backgroundColor: '#F0F9FF',
+                border: '1px solid #0EA5E9',
+                borderRadius: '8px',
+                padding: '12px',
+                margin: '16px 0',
+                fontSize: '14px',
+                color: '#0369A1'
+              }}>
+                <strong>💡 Sistema migliorato:</strong>
+                <ul style={{ margin: '8px 0', paddingLeft: '16px' }}>
+                  <li>Retry automatico con backoff esponenziale in caso di rate limits</li>
+                  <li>Cache intelligente per ridurre le chiamate API</li>
+                  <li>Gestione migliorata degli errori con messaggi più specifici</li>
+                  <li>Timeout ottimizzato per evitare attese eccessive</li>
+                </ul>
+                
+                <div style={{ marginTop: '12px', borderTop: '1px solid #BAE6FD', paddingTop: '12px' }}>
+                  <button
+                    onClick={() => setShowDiagnostics(!showDiagnostics)}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      color: '#0369A1',
+                      cursor: 'pointer',
+                      fontSize: '13px',
+                      textDecoration: 'underline'
+                    }}
+                  >
+                    {showDiagnostics ? '🔧 Nascondi diagnostica' : '🔧 Mostra strumenti diagnostica'}
+                  </button>
+                  
+                  {showDiagnostics && (
+                    <div style={{ marginTop: '12px' }}>
+                      <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                        <button
+                          onClick={testApiConnection}
+                          style={{
+                            backgroundColor: '#059669',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '4px',
+                            padding: '6px 12px',
+                            fontSize: '12px',
+                            cursor: 'pointer'
+                          }}
+                        >
+                          Test API
+                        </button>
+                        <button
+                          onClick={clearCache}
+                          style={{
+                            backgroundColor: '#DC2626',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '4px',
+                            padding: '6px 12px',
+                            fontSize: '12px',
+                            cursor: 'pointer'
+                          }}
+                        >
+                          Pulisci Cache
+                        </button>
+                        <button
+                          onClick={() => {
+                            const stats = getCacheStats();
+                            if (stats) {
+                              const oldestDate = stats.oldestItem ? new Date(stats.oldestItem).toLocaleDateString('it-IT') : 'N/A';
+                              const newestDate = stats.newestItem ? new Date(stats.newestItem).toLocaleDateString('it-IT') : 'N/A';
+                              alert(`Statistiche Cache:\n\nTotale elementi: ${stats.totalItems}\nAnalisi reali: ${stats.realAnalysis}\nAnalisi simulate: ${stats.simulatedAnalysis}\nDimensione totale: ${Math.round(stats.totalSize / 1024)} KB\nPiù vecchia: ${oldestDate}\nPiù recente: ${newestDate}`);
+                            } else {
+                              alert("Errore nel recupero delle statistiche cache");
+                            }
+                          }}
+                          style={{
+                            backgroundColor: '#7C3AED',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '4px',
+                            padding: '6px 12px',
+                            fontSize: '12px',
+                            cursor: 'pointer'
+                          }}
+                        >
+                          Info Cache
+                        </button>
+                      </div>
+                      <p style={{ fontSize: '11px', margin: '8px 0 0 0', color: '#64748B' }}>
+                        Usa questi strumenti per diagnosticare problemi con l'API Gemini
+                      </p>
+                    </div>
+                  )}
+                </div>
+              </div>
               
               <Button 
                 onClick={() => generateAIAnalysis(false)} 
