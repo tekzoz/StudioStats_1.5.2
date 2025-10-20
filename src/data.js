@@ -31183,7 +31183,6 @@ export const foniciData = [
                 {nome: "MASSIMO LOMBARDO", data: "2025-09-15", turno: "9:30-12:30", sala: "1 LAURA", turni: 1},
                 {nome: "EMANUELE LOFFREDI", data: "2025-09-15", turno: "9:30-12:30", sala: "2 STEFANO", turni: 1},
                 {nome: "SANTIS MASSIMO DE", data: "2025-09-15", turno: "13:30-16:30", sala: "7 ROSSELLA", turni: 1},
-                {nome: "MARCO AUGUSTO COMBA", data: "2025-09-15", turno: "16:30-19:30", sala: "5 GIUPPY", turni: 1},
                 {nome: "FEDERICO MANUTI", data: "2025-09-15", turno: "16:30-19:30", sala: "2 STEFANO", turni: 1},
                 {nome: "TOMMASO DACCO", data: "2025-09-16", turno: "9:30-12:30", sala: "4 FRANCESCO", turni: 1},
                 {nome: "TOMMASO DACCO", data: "2025-09-16", turno: "13:30-16:30", sala: "4 FRANCESCO", turni: 1},
