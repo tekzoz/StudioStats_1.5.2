@@ -1940,6 +1940,86 @@ export const direttoriData = [
                               "mese": "2025-08",
                               "turni": 18
                             },
+                              {
+                                        "nome": "BALDINI ORESTE",
+                                        "mese": "2025-09",
+                                        "turni": 13
+                                      },
+                              {
+                                        "nome": "BALDINI RITA",
+                                        "mese": "2025-09",
+                                        "turni": 4
+                                      },
+                              {
+                                        "nome": "BENASSI STEFANO",
+                                        "mese": "2025-09",
+                                        "turni": 23
+                                      },
+                              {
+                                        "nome": "CAPUTO ARIANNA",
+                                        "mese": "2025-09",
+                                        "turni": 55
+                                      },
+                              {
+                                        "nome": "CASTAGNA GABRIELE",
+                                        "mese": "2025-09",
+                                        "turni": 3
+                                      },
+                              {
+                                        "nome": "CASTRACANE BARBARA",
+                                        "mese": "2025-09",
+                                        "turni": 1
+                                      },
+                              {
+                                        "nome": "CATANIA GIULIA",
+                                        "mese": "2025-09",
+                                        "turni": 19
+                                      },
+                              {
+                                        "nome": "CATANIA MYRIAM",
+                                        "mese": "2025-09",
+                                        "turni": 2
+                                      },
+                              {
+                                        "nome": "CIGLIANO ALESSIO",
+                                        "mese": "2025-09",
+                                        "turni": 10
+                                      },
+                              {
+                                        "nome": "DE FLAVIIS FABRIZIO",
+                                        "mese": "2025-09",
+                                        "turni": 16
+                                      },
+                              {
+                                        "nome": "IZZO FIAMMETTA",
+                                        "mese": "2025-09",
+                                        "turni": 2
+                                      },
+                              {
+                                        "nome": "IZZO GIUSEPPINA",
+                                        "mese": "2025-09",
+                                        "turni": 3
+                                      },
+                              {
+                                        "nome": "IZZO ROSSELLA",
+                                        "mese": "2025-09",
+                                        "turni": 24
+                                      },
+                              {
+                                        "nome": "SCOTTI GIULIA SONIA",
+                                        "mese": "2025-09",
+                                        "turni": 4
+                                      },
+                              {
+                                        "nome": "TRAVERSA CRISTIANA",
+                                        "mese": "2025-09",
+                                        "turni": 2
+                                      },
+                              {
+                                        "nome": "VENDITTI FRANCESCO SAVERIO",
+                                        "mese": "2025-09",
+                                        "turni": 23
+                                      },
 ];
 
 export const getDirettoriTurnCountsForPeriod = (period) => {
