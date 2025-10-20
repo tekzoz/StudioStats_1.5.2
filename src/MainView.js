@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, memo } from 'react';
 import styled from 'styled-components';
 import {
   MonthYearIcon,
@@ -115,10 +115,11 @@ const Footer = styled.footer`
   color: #6b7280;
 `;
 
-const MainView = ({ setView }) => {
+const MainView = memo(({ setView }) => {
   const [visibleCards, setVisibleCards] = useState([]);
 
-  const cards = [
+  // Memorizziamo l'array cards per evitare ricreazioni ad ogni render
+  const cards = useMemo(() => [
     {
       icon: <MonthYearIcon />,
       label: 'Ultimo Mese',
@@ -179,15 +180,17 @@ const MainView = ({ setView }) => {
       color: '#E0E7FF',
       onClick: () => setView('information'),
     },
-  ];
+  ], [setView]); // Dipendenza da setView che dovrebbe essere stabile
 
+  // Fix: usiamo una dipendenza fissa invece di cards.length
   useEffect(() => {
     const totalAnimationTime = 1000;
-    const delay = totalAnimationTime / cards.length;
+    const cardsCount = 10; // Numero fisso di cards
+    const delay = totalAnimationTime / cardsCount;
 
     const timer = setInterval(() => {
       setVisibleCards((prev) => {
-        if (prev.length === cards.length) {
+        if (prev.length >= cardsCount) {
           clearInterval(timer);
           return prev;
         }
@@ -197,7 +200,7 @@ const MainView = ({ setView }) => {
     }, delay);
 
     return () => clearInterval(timer);
-  }, [cards.length]);
+  }, []); // Array vuoto: esegue solo al mount
 
   return (
     <DashboardContainer>
@@ -232,6 +235,8 @@ const MainView = ({ setView }) => {
       <Footer>&copy; StudioStats 2025 Marco Augusto Comba | Versione 1.6.1</Footer>
     </DashboardContainer>
   );
-};
+});
+
+MainView.displayName = 'MainView';
 
 export default MainView;

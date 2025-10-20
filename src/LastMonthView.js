@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useMemo, memo } from 'react';
 import { ArrowLeft, Calendar, Clock, Gauge } from 'lucide-react';
 import { getLatestMonthData, getPreviousMonthData, getAnnualAverageData, getSameMonthPreviousYear, getSameMonthBestPreviousYear, getCorrectAnnualAverage, getBestMonthByDailyAverage } from './data';
 import PerformanceGauge from './PerformanceGauge';
 
-const TripleStatCard = ({ icon, label, currentData, previousData, bestData, backgroundColor }) => {
+const TripleStatCard = memo(({ icon, label, currentData, previousData, bestData, backgroundColor }) => {
   // Determina quale sia il mese migliore tra precedente e storico
   const bestValue = bestData ? parseFloat(bestData.value) : 0;
   const previousValue = parseFloat(previousData.value);
@@ -72,9 +72,11 @@ const TripleStatCard = ({ icon, label, currentData, previousData, bestData, back
       )}
     </div>
   );
-};
+});
 
-const StatCard = ({ icon, label, value, comparison, backgroundColor, component, showUnit = false }) => (
+TripleStatCard.displayName = 'TripleStatCard';
+
+const StatCard = memo(({ icon, label, value, comparison, backgroundColor, component, showUnit = false }) => (
   <div style={{
     backgroundColor: backgroundColor,
     borderRadius: '12px',
@@ -115,7 +117,9 @@ const StatCard = ({ icon, label, value, comparison, backgroundColor, component, 
       </div>
     )}
   </div>
-);
+));
+
+StatCard.displayName = 'StatCard';
 
 const calculateComparison = (current, previous) => {
   if (typeof current !== 'number' || typeof previous !== 'number') {
@@ -145,16 +149,17 @@ const roundToHalf = (num) => {
   return Math.round(num * 2) / 2;
 };
 
-const LastMonthView = ({ setView }) => {
-  const latestMonthData = getLatestMonthData();
-  const previousMonthData = getPreviousMonthData();
-  const annualAverageData = getCorrectAnnualAverage(); // Usa la media corretta
-  const sameMonthPrevYearData = getSameMonthPreviousYear();
-  const sameMonthBestYearData = getSameMonthBestPreviousYear();
-  const bestMonthData = getBestMonthByDailyAverage();
+const LastMonthView = memo(({ setView }) => {
+  // Memoizziamo i dati per evitare ricalcoli ad ogni render
+  const latestMonthData = useMemo(() => getLatestMonthData(), []);
+  const previousMonthData = useMemo(() => getPreviousMonthData(), []);
+  const annualAverageData = useMemo(() => getCorrectAnnualAverage(), []);
+  const sameMonthPrevYearData = useMemo(() => getSameMonthPreviousYear(), []);
+  const sameMonthBestYearData = useMemo(() => getSameMonthBestPreviousYear(), []);
+  const bestMonthData = useMemo(() => getBestMonthByDailyAverage(), []);
 
   // Calcolo dinamico basato sui dati effettivi invece della data di sistema
-  const monthNames = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'];
+  const monthNames = useMemo(() => ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre'], []);
   
   // Ora otteniamo direttamente mese e anno dai dati effettivi
   const displayMonth = monthNames[latestMonthData.month - 1];
@@ -162,7 +167,8 @@ const LastMonthView = ({ setView }) => {
   const previousMonthName = monthNames[previousMonthData.month - 1];
   const previousMonthYear = previousMonthData.year;
 
-  const comparisonDataTurni = {
+  // Memoizziamo i dati di confronto per evitare ricalcoli
+  const comparisonDataTurni = useMemo(() => ({
     prevMonth: calculateComparison(latestMonthData.totaleTurni, previousMonthData.totaleTurni),
     annual: calculateComparison(latestMonthData.totaleTurni, annualAverageData.mediaAnnuale),
     sameMonthPrevYear: sameMonthPrevYearData ? calculateComparison(latestMonthData.totaleTurni, sameMonthPrevYearData.totaleTurni) : null,
@@ -176,7 +182,7 @@ const LastMonthView = ({ setView }) => {
     annualValue: Math.round(annualAverageData.mediaAnnuale),
     sameMonthPrevYearValue: sameMonthPrevYearData ? sameMonthPrevYearData.totaleTurni : null,
     sameMonthBestYearValue: sameMonthBestYearData ? sameMonthBestYearData.totaleTurni : null
-  };
+  }), [latestMonthData, previousMonthData, annualAverageData, sameMonthPrevYearData, sameMonthBestYearData, displayMonth, displayYear, previousMonthName, previousMonthYear]);
   
   // Aggiunge gli anni ai confronti
   if (comparisonDataTurni.sameMonthPrevYear) {
@@ -186,7 +192,7 @@ const LastMonthView = ({ setView }) => {
     comparisonDataTurni.sameMonthBestYear.year = sameMonthBestYearData.year;
   }
 
-  const comparisonDataMedia = {
+  const comparisonDataMedia = useMemo(() => ({
     prevMonth: calculateComparison(roundToHalf(latestMonthData.mediaGiornaliera), roundToHalf(previousMonthData.mediaGiornaliera)),
     annual: calculateComparison(roundToHalf(latestMonthData.mediaGiornaliera), roundToHalf(annualAverageData.mediaAnnuale / annualAverageData.monthsCount)), // Media corretta
     sameMonthPrevYear: sameMonthPrevYearData ? calculateComparison(roundToHalf(latestMonthData.mediaGiornaliera), roundToHalf(sameMonthPrevYearData.mediaGiornaliera)) : null,
@@ -195,7 +201,7 @@ const LastMonthView = ({ setView }) => {
     prevMonthYear: previousMonthYear,
     monthName: displayMonth,
     year: displayYear
-  };
+  }), [latestMonthData, previousMonthData, annualAverageData, sameMonthPrevYearData, sameMonthBestYearData, displayMonth, displayYear, previousMonthName, previousMonthYear]);
   
   // Aggiunge gli anni ai confronti per la media
   if (comparisonDataMedia.sameMonthPrevYear) {
@@ -205,12 +211,12 @@ const LastMonthView = ({ setView }) => {
     comparisonDataMedia.sameMonthBestYear.year = sameMonthBestYearData.year;
   }
 
-  // Preparazione dati per il nuovo componente TripleStatCard della media giornaliera
+  // Preparazione dati per il nuovo componente TripleStatCard della media giornaliera - memoizzati
   const currentAverage = roundToHalf(latestMonthData.mediaGiornaliera);
   const previousAverage = roundToHalf(previousMonthData.mediaGiornaliera);
   const bestAverage = bestMonthData ? roundToHalf(bestMonthData.mediaGiornaliera) : null;
   
-  const averageData = {
+  const averageData = useMemo(() => ({
     current: {
       value: currentAverage.toFixed(1),
       monthName: displayMonth,
@@ -228,9 +234,9 @@ const LastMonthView = ({ setView }) => {
       year: bestMonthData.year,
       comparison: calculateInverseComparison(bestAverage, currentAverage)
     } : null
-  };
+  }), [currentAverage, previousAverage, bestAverage, displayMonth, displayYear, previousMonthName, previousMonthYear, bestMonthData, monthNames]);
 
-  // Calcolo la percentuale di utilizzo delle sale
+  // Calcolo la percentuale di utilizzo delle sale - memoizzato
   // Assumo che ogni turno sia di 3 ore, con 10 sale disponibili e 3 fasce orarie (9 ore al giorno)
   const maxTurniGiornalieri = 10 * 3; // 10 sale * 3 fasce orarie = 30 turni massimi giornalieri
   const percentualeUtilizzo = (latestMonthData.mediaGiornaliera / maxTurniGiornalieri) * 100;
@@ -244,15 +250,15 @@ const LastMonthView = ({ setView }) => {
   const mediaGiornalieraAnnuale = annualAverageData.mediaAnnuale / annualAverageData.monthsCount;
   const utilizzoMediaAnnuale = (mediaGiornalieraAnnuale / maxTurniGiornalieri) * 100;
   
-  const comparisonDataUtilizzo = {
+  const comparisonDataUtilizzo = useMemo(() => ({
     prevMonth: calculateComparison(percentualeUtilizzoArrotondata, Math.round(utilizzoMesePrecedente)),
     annual: calculateComparison(percentualeUtilizzoArrotondata, Math.round(utilizzoMediaAnnuale)),
     prevMonthName: previousMonthName,
     prevMonthYear: previousMonthYear,
     year: displayYear
-  };
+  }), [percentualeUtilizzoArrotondata, utilizzoMesePrecedente, utilizzoMediaAnnuale, previousMonthName, previousMonthYear, displayYear]);
 
-  const stats = [
+  const stats = useMemo(() => [
     { 
       icon: <Calendar />, 
       label: 'Totale Turni di Doppiaggio', 
@@ -277,7 +283,7 @@ const LastMonthView = ({ setView }) => {
       ),
       backgroundColor: '#F0E6FF'
     },
-  ];
+  ], [latestMonthData, comparisonDataTurni, percentualeUtilizzoArrotondata, maxTurniGiornalieri]);
 
   return (
     <div style={{
@@ -356,6 +362,8 @@ const LastMonthView = ({ setView }) => {
       </div>
     </div>
   );
-};
+});
+
+LastMonthView.displayName = 'LastMonthView';
 
 export default LastMonthView;

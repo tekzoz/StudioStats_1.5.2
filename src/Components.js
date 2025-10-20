@@ -1,6 +1,6 @@
 // Components.js
 
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 import { ArrowLeft, TrendingUp, TrendingDown } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
@@ -137,7 +137,26 @@ export const HighlightBox = styled.div`
 
 // Componenti Funzionali
 
-export const Classifica = ({ data = [], title, highlightTopN, isAnnual, showTrend = false }) => (
+// Componente ClassificaItem memoizzato per ottimizzare le performance
+const ClassificaItemComponent = memo(({ item, index, rank, isAnnual, showTrend }) => (
+  <ClassificaItem rank={rank} isAnnual={isAnnual}>
+    <span>{rank}.</span>
+    <span>{item.nome}</span>
+    {showTrend && item.trend && (
+      <span>
+        {item.trend === 'up' && <TrendingUp size={16} color="#10B981" />}
+        {item.trend === 'down' && <TrendingDown size={16} color="#EF4444" />}
+        {item.trend === 'stable' && <span style={{ width: '16px', display: 'inline-block' }}></span>}
+      </span>
+    )}
+    {!showTrend && <span></span>}
+    <TurniSpan>{item.turni} turni</TurniSpan>
+  </ClassificaItem>
+));
+
+ClassificaItemComponent.displayName = 'ClassificaItemComponent';
+
+export const Classifica = memo(({ data = [], title, highlightTopN, isAnnual, showTrend = false }) => (
   <Card>
     <CardTitle>{title}</CardTitle>
     {data.length > 0 ? (
@@ -147,68 +166,41 @@ export const Classifica = ({ data = [], title, highlightTopN, isAnnual, showTren
             <HighlightBox>
               <ClassificaList>
                 {data.slice(0, highlightTopN).map((item, index) => (
-                  <ClassificaItem
+                  <ClassificaItemComponent
                     key={item.nome}
+                    item={item}
+                    index={index}
                     rank={index + 1}
                     isAnnual={isAnnual}
-                  >
-                    <span>{index + 1}.</span>
-                    <span>{item.nome}</span>
-                    {showTrend && item.trend && (
-                      <span>
-                        {item.trend === 'up' && <TrendingUp size={16} color="#10B981" />}
-                        {item.trend === 'down' && <TrendingDown size={16} color="#EF4444" />}
-                        {item.trend === 'stable' && <span style={{ width: '16px', display: 'inline-block' }}></span>}
-                      </span>
-                    )}
-                    {!showTrend && <span></span>}
-                    <TurniSpan>{item.turni} turni</TurniSpan>
-                  </ClassificaItem>
+                    showTrend={showTrend}
+                  />
                 ))}
               </ClassificaList>
             </HighlightBox>
             <ClassificaList>
               {data.slice(highlightTopN).map((item, index) => (
-                <ClassificaItem
+                <ClassificaItemComponent
                   key={item.nome}
+                  item={item}
+                  index={index}
                   rank={highlightTopN + index + 1}
                   isAnnual={isAnnual}
-                >
-                  <span>{highlightTopN + index + 1}.</span>
-                  <span>{item.nome}</span>
-                  {showTrend && item.trend && (
-                    <span>
-                      {item.trend === 'up' && <TrendingUp size={16} color="#10B981" />}
-                      {item.trend === 'down' && <TrendingDown size={16} color="#EF4444" />}
-                      {item.trend === 'stable' && <span style={{ width: '16px', display: 'inline-block' }}></span>}
-                    </span>
-                  )}
-                  {!showTrend && <span></span>}
-                  <TurniSpan>{item.turni} turni</TurniSpan>
-                </ClassificaItem>
+                  showTrend={showTrend}
+                />
               ))}
             </ClassificaList>
           </>
         ) : (
           <ClassificaList>
             {data.map((item, index) => (
-              <ClassificaItem
+              <ClassificaItemComponent
                 key={item.nome}
+                item={item}
+                index={index}
                 rank={index + 1}
                 isAnnual={isAnnual}
-              >
-                <span>{index + 1}.</span>
-                <span>{item.nome}</span>
-                {showTrend && item.trend && (
-                  <span>
-                    {item.trend === 'up' && <TrendingUp size={16} color="#10B981" />}
-                    {item.trend === 'down' && <TrendingDown size={16} color="#EF4444" />}
-                    {item.trend === 'stable' && <span style={{ width: '16px', display: 'inline-block' }}></span>}
-                  </span>
-                )}
-                {!showTrend && <span></span>}
-                <TurniSpan>{item.turni} turni</TurniSpan>
-              </ClassificaItem>
+                showTrend={showTrend}
+              />
             ))}
           </ClassificaList>
         )}
@@ -217,9 +209,11 @@ export const Classifica = ({ data = [], title, highlightTopN, isAnnual, showTren
       <p>Nessun dato disponibile</p>
     )}
   </Card>
-);
+));
 
-export const ChartRecharts = ({ data, title }) => (
+Classifica.displayName = 'Classifica';
+
+export const ChartRecharts = memo(({ data, title }) => (
   <Card style={{ height: '400px' }}>
     <CardTitle>{title}</CardTitle>
     <ResponsiveContainer width="100%" height="90%">
@@ -241,11 +235,13 @@ export const ChartRecharts = ({ data, title }) => (
       </BarChart>
     </ResponsiveContainer>
   </Card>
-);
+));
+
+ChartRecharts.displayName = 'ChartRecharts';
 
 // Mantieni i componenti esistenti con Tailwind CSS
 
-export const StatsCard = ({ title, value, comparison }) => (
+export const StatsCard = memo(({ title, value, comparison }) => (
   <div className="bg-white p-4 rounded-lg shadow">
     <h3 className="text-lg font-semibold mb-2">{title}</h3>
     <p className="text-2xl font-bold">{value}</p>
@@ -255,9 +251,13 @@ export const StatsCard = ({ title, value, comparison }) => (
       </p>
     )}
   </div>
-);
+));
 
-export const Chart = ({ data }) => {
+StatsCard.displayName = 'StatsCard';
+
+export const Chart = memo(({ data }) => {
   // Il tuo componente Chart con react-chartjs-2
   // ... codice esistente ...
-};
+});
+
+Chart.displayName = 'Chart';
