@@ -1195,7 +1195,67 @@ export const assistentiData = [
                                             nome: "SAITTA FIORENZA",
                                             mese: "2025-09",
                                             turni: 5
-                                          }
+                                          },
+                                            {
+                                                      nome: "CARBINI ALICE",
+                                                      mese: "2025-10",
+                                                      turni: 50
+                                                    },
+                                            {
+                                                      nome: "CONTI FEDERICA",
+                                                      mese: "2025-10",
+                                                      turni: 57
+                                                    },
+                                            {
+                                                      nome: "CORTESE ELISABETTA",
+                                                      mese: "2025-10",
+                                                      turni: 48
+                                                    },
+                                            {
+                                                      nome: "FABRICATORE ANDREA",
+                                                      mese: "2025-10",
+                                                      turni: 20
+                                                    },
+                                            {
+                                                      nome: "GIRARDI ELISABETTA",
+                                                      mese: "2025-10",
+                                                      turni: 24
+                                                    },
+                                            {
+                                                      nome: "NICOLOSI FRANCESCA",
+                                                      mese: "2025-10",
+                                                      turni: 34
+                                                    },
+                                            {
+                                                      nome: "PARLATO JEANNE",
+                                                      mese: "2025-10",
+                                                      turni: 2
+                                                    },
+                                            {
+                                                      nome: "PICCHIO MAURIZIO",
+                                                      mese: "2025-10",
+                                                      turni: 25
+                                                    },
+                                            {
+                                                      nome: "ROMA MANUELE",
+                                                      mese: "2025-10",
+                                                      turni: 22
+                                                    },
+                                            {
+                                                      nome: "ROMEO SIMONA",
+                                                      mese: "2025-10",
+                                                      turni: 25
+                                                    },
+                                            {
+                                                      nome: "SAITTA FIORENZA",
+                                                      mese: "2025-10",
+                                                      turni: 30
+                                                    },
+                                            {
+                                                      nome: "SCACCO DE SANTIS MANUELA",
+                                                      mese: "2025-10",
+                                                      turni: 15
+                                                    }
             
   ];
   

@@ -1,0 +1,77 @@
+---
+alwaysApply: true
+description: Mantenimento e aggiornamento automatico del README.md
+---
+
+# 📚 Regole per il Mantenimento del README
+
+## 🎯 Obiettivo
+Il file [README.md](mdc:README.md) deve sempre contenere una descrizione **dettagliata**, **accurata** e **aggiornata** dell'applicazione StudioStats, servendo come presentazione completa per gli utenti.
+
+## 📋 Responsabilità Automatiche
+
+### ✨ Quando Aggiungere Nuove Funzionalità
+**OGNI VOLTA** che viene aggiunta una nuova funzionalità, componente o vista:
+
+1. **Aggiorna la sezione "Caratteristiche Principali"** con la nuova funzionalità
+2. **Aggiorna la "Struttura del Progetto"** se sono stati aggiunti nuovi file
+3. **Aggiorna la sezione "Viste e Funzionalità"** con descrizione dettagliata
+4. **Verifica e aggiorna le "Tecnologie Utilizzate"** se sono state aggiunte nuove dipendenze
+
+### 🔄 Quando Modificare Funzionalità Esistenti
+Quando si modifica una funzionalità esistente:
+
+1. **Aggiorna la descrizione** nella sezione corrispondente
+2. **Modifica gli screenshot** o esempi se necessario
+3. **Aggiorna la versione** nei badge se è un cambiamento significativo
+
+### 📦 Quando Aggiungere/Rimuovere Dipendenze
+Quando si modifica [package.json](mdc:package.json):
+
+1. **Sincronizza la sezione "Tecnologie Utilizzate"** con le dipendenze attuali
+2. **Aggiungi descrizioni** per nuove librerie significative
+3. **Rimuovi riferimenti** a dipendenze non più utilizzate
+4. **Aggiorna i numeri di versione** nelle descrizioni
+
+### 🎨 Struttura da Mantenere
+Il README deve sempre includere queste sezioni in ordine:
+
+1. **Header con badge** (versione, tecnologie, licenza)
+2. **Panoramica e obiettivo** dell'applicazione
+3. **Caratteristiche principali** (lista puntata con emoji)
+4. **Installazione rapida** (passi chiari e testati)
+5. **Tecnologie utilizzate** (categorizzate e aggiornate)
+6. **Struttura del progetto** (albero file accurato)
+7. **Script disponibili** (sincronizzati con package.json)
+8. **Viste e funzionalità** (descrizione di ogni sezione dell'app)
+9. **Configurazione** (API keys, personalizzazione)
+10. **Compatibilità browser**
+11. **Troubleshooting** (problemi comuni e soluzioni)
+
+## 🚀 Standard di Qualità
+
+### ✅ Il README deve essere:
+- **Completo**: Copre tutte le funzionalità dell'app
+- **Aggiornato**: Riflette lo stato attuale del codice
+- **Chiaro**: Linguaggio semplice e diretto
+- **Visuale**: Usa emoji e formattazione per la leggibilità
+- **Pratico**: Include esempi e istruzioni step-by-step
+
+### 🎯 Linguaggio e Tono
+- **Professionale** ma **accessibile**
+- **Italiano** come lingua principale
+- **Terminologia tecnica** spiegata quando necessario
+- **Orientato all'utente**: Focus sui benefici e l'utilizzo
+
+## 🔧 Automazioni Richieste
+
+### Quando si committa codice:
+1. **Verifica automaticamente** se il README necessita aggiornamenti
+2. **Suggerisci modifiche** specifiche basate sui cambiamenti nel codice
+3. **Mantieni coerenza** tra documentazione e implementazione
+
+### Controlli di Qualità:
+- **Link funzionanti** a file e sezioni
+- **Versioni aggiornate** nei badge e nelle descrizioni
+- **Struttura file** accurata nell'albero del progetto
+- **Script npm** sincronizzati con package.json

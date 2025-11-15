@@ -1,0 +1,93 @@
+---
+globs: package.json,README.md
+description: Sincronizzazione automatica delle versioni e dipendenze tra package.json e README.md
+---
+
+# 🔄 Sincronizzazione Versioni e Dipendenze
+
+## 🎯 Obiettivo
+Mantenere **perfetta sincronizzazione** tra [package.json](mdc:package.json) e [README.md](mdc:README.md) per versioni, dipendenze e script.
+
+## 📦 Monitoraggio Automatico
+
+### Quando si modifica package.json:
+
+#### 🔢 Aggiornamento Versione
+Se cambia `"version"` in package.json:
+1. **Aggiorna automaticamente** il badge versione nel README
+2. **Aggiorna** la versione nel footer del README
+3. **Verifica coerenza** in tutti i riferimenti alla versione
+
+#### 📚 Aggiornamento Dipendenze
+Se si aggiungono/rimuovono dipendenze:
+1. **Sincronizza** la sezione "Tecnologie Utilizzate"
+2. **Aggiungi descrizioni** per nuove librerie significative
+3. **Rimuovi** riferimenti a dipendenze obsolete
+4. **Aggiorna numeri di versione** delle dipendenze esistenti
+
+#### 🔧 Aggiornamento Script
+Se si modificano gli script npm:
+1. **Sincronizza** la sezione "Script Disponibili"
+2. **Aggiungi descrizioni** per nuovi script
+3. **Aggiorna esempi** di utilizzo se necessario
+
+## 📋 Mapping Automatico
+
+### Dipendenze → Sezioni README
+
+**Core Framework:**
+- `react` → React [versione]
+- `react-dom` → React DOM
+- `react-router-dom` → React Router
+
+**Visualizzazione Dati:**
+- `chart.js` → Chart.js [versione]
+- `recharts` → Recharts [versione]
+- `react-chartjs-2` → React-ChartJS-2
+
+**Stile e UI:**
+- `tailwindcss` → Tailwind CSS [versione]
+- `styled-components` → Styled Components [versione]
+- `lucide-react` → Lucide React
+- `react-icons` → React Icons
+
+**AI e Analisi:**
+- `@google/genai` → Google GenAI [versione]
+- `axios` → Axios [versione]
+
+**Utilità:**
+- `date-fns` → date-fns [versione]
+- `xlsx` → XLSX [versione]
+- `react-markdown` → React Markdown
+
+## 🚀 Template Automatici
+
+### Badge Versione
+```markdown
+![Version](https://img.shields.io/badge/version-[VERSION]-blue.svg)
+```
+
+### Sezione Tecnologie
+```markdown
+- **[NOME LIBRERIA] [VERSIONE]** - [DESCRIZIONE]
+```
+
+### Script NPM
+```markdown
+# [DESCRIZIONE SCRIPT]
+npm run [NOME SCRIPT]
+```
+
+## ⚡ Automazioni Richieste
+
+### Al salvataggio di package.json:
+1. **Estrai automaticamente** tutte le versioni delle dipendenze
+2. **Aggiorna** le sezioni corrispondenti nel README
+3. **Mantieni formattazione** e stile esistenti
+4. **Verifica** che non ci siano riferimenti obsoleti
+
+### Controlli di Coerenza:
+- **Versione app** coerente ovunque
+- **Dipendenze** tutte documentate
+- **Script** tutti elencati con descrizioni
+- **Link** funzionanti e aggiornati

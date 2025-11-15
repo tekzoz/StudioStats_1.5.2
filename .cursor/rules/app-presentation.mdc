@@ -1,0 +1,131 @@
+---
+alwaysApply: true
+description: Regole per presentare efficacemente l'obiettivo e le funzioni dell'applicazione StudioStats
+---
+
+# 🎯 Presentazione Efficace dell'Applicazione
+
+## 📋 Obiettivo della Regola
+Garantire che il [README.md](mdc:README.md) presenti **StudioStats** in modo professionale, evidenziando chiaramente l'**obiettivo dell'app** e le sue **funzioni principali** per gli utenti dello Studio Pumaisdue.
+
+## 🎪 Messaggio Chiave da Comunicare
+
+### 🏢 Per Studio Pumaisdue:
+**"StudioStats trasforma i dati grezzi delle vostre produzioni in insights intelligenti per ottimizzare le performance del vostro studio."**
+
+### 🎯 Valore Principale:
+- **Monitoraggio Performance**: Tracciamento dettagliato di Assistenti, Direttori e Fonici
+- **Analisi Comparative**: Confronti temporali per identificare trend e miglioramenti
+- **Decisioni Data-Driven**: Insights basati su dati reali per ottimizzare i processi
+- **Visualizzazioni Professionali**: Dashboard intuitive per stakeholder e management
+
+## 📊 Struttura di Presentazione Obbligatoria
+
+### 1. 🎯 Panoramica (Sezione Principale)
+**DEVE contenere:**
+```markdown
+**StudioStats** è un'applicazione web moderna progettata specificamente per **Studio Pumaisdue** per:
+
+🎯 **Monitorare** le performance di produzione in tempo reale
+📊 **Analizzare** trend e pattern nelle performance del team
+🔍 **Identificare** opportunità di miglioramento e ottimizzazione
+📈 **Visualizzare** dati complessi in dashboard intuitive e actionable
+🤖 **Sfruttare** l'AI per insights avanzati e predizioni
+```
+
+### 2. ✨ Caratteristiche Principali
+**DEVE evidenziare il valore per l'utente:**
+- Ogni caratteristica deve spiegare il **beneficio concreto**
+- Focus su **come migliora il lavoro** dello studio
+- Linguaggio orientato ai **risultati business**
+
+### 3. 🎭 Sezioni per Ruolo
+**DEVE spiegare come ogni ruolo beneficia:**
+
+#### Per Assistenti:
+- Monitoraggio performance personali
+- Identificazione aree di miglioramento
+- Confronto con standard del settore
+
+#### Per Direttori:
+- Oversight completo delle produzioni
+- Analisi trend di qualità e efficienza
+- Strumenti per decision-making strategico
+
+#### Per Fonici:
+- Tracking tecnico delle sessioni
+- Analisi qualità audio e workflow
+- Ottimizzazione setup e processi
+
+## 🎨 Tono e Linguaggio
+
+### ✅ DA USARE:
+- **Professionale** ma **accessibile**
+- **Orientato ai risultati** business
+- **Specifico** per il settore produzione audio
+- **Entusiasta** ma **credibile**
+- **Tecnico** quando necessario, **semplice** di default
+
+### ❌ DA EVITARE:
+- Gergo troppo tecnico senza spiegazioni
+- Promesse vaghe o generiche
+- Linguaggio troppo commerciale
+- Descrizioni puramente tecniche senza benefici
+
+## 🚀 Call-to-Action Efficaci
+
+### Per Nuovi Utenti:
+```markdown
+🎉 **Inizia subito** a trasformare i tuoi dati di produzione in insights intelligenti!
+```
+
+### Per Sviluppatori:
+```markdown
+🔧 **Personalizza** StudioStats per le esigenze specifiche del tuo studio
+```
+
+## 📈 Metriche di Successo da Evidenziare
+
+### Benefici Quantificabili:
+- **Riduzione tempo** di analisi dati
+- **Miglioramento efficienza** del workflow
+- **Identificazione rapida** di problemi di qualità
+- **Ottimizzazione risorse** dello studio
+
+### Esempi Concreti:
+```markdown
+📊 **Analisi in tempo reale** delle performance di produzione
+🎯 **Identificazione immediata** di colli di bottiglia nel workflow  
+📈 **Trend analysis** per prevedere picchi di carico di lavoro
+🔍 **Root cause analysis** automatica per problemi ricorrenti
+```
+
+## 🎯 Sezione "Perché StudioStats?"
+
+**DEVE includere una sezione dedicata:**
+```markdown
+## 🤔 Perché StudioStats per il Vostro Studio?
+
+### 🎯 Progettato Specificamente per Studi di Produzione
+- Comprende le sfide uniche del settore audio/video
+- Metriche e KPI specifici per produzioni creative
+- Workflow ottimizzati per team di produzione
+
+### 📊 Dati Actionable, Non Solo Numeri
+- Insights che portano a decisioni concrete
+- Visualizzazioni che raccontano una storia
+- Raccomandazioni automatiche per miglioramenti
+
+### 🚀 Crescita Continua del Vostro Business
+- Identificazione opportunità di efficienza
+- Ottimizzazione allocazione risorse
+- Miglioramento qualità output finale
+```
+
+## ⚡ Automazione Richiesta
+
+**OGNI MODIFICA** al README deve:
+1. **Verificare** che il messaggio chiave sia chiaro
+2. **Assicurare** che i benefici siano evidenziati
+3. **Mantenere** focus sull'utente finale
+4. **Bilanciare** aspetti tecnici e business value

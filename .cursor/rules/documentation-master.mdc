@@ -1,0 +1,128 @@
+---
+alwaysApply: true
+description: Regola master per la gestione completa della documentazione del progetto StudioStats
+---
+
+# 📚 Master Guide - Documentazione StudioStats
+
+## 🎯 Missione Principale
+**Mantenere una documentazione impeccabile** che presenti StudioStats come una **soluzione professionale** per Studio Pumaisdue, sempre **aggiornata** e **completa**.
+
+## 🔄 Workflow Automatico Completo
+
+### 🆕 Quando si aggiunge una NUOVA FUNZIONALITÀ:
+
+#### 1. 📝 Aggiorna [CHANGELOG.md](mdc:CHANGELOG.md)
+```markdown
+### ✨ Nuove Funzionalità
+- **📊 [Nome Funzionalità]**: [Valore per Studio Pumaisdue]
+```
+
+#### 2. 📚 Aggiorna [README.md](mdc:README.md)
+- **Caratteristiche Principali** → Aggiungi con emoji e beneficio
+- **Viste e Funzionalità** → Sezione dettagliata se è una vista
+- **Struttura Progetto** → Aggiorna albero file se necessario
+- **Tecnologie** → Aggiungi nuove dipendenze
+
+#### 3. 📦 Aggiorna [package.json](mdc:package.json)
+- **Versione** → Incrementa secondo semantic versioning
+- **Dipendenze** → Aggiungi se necessarie
+
+### 🔧 Quando si MODIFICA una funzionalità esistente:
+
+#### 1. 📝 CHANGELOG.md
+```markdown
+### 🔧 Miglioramenti
+- **[Nome Funzionalità]**: [Descrizione miglioramento]
+```
+
+#### 2. 📚 README.md
+- **Aggiorna descrizioni** esistenti
+- **Modifica esempi** se necessario
+- **Verifica accuratezza** delle informazioni
+
+### 🐛 Quando si CORREGGE un bug:
+
+#### 1. 📝 CHANGELOG.md
+```markdown
+### 🐛 Bug Fix
+- **[Componente]**: Risolto [problema] che causava [impatto]
+```
+
+#### 2. 📚 README.md
+- **Aggiorna troubleshooting** se applicabile
+- **Correggi informazioni** errate se presenti
+
+## 🎯 Standard di Eccellenza
+
+### 📋 Il README.md DEVE sempre:
+- ✅ **Presentare chiaramente** l'obiettivo di StudioStats
+- ✅ **Evidenziare il valore** per Studio Pumaisdue
+- ✅ **Essere completo** (tutte le sezioni obbligatorie)
+- ✅ **Essere aggiornato** (versioni, funzionalità, struttura)
+- ✅ **Essere professionale** (linguaggio, formattazione, emoji)
+- ✅ **Essere pratico** (istruzioni chiare, esempi funzionanti)
+
+### 🎨 Qualità Visiva:
+- 🎨 **Emoji appropriati** per ogni sezione
+- 📊 **Badge aggiornati** (versione, tecnologie)
+- 🎯 **Formattazione consistente** 
+- 📝 **Code blocks** con syntax highlighting
+- 🔗 **Link funzionanti** e aggiornati
+
+### 📝 Qualità Contenuto:
+- 🇮🇹 **Italiano professionale** e accessibile
+- 🎯 **Focus sui benefici** per l'utente
+- 📊 **Descrizioni dettagliate** non solo elenchi
+- 🔧 **Istruzioni testate** e funzionanti
+- 💡 **Esempi pratici** dove appropriato
+
+## 🚀 Automazioni Richieste
+
+### 🔄 Ad ogni modifica del codice:
+1. **Scansiona** per nuove funzionalità o componenti
+2. **Identifica** cosa necessita documentazione
+3. **Suggerisci** aggiornamenti specifici
+4. **Verifica** coerenza tra codice e documentazione
+
+### 📊 Ad ogni modifica di package.json:
+1. **Sincronizza** versioni ovunque
+2. **Aggiorna** sezione tecnologie nel README
+3. **Verifica** script npm documentati
+4. **Controlla** dipendenze elencate
+
+### 📝 Ad ogni apertura di README.md:
+1. **Esegui** controlli di qualità completi
+2. **Verifica** completezza di tutte le sezioni
+3. **Controlla** accuratezza delle informazioni
+4. **Suggerisci** miglioramenti se necessario
+
+## 🎯 Messaggi Chiave da Mantenere
+
+### Per Studio Pumaisdue:
+> **"StudioStats trasforma i dati delle vostre produzioni in insights intelligenti per ottimizzare le performance del vostro studio."**
+
+### Valore Principale:
+- 📊 **Monitoraggio Performance** in tempo reale
+- 📈 **Analisi Comparative** per identificare trend
+- 🎯 **Decisioni Data-Driven** basate su dati reali
+- 🎨 **Visualizzazioni Professionali** per stakeholder
+
+## 📋 Checklist Rapida
+
+### ✅ Prima di ogni commit:
+- [ ] CHANGELOG aggiornato se necessario
+- [ ] README riflette modifiche al codice
+- [ ] Versioni sincronizzate ovunque
+- [ ] Nuove funzionalità documentate
+- [ ] Link e riferimenti verificati
+
+### ✅ Prima di ogni release:
+- [ ] CHANGELOG completo per la versione
+- [ ] README completamente aggiornato
+- [ ] Tutti i controlli di qualità passati
+- [ ] Documentazione professionale e completa
+- [ ] Messaggio dell'app chiaro e convincente
+
+## 🎪 Ricorda Sempre:
+**Il README è il biglietto da visita di StudioStats** - deve impressionare, informare e convincere che questa è la soluzione perfetta per Studio Pumaisdue! 🚀

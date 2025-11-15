@@ -1,0 +1,132 @@
+---
+globs: CHANGELOG.md,README.md,package.json
+description: Sincronizzazione tra CHANGELOG, README e versioni per mantenere documentazione coerente
+---
+
+# 📝 Sincronizzazione CHANGELOG e Documentazione
+
+## 🎯 Obiettivo
+Mantenere **perfetta coerenza** tra [CHANGELOG.md](mdc:CHANGELOG.md), [README.md](mdc:README.md) e [package.json](mdc:package.json) per versioni e funzionalità.
+
+## 🔄 Flusso di Aggiornamento Automatico
+
+### Quando si aggiunge una nuova funzionalità:
+
+#### 1. 📝 Aggiorna CHANGELOG.md
+```markdown
+## [Versione] - Data
+
+### ✨ Nuove Funzionalità
+- **[Nome Funzionalità]**: [Descrizione dettagliata del beneficio per l'utente]
+
+### 🔧 Miglioramenti
+- [Elenco miglioramenti]
+
+### 🐛 Bug Fix
+- [Elenco correzioni]
+```
+
+#### 2. 📚 Aggiorna README.md
+- **Sezione "Caratteristiche Principali"**: Aggiungi la nuova funzionalità
+- **Sezione "Viste e Funzionalità"**: Descrizione dettagliata se è una nuova vista
+- **Sezione "Struttura Progetto"**: Se sono stati aggiunti nuovi file
+
+#### 3. 📦 Aggiorna package.json
+- **Incrementa versione** seguendo semantic versioning
+- **Aggiungi nuove dipendenze** se necessarie
+
+## 🏷️ Standard Versioning
+
+### Semantic Versioning (MAJOR.MINOR.PATCH):
+- **MAJOR** (1.x.x): Cambiamenti breaking, ristrutturazioni importanti
+- **MINOR** (x.1.x): Nuove funzionalità, nuove viste, miglioramenti significativi
+- **PATCH** (x.x.1): Bug fix, piccoli miglioramenti, correzioni
+
+### Esempi:
+- Nuova vista analisi → **MINOR** (1.6.0 → 1.7.0)
+- Nuovo componente export → **MINOR** (1.6.0 → 1.7.0)  
+- Fix bug grafico → **PATCH** (1.6.0 → 1.6.1)
+- Ristrutturazione completa → **MAJOR** (1.6.0 → 2.0.0)
+
+## 📋 Template CHANGELOG
+
+### Per Nuove Funzionalità:
+```markdown
+### ✨ Nuove Funzionalità
+- **📊 [Nome Vista/Funzionalità]**: [Descrizione del valore per l'utente e come migliora il workflow dello studio]
+- **🔧 [Nome Strumento]**: [Benefici concreti per le operazioni quotidiane]
+```
+
+### Per Miglioramenti:
+```markdown
+### 🔧 Miglioramenti
+- **Performance**: [Descrizione miglioramento e impatto]
+- **UI/UX**: [Miglioramenti interfaccia e esperienza utente]
+- **Dati**: [Ottimizzazioni gestione e visualizzazione dati]
+```
+
+### Per Bug Fix:
+```markdown
+### 🐛 Bug Fix
+- **[Componente]**: Risolto [problema specifico] che causava [impatto]
+- **[Vista]**: Corretta [issue] per migliorare [aspetto dell'esperienza]
+```
+
+## 🔄 Sincronizzazione Automatica
+
+### Al cambio di versione in package.json:
+
+#### 1. 📝 Aggiorna CHANGELOG
+- Crea nuova sezione per la versione
+- Sposta "Unreleased" se presente
+- Aggiungi data di rilascio
+
+#### 2. 📚 Aggiorna README
+- Badge versione nell'header
+- Versione nel footer
+- Riferimenti versione nel testo
+
+#### 3. 🔍 Verifica Coerenza
+- Tutte le funzionalità nel CHANGELOG sono documentate nel README
+- Versioni allineate ovunque
+- Link e riferimenti aggiornati
+
+## 📊 Tracking Funzionalità
+
+### Mappa Funzionalità → Documentazione:
+Ogni funzionalità deve essere presente in:
+- [ ] **CHANGELOG.md** - Quando è stata aggiunta e perché
+- [ ] **README.md** - Come funziona e come usarla  
+- [ ] **Codice** - Implementazione effettiva
+
+### Esempi di Mappatura:
+```
+Analisi Trend Performance:
+├── CHANGELOG.md → "v1.6.0: Aggiunta vista analisi trend avanzata"
+├── README.md → "📈 Analisi Tendenze: Visualizzazione trend nel tempo"
+└── Codice → PerformanceTrendView.js
+```
+
+## 🚀 Automazione Richiesta
+
+### Al commit di nuove funzionalità:
+1. **Rileva automaticamente** nuovi file/componenti
+2. **Suggerisci** aggiornamenti CHANGELOG appropriati
+3. **Proponi** modifiche README corrispondenti
+4. **Verifica** coerenza versioning
+
+### Controlli Pre-Release:
+- [ ] CHANGELOG aggiornato con tutte le modifiche
+- [ ] README riflette stato attuale dell'app
+- [ ] Versioni sincronizzate ovunque
+- [ ] Nessuna funzionalità non documentata
+
+## 📋 Checklist Release
+
+Prima di ogni release:
+- [ ] **CHANGELOG** completo per la versione
+- [ ] **README** aggiornato con nuove funzionalità
+- [ ] **package.json** versione incrementata
+- [ ] **Badge** e riferimenti versione aggiornati
+- [ ] **Link** e percorsi verificati
+- [ ] **Esempi** e screenshot aggiornati se necessario

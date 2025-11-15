@@ -1,0 +1,119 @@
+---
+description: Controllo qualità e completezza del README.md
+---
+
+# 🔍 Controllo Qualità README
+
+## 🎯 Standard di Qualità Richiesti
+
+Il [README.md](mdc:README.md) deve sempre rispettare questi standard di eccellenza per presentare professionalmente l'applicazione StudioStats.
+
+## ✅ Checklist Completezza
+
+### 📋 Sezioni Obbligatorie
+- [ ] **Header con badge** (versione, React, licenza)
+- [ ] **Panoramica** chiara dell'obiettivo dell'app
+- [ ] **Caratteristiche principali** (minimo 6 punti)
+- [ ] **Installazione rapida** (passi testati)
+- [ ] **Tecnologie utilizzate** (categorizzate)
+- [ ] **Struttura progetto** (albero file accurato)
+- [ ] **Script disponibili** (tutti gli script npm)
+- [ ] **Viste e funzionalità** (ogni sezione dell'app)
+- [ ] **Configurazione** (API keys, personalizzazione)
+- [ ] **Troubleshooting** (problemi comuni)
+
+### 🎨 Standard Visivi
+- [ ] **Emoji appropriati** in ogni sezione
+- [ ] **Formattazione markdown** corretta
+- [ ] **Code blocks** con syntax highlighting
+- [ ] **Badge** aggiornati e funzionanti
+- [ ] **Divisori** (`---`) tra sezioni principali
+
+### 📝 Standard Contenuto
+- [ ] **Linguaggio italiano** professionale
+- [ ] **Descrizioni dettagliate** (non solo elenchi)
+- [ ] **Esempi pratici** dove appropriato
+- [ ] **Benefici per l'utente** evidenziati
+- [ ] **Terminologia tecnica** spiegata
+
+## 🔧 Controlli Automatici
+
+### Quando si apre/modifica README.md:
+
+#### 📊 Verifica Completezza
+1. **Controlla** che tutte le sezioni obbligatorie siano presenti
+2. **Verifica** che ogni vista/componente sia documentato
+3. **Assicura** che tutte le dipendenze siano elencate
+
+#### 🔗 Verifica Link e Riferimenti
+1. **Testa** tutti i link interni ed esterni
+2. **Verifica** riferimenti a file esistenti
+3. **Controlla** coerenza dei percorsi
+
+#### 📈 Verifica Dati Aggiornati
+1. **Confronta** versioni con package.json
+2. **Verifica** script npm sincronizzati
+3. **Controlla** struttura file attuale
+
+## 🎯 Obiettivi di Presentazione
+
+### Per l'Utente Finale:
+Il README deve rispondere a:
+- **Cosa fa** l'applicazione?
+- **Perché** dovrei usarla?
+- **Come** la installo e uso?
+- **Quali** funzionalità offre?
+- **Come** risolvo problemi comuni?
+
+### Per lo Sviluppatore:
+Il README deve fornire:
+- **Architettura** del progetto
+- **Tecnologie** utilizzate
+- **Script** di sviluppo
+- **Configurazione** dell'ambiente
+- **Struttura** del codice
+
+## 🚀 Miglioramenti Continui
+
+### Suggerimenti Automatici:
+Quando il README non rispetta gli standard:
+1. **Suggerisci** miglioramenti specifici
+2. **Proponi** contenuto mancante
+3. **Raccomanda** ristrutturazioni se necessario
+
+### Esempi di Miglioramenti:
+- Descrizioni troppo brevi → Suggerisci espansione
+- Sezioni mancanti → Proponi template
+- Link rotti → Suggerisci correzioni
+- Versioni obsolete → Proponi aggiornamenti
+
+## 📋 Template di Qualità
+
+### Descrizione Funzionalità:
+```markdown
+### 🎯 [Nome Funzionalità]
+[Descrizione dettagliata che spiega:]
+- Cosa fa la funzionalità
+- Come aiuta l'utente
+- Quando utilizzarla
+- Benefici specifici
+```
+
+### Sezione Tecnologia:
+```markdown
+- **[Nome Libreria] [Versione]** - [Descrizione del ruolo e benefici]
+```
+
+### Istruzione Installazione:
+```markdown
+# [Numero]. [Descrizione chiara del passo]
+[comando o azione]
+```
+
+## ⚡ Automazione Richiesta
+
+**OGNI VOLTA** che si modifica il README:
+1. **Esegui** tutti i controlli di qualità
+2. **Suggerisci** miglioramenti specifici
+3. **Verifica** completezza e accuratezza
+4. **Mantieni** standard professionali

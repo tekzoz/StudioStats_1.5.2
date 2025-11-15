@@ -1,0 +1,74 @@
+---
+globs: *.js,*.jsx,*.ts,*.tsx
+description: Documentazione automatica delle funzionalità nel README quando si aggiungono nuovi componenti o viste
+---
+
+# 🔄 Documentazione Automatica delle Funzionalità
+
+## 🎯 Trigger Automatici
+
+### Quando si crea un nuovo file componente:
+Se il file contiene:
+- **Nuova vista** (es. `*View.js`, `*Page.js`)
+- **Nuovo componente principale** (es. `Dashboard.js`, `Analytics.js`)
+- **Nuova funzionalità** (es. `*Analyzer.js`, `*Manager.js`)
+
+**DEVI AUTOMATICAMENTE:**
+
+1. **Aggiornare [README.md](mdc:README.md)** nella sezione appropriata
+2. **Aggiungere descrizione** della nuova funzionalità
+3. **Aggiornare la struttura del progetto** se necessario
+
+## 📝 Template per Nuove Viste
+
+Quando aggiungi una nuova vista, usa questo template nel README:
+
+```markdown
+### 🆕 [Nome Vista]
+[Descrizione dettagliata di cosa fa la vista, quali dati mostra, e come aiuta l'utente]
+```
+
+## 📊 Template per Nuove Funzionalità
+
+Per nuove funzionalità principali:
+
+```markdown
+- 🆕 **[Nome Funzionalità]**: [Descrizione del beneficio per l'utente]
+```
+
+## 🔍 Esempi di Aggiornamenti Automatici
+
+### Esempio 1: Nuova Vista Analisi
+Se crei `TrendAnalysisView.js`:
+```markdown
+### 📈 Analisi Trend Avanzata
+Visualizzazione sofisticata dei trend di performance a lungo termine con proiezioni e analisi predittive basate su AI.
+```
+
+### Esempio 2: Nuovo Componente Export
+Se crei `DataExporter.js`:
+```markdown
+- 📤 **Export Avanzato**: Esportazione dati in multipli formati (Excel, CSV, PDF) con filtri personalizzabili
+```
+
+## 🎯 Sezioni da Aggiornare Automaticamente
+
+### 1. Caratteristiche Principali
+Aggiungi nuove funzionalità con emoji appropriati
+
+### 2. Struttura del Progetto
+Mantieni l'albero file aggiornato con nuovi componenti
+
+### 3. Viste e Funzionalità
+Aggiungi sezione dettagliata per ogni nuova vista
+
+### 4. Tecnologie (se applicabile)
+Se la nuova funzionalità introduce nuove dipendenze
+
+## ⚡ Automazione Richiesta
+
+**OGNI VOLTA** che modifichi un file che aggiunge funzionalità:
+1. **Scansiona il codice** per identificare nuove funzionalità
+2. **Genera automaticamente** le descrizioni appropriate
+3. **Aggiorna il README** nelle sezioni pertinenti
+4. **Mantieni coerenza** con lo stile esistente

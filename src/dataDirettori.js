@@ -2020,6 +2020,86 @@ export const direttoriData = [
                                         "mese": "2025-09",
                                         "turni": 23
                                       },
+                                        {
+                                                  "nome": "AQUILONE FLAVIO",
+                                                  "mese": "2025-10",
+                                                  "turni": 1
+                                                },
+                                        {
+                                                  "nome": "BALDINI ORESTE NICOLA",
+                                                  "mese": "2025-10",
+                                                  "turni": 42
+                                                },
+                                        {
+                                                  "nome": "BALDINI RITA",
+                                                  "mese": "2025-10",
+                                                  "turni": 47
+                                                },
+                                        {
+                                                  "nome": "BENASSI STEFANO",
+                                                  "mese": "2025-10",
+                                                  "turni": 15
+                                                },
+                                        {
+                                                  "nome": "CAPUTO ARIANNA",
+                                                  "mese": "2025-10",
+                                                  "turni": 22
+                                                },
+                                        {
+                                                  "nome": "CASTRACANE BARBARA",
+                                                  "mese": "2025-10",
+                                                  "turni": 15
+                                                },
+                                        {
+                                                  "nome": "CATANIA GIULIA",
+                                                  "mese": "2025-10",
+                                                  "turni": 38
+                                                },
+                                        {
+                                                  "nome": "CATANIA MYRIAM",
+                                                  "mese": "2025-10",
+                                                  "turni": 7
+                                                },
+                                        {
+                                                  "nome": "CIGLIANO ALESSIO",
+                                                  "mese": "2025-10",
+                                                  "turni": 6
+                                                },
+                                        {
+                                                  "nome": "DE FLAVIIS FABRIZIO",
+                                                  "mese": "2025-10",
+                                                  "turni": 25
+                                                },
+                                        {
+                                                  "nome": "IZZO FIAMMETTA",
+                                                  "mese": "2025-10",
+                                                  "turni": 12
+                                                },
+                                        {
+                                                  "nome": "IZZO GIUSEPPINA",
+                                                  "mese": "2025-10",
+                                                  "turni": 28
+                                                },
+                                        {
+                                                  "nome": "IZZO ROSSELLA",
+                                                  "mese": "2025-10",
+                                                  "turni": 49
+                                                },
+                                        {
+                                                  "nome": "LATINI ILARIA",
+                                                  "mese": "2025-10",
+                                                  "turni": 2
+                                                },
+                                        {
+                                                  "nome": "RAIMO MARTINA",
+                                                  "mese": "2025-10",
+                                                  "turni": 5
+                                                },
+                                        {
+                                                  "nome": "VENDITTI FRANCESCO SAVERIO",
+                                                  "mese": "2025-10",
+                                                  "turni": 31
+                                                },
 ];
 
 export const getDirettoriTurnCountsForPeriod = (period) => {
