@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ArrowLeft } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { getFoniciTurnCountsForPeriod, getUtilizzoSaleForPeriod, getBilanciamentoFonici, getFoniciTurnCountsWithTrend } from './data';
+import { getFoniciTurnCountsForPeriod, getUtilizzoSaleForPeriod, getBilanciamentoFonici, getFoniciTurnCountsWithTrend, getMediaTurniAlMeseFonici } from './data';
 import {
   Container,
   Content,
@@ -56,10 +56,80 @@ const BilanciamentoCard = ({ data, averageTurni }) => (
   </Card>
 );
 
+const MediaTurniTable = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    color: #374151;
+    font-size: 14px;
+  }
+  
+  td {
+    color: #6b7280;
+    font-size: 14px;
+  }
+  
+  tr:hover {
+    background-color: #f9fafb;
+  }
+  
+  .nome-column {
+    font-weight: 500;
+    color: #111827;
+  }
+  
+  .media-column {
+    font-weight: 600;
+    color: #2563eb;
+  }
+`;
+
+const MediaTurniCard = ({ data }) => (
+  <Card>
+    <CardTitle>📊 Media Turni al Mese per Fonico</CardTitle>
+    <p style={{ color: '#6b7280', fontSize: '14px', marginBottom: '8px' }}>
+      Confronto tra media dall'inizio dell'anno e media dell'ultimo quadrimestre
+    </p>
+    <MediaTurniTable>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Fonico</th>
+          <th>Media Anno</th>
+          <th>Media Quadrimestre</th>
+          <th>Turni Totali Anno</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((fonico, index) => (
+          <tr key={fonico.nome}>
+            <td>{index + 1}</td>
+            <td className="nome-column">{fonico.nome}</td>
+            <td className="media-column">{fonico.mediaAnno} turni/mese</td>
+            <td className="media-column">{fonico.mediaQuadrimestre} turni/mese</td>
+            <td>{fonico.turniTotaliAnno} turni</td>
+          </tr>
+        ))}
+      </tbody>
+    </MediaTurniTable>
+  </Card>
+);
+
 const StatisticheFonici = ({ setView }) => {
   const [foniciData, setFoniciData] = useState(null);
   const [utilizzoSale, setUtilizzoSale] = useState(null);
   const [bilanciamentoData, setBilanciamentoData] = useState(null);
+  const [mediaTurniData, setMediaTurniData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -72,6 +142,8 @@ const StatisticheFonici = ({ setView }) => {
     const utilizzoSaleUltimoAnno = getUtilizzoSaleForPeriod('anno');
 
     const { bilanciamento, averageTurni } = getBilanciamentoFonici();
+    
+    const mediaTurni = getMediaTurniAlMeseFonici();
 
     setBilanciamentoData({
       bilanciamento,
@@ -89,6 +161,8 @@ const StatisticheFonici = ({ setView }) => {
       ultimoQuadrimestre: utilizzoSaleUltimoQuadrimestre,
       ultimoAnno: utilizzoSaleUltimoAnno,
     });
+    
+    setMediaTurniData(mediaTurni);
 
     setLoading(false);
   }, []);
@@ -139,6 +213,13 @@ const StatisticheFonici = ({ setView }) => {
     />
   </div>
 </Grid>
+
+        {/* Riquadro Media Turni al Mese */}
+        <Grid>
+          <div style={{ gridColumn: '1 / -1' }}>
+            <MediaTurniCard data={mediaTurniData} />
+          </div>
+        </Grid>
 
         
         {/* Footer */}

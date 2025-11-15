@@ -31783,6 +31783,64 @@ export const getUtilizzoSaleForPeriod = (period) => {
     .sort((a, b) => b.turni - a.turni);
 };
 
+// Funzione per calcolare la media turni al mese per ogni fonico
+export const getMediaTurniAlMeseFonici = () => {
+  const today = new Date();
+  const currentYear = today.getFullYear();
+  
+  // Calcola il numero di mesi dall'inizio dell'anno fino ad oggi
+  const currentMonth = today.getMonth() + 1; // getMonth() restituisce 0-11
+  const monthsFromYearStart = currentMonth;
+  
+  // Calcola il numero di mesi per il quadrimestre (ultimi 4 mesi)
+  const monthsInQuadrimestre = 4;
+  
+  // Ottieni i dati dall'inizio dell'anno
+  const dataAnno = getFoniciDataForPeriod('anno');
+  const dataQuadrimestre = getFoniciDataForPeriod('quadrimestre');
+  
+  // Calcola i turni totali per fonico dall'inizio dell'anno
+  const turniAnno = {};
+  dataAnno.forEach(({ nome, turni }) => {
+    turniAnno[nome] = (turniAnno[nome] || 0) + turni;
+  });
+  
+  // Calcola i turni totali per fonico nell'ultimo quadrimestre
+  const turniQuadrimestre = {};
+  dataQuadrimestre.forEach(({ nome, turni }) => {
+    turniQuadrimestre[nome] = (turniQuadrimestre[nome] || 0) + turni;
+  });
+  
+  // Crea un set di tutti i fonici unici
+  const allFonici = new Set([...Object.keys(turniAnno), ...Object.keys(turniQuadrimestre)]);
+  
+  // Calcola la media turni al mese per ogni fonico
+  const mediaPerFonico = Array.from(allFonici)
+  .filter(nome => {
+    // Filtra subito i fonici che non hanno turni nell'ultimo quadrimestre (non più utilizzati)
+    const turniQuad = turniQuadrimestre[nome] || 0;
+    return turniQuad > 0;
+  })
+  .map(nome => {
+    const turniTotaliAnno = turniAnno[nome] || 0;
+    const turniTotaliQuadrimestre = turniQuadrimestre[nome] || 0;
+    
+    const mediaAnno = monthsFromYearStart > 0 ? (turniTotaliAnno / monthsFromYearStart) : 0;
+    const mediaQuadrimestre = turniTotaliQuadrimestre / monthsInQuadrimestre;
+    
+    return {
+      nome,
+      mediaAnno: parseFloat(mediaAnno.toFixed(1)),
+      mediaQuadrimestre: parseFloat(mediaQuadrimestre.toFixed(1)),
+      turniTotaliAnno: turniTotaliAnno,
+      turniTotaliQuadrimestre: turniTotaliQuadrimestre
+    };
+  });
+  
+  // Ordina per media anno (decrescente)
+  return mediaPerFonico.sort((a, b) => b.mediaAnno - a.mediaAnno);
+};
+
 // Strutture dati per i mesi
 const monthsData = [
   // Dati 2020
